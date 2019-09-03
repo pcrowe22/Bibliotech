@@ -1,0 +1,186 @@
+/*var xp="";//="Light";
+var xpf=xp.fontcolor("white");
+var xn="";//="Dark";
+var xnf=xn.fontcolor("white");
+var yp="";//"Light";
+var ypf=yp.fontcolor("white");
+var yn="";//="Dark";
+var ynf=yn.fontcolor("white");
+
+var q1="";//="Energy";
+var q1f=q1.fontcolor("white");
+var q2="";//="Space-time";
+var q2f=q2.fontcolor("white");
+var q3="";//="Matter";
+var q3f=q3.fontcolor("white");
+var q4="";//="Space-time";
+var q4f=q4.fontcolor("white");
+*/
+var c1="Light -- Dark";
+var c2="Energy -- Matter";
+
+
+var ldld = {
+	ID1: "ld",
+	ID2: "ld",
+	parent: "none",
+	layer: "0",
+	graph: "rd_ld",
+	p1: "Light",
+	p2: "Energy",
+	p3: "Light",
+	p4: "Space-Time",
+	p5: "Dark",
+	p6: "Matter",
+	p7: "Dark",
+	p8: "Space-time"
+};
+var emem = {
+	ID1: "em",
+	ID2: "em",
+	parent: "ldld",
+	layer: "1",
+	graph: "rd_ld",
+	p1: "Energy",
+	p2: "Electrostatic Attraction",
+	p3: "Energy",
+	p4: "Force", 
+	p5: "Matter",
+	p6: "Gravity",
+	p7: "Matter",
+	p8: "Force"
+};
+
+var c = document.getElementById("Can");
+function drawld(){
+	var ldtx = c.getContext("2d");
+    ldtx.strokeStyle = 'white';
+    ldtx.beginPath();
+    ldtx.moveTo(0,0);
+    ldtx.lineTo(500,500);
+    ldtx.stroke();
+}
+function drawrd(){
+	var rdtx = c.getContext("2d");
+      rdtx.strokeStyle = "white";
+      rdtx.beginPath();
+      rdtx.moveTo(0,500);
+      rdtx.lineTo(500,0);
+      rdtx.stroke();
+}
+function drawvert(){
+	var vert = c.getContext("2d");
+      vert.strokeStyle = "white";
+      vert.beginPath();
+      vert.moveTo(250,0);
+      vert.lineTo(250,500);
+      vert.stroke();
+}
+function drawhor(){
+	var hor = c.getContext("2d");
+      hor.strokeStyle = "white";
+      hor.beginPath();
+      hor.moveTo(0,250);
+      hor.lineTo(500,250);
+      hor.stroke();
+}
+function drawtb(){
+	var tb = c.getContext("2d");
+      tb.strokeStyle = "white";
+      tb.beginPath();
+      tb.moveTo(0,0);
+      tb.lineTo(500,0);
+      tb.stroke();
+}
+function drawbb(){
+	var bb = c.getContext("2d");
+      bb.strokeStyle = "white";
+      bb.beginPath();
+      bb.moveTo(0,500);
+      bb.lineTo(500,500);
+      bb.stroke();
+}
+function drawlb(){
+	var lb = c.getContext("2d");
+      lb.strokeStyle = "white";
+      lb.beginPath();
+      lb.moveTo(0,0);
+      lb.lineTo(0,500);
+      lb.stroke();
+}
+function drawrb(){
+	var rb = c.getContext("2d");
+      rb.strokeStyle = "white";
+      rb.beginPath();
+      rb.moveTo(500,0);
+      rb.lineTo(500,500);
+      rb.stroke();
+}
+
+function drawContraries(newAxes){
+	  if (newAxes.graph.includes("ld")==true){
+        drawld();
+      }
+      if (newAxes.graph.includes("rd")==true){
+      drawrd();
+      }
+      if (newAxes.graph.includes("tb")==true){
+      drawtb();
+      }
+      if (newAxes.graph.includes("bb")==true){
+      drawbb();
+      }
+      if (newAxes.graph.includes("rb")==true){
+      drawrb();
+      }
+      if (newAxes.graph.includes("lb")==true){
+      drawlb();
+      }
+	 /*yp=newAxes.p1;
+	 q1=newAxes.p2;
+	 xp=newAxes.p3;
+	 q4=newAxes.p4;
+	 yn=newAxes.p5;
+	 q3=newAxes.p6;
+	 xn=newAxes.p7;
+	 q2=newAxes.p8;*/
+	 document.getElementById('yp').innerHTML=newAxes.p1;
+	 document.getElementById('q1').innerHTML=newAxes.p2;
+	 document.getElementById('xp').innerHTML=newAxes.p3;
+	 document.getElementById('q4').innerHTML=newAxes.p4;
+	 document.getElementById('yn').innerHTML=newAxes.p5;
+	 document.getElementById('q3').innerHTML=newAxes.p6;
+	 document.getElementById('xn').innerHTML=newAxes.p7;
+	 document.getElementById('q2').innerHTML=newAxes.p8;
+}
+var axes = [ldld, emem]; 
+var potentialAxes={ID1=[],ID2=[]};
+function assignPotID(potAxes, contrary){
+	if (potAxes.ID1==[]){
+		potAxes.ID1=contrary;
+	} else if (potAxes.ID2==[]){
+		potAxes.ID2=contrary;
+		var dispAxes=chooseAxes(potAxes);
+		drawContraries(dispAxes);
+	} else {
+		potAxes.ID1=contrary;
+		potAxes.ID2=[];
+	}
+}
+function chooseAxes(potAxes){
+	for (var i=0; i<axes.length; i++){
+		if (potAxes.ID1.includes(axes[i])){		//verifies that the potential axes do exist within the list of axes
+			for (var j=0; j<axes.length; j++){
+				if (potAxes.ID2.includes(axes[j])){
+					var newAxes=potAxes;
+					return newAxes;
+					break;
+				}
+			}
+			break;
+		} else {
+			newAxes.graph = "";
+			return newAxes;
+		}
+	}
+}
