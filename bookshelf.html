@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="YUTF-8">
+		<title>Bookshelf</title>
+		<link href="fancy.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body style="background-color: brown">
+		<a href="index.html" id="home-button" style="background-color: transparent; color: white">Home</a>
+		<ul>
+
+        		<li class="book"><img id="Peregrine" onclick="grabBook('Peregrine')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCPeregrine.png"></li>
+
+        		<li class="book"><img id="EastOfEden" onclick="grabBook('EastOfEden')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCEast.png"></li>
+
+        		<li class="book"><img id="Dune" onclick="grabBook('Dune')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCDune.png"></li>
+
+        		<li class="book"><img id="Minutes" onclick="grabBook('Minutes')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCMinutes.png"></li>
+
+      		</ul>
+
+		<p class="walktext" style="position: absolute; top: 90%"><a href="walk2.html">Leave</a></p>
+		
+                <div id="bookHolder"><img id="imageHolder" src=""/>
+                </div>
+
+
+		<img id="emptinessTry" style="height: 300px; width: 100px" onmouseover="document.getElementById('emptinessTry').setAttribute('border', 'solid 3px pink');" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCPeregrine.png">
+
+
+		<img id="blackDefault" style="display: none" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Walking\black.png"/>
+		<script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\walk.js"></script>
+	</body>
+</html>

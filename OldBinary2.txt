@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Polarity</title>
+    <link href="fancy.css" rel="stylesheet" type="text/css" media="all">
+    <script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\binaries"></script>
+  </head>
+  <body style="background-color: black">
+    <h1 style="position: relative; color: white; z-index: 2">Discover the Array</h1>
+    <a href="index.html" id="home-button" style="background-color: transparent; color: white">Home</a>
+    
+    <div style="position: relative">
+
+      <p style="position: absolute; top: 40px; left: 25%" id="q2box">Text</p>
+
+
+      <div style="position: absolute; top: 31px; left: 50%">
+        <script>document.write(ypf);</script>
+      </div>
+      
+
+      <div style="position: absolute; top: 40px; left: 75%">
+        <script>
+          document.write(q1f);
+        </script>
+      </div>
+
+      <div style="position: absolute; left: 25%; top: 295px">
+        <script>document.write(xnf);</script>
+      </div>
+     
+      <div style="position: absolute; left: 75%; top: 295px">
+        <script>document.write(ypf);</script>
+      </div>
+
+      <div style="position: absolute; top: 550px; left: 25%">
+        <script>
+          document.write(q3f);
+        </script>
+      </div>
+      <div style="position: absolute; top: 560px; left: 50%">
+        <script>document.write(ynf);</script>
+      </div>
+      <div style="position: absolute; top: 550px; left: 75%">
+        <script>
+          document.write(q4f);
+        </script>
+      </div>
+      
+    </div>
+
+
+    <canvas id="Can" width="500" height="500"></canvas>
+    <script>
+      var c = document.getElementById("Can");
+      drawvert();
+      drawhor();
+
+      var userAxes=ldld;
+      drawContraries(userAxes);
+    </script>
+    <div>
+      <br>
+      <br>
+      <p>Contraries</p>
+      <button class="txtButton" id="contraryList" onclick="assignPotID(potentialAxes, c1)">Light -- Dark</button>
+      <button class="txtButton" id="contraryList" onclick="assignPotID(potentialAxes, c2)">Energy -- Matter</button>
+    </div>
+    <!--<div>
+    when positioning the div, to left: 80% and top: 20px, it becomes unclickable. Fix this
+       <form>
+         <input type="text" name="userCode" id="userCode" size=10 />
+         <button type="button" onClick="search()">Locate.</br>
+       </form>
+    </div>-->
+  </body>
+</html>

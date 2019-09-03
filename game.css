@@ -1,0 +1,21 @@
+
+.gameText, .gameText1{
+  position: relative;
+  color: white;
+  font-family: times new roman;
+  display: none;
+}
+.checkChoice{
+	color: white;
+	display: none;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 1.83rem;
+}
+.checkChoice input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}

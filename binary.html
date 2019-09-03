@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Polarity</title>
+    <link href="fancy.css" rel="stylesheet" type="text/css" media="all">
+    <!--<script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\binaries.js"></script>-->
+  </head>
+  <body style="background-color: black">
+    <h1 style="position: relative; color: white; z-index: 2">Discover the Array</h1>
+    <a href="index.html" id="home-button" style="background-color: transparent; color: white">Home</a>
+    <div style="position: relative">
+
+      <p style="position: absolute; top: 40px; left: 25%; text-indent:0; font-size: 1rem" id="q2"></p>
+
+      <p style="position: absolute; top: 31px; left: 50%; text-inden:0; font-size:1rem" id="yp"></p>
+      
+      <p style="position: absolute; top: 40px; left: 75%; text-indent:0; font-size:1rem" id="q1"></p>
+
+      <p style="position: absolute; left: 25%; top: 295px; text-indent:0; font-size:1rem" id="xn"></p>
+
+      <p style="position: absolute; left: 75%; top: 295px; text-indent:0;font-size:1rem" id="xp"></p>
+
+      <p style="position: absolute; top: 550px; left: 25%; text-indent:0;font-size:1rem" id="q3"></p>
+
+      <p style="position: absolute; top: 560px; left: 50%; text-indent:0;font-size:1rem" id="yn"></p>
+
+      <p style="position: absolute; top: 550px; left: 75%; text-indent:0; font-size:1rem" id="q4"></p>
+      
+    </div>
+
+    <canvas id="dots" width="100" height="50" style="position: fixed; left: 1100px"></canvas>
+
+    <canvas id="Can" width="500" height="500"></canvas>
+    
+    <div>
+      <br>
+      <br>
+      <p>Contraries</p>
+      <button class="contrButton" id="contr0" style="display: block" onclick="assignPotID(potentialAxes, contr[0])">Light -- Dark</button>
+      <a class="contrAnchor" href="#"><button class="contrButton" onclick="assignPotID(potentialAxes,contr[1])">Energy -- Matter</button></a>
+      <button class="contrButton" id="contr2" onclick="assignPotID(potentialAxes,contr[2])">Space -- Time</button>
+      <button class="contrButton" id="contr3" onclick="assignPotID(potentialAxes,contr[3])">Push -- Pull</button>
+      <button class="contrButton" id="contr4" onclick="assignPotID(potentialAxes,contr[4])">Compress -- Expand</button>
+      <button class="contrButton" id="contr5" onclick="assignPotID(potentialAxes,contr[5])">Fast -- Slow</button>
+      <button class="contrButton" id="contr6" onclick="assignPotID(potentialAxes,contr[6])">Electricity -- Teraforming</button>
+      <button class="contrButton" id="contr7" onclick="assignPotID(potentialAxes,contr[7])">Bright -- Shadow</button>
+      <button class="contrButton" id="contr8" onclick="assignPotID(potentialAxes,contr[8])">Visible -- Obscure</button>
+      <button class="contrButton" id="contr9" onclick="assignPotID(potentialAxes,contr[9])">Hot -- Cold</button>
+      <button class="contrButton" id="contr10" onclick="assignPotID(potentialAxes,contr[10])">Positive -- Negative</button>
+      <button class="contrButton" id="contr11" onclick="assignPotID(potentialAxes,contr[11])">Spark -- Heat</button>
+      <button class="contrButton" id="contr12" onclick="assignPotID(potentialAxes,contr[12])">Reflection -- Invisible</button>
+      <button class="contrButton" id="contr13" onclick="assignPotID(potentialAxes,contr[13])">Snap-Freeze -- Combustion</button>
+      <button class="contrButton" id="contr14" onclick="assignPotID(potentialAxes,contr[14])">Snap-Freeze -- Freeze</button>
+      <button class="contrButton" id="contr15" onclick="assignPotID(potentialAxes,contr[15])">Melt -- Combustion</button>
+      <button class="contrButton" id="contr16" onclick="assignPotID(potentialAxes,contr[16])">Melt -- Freeze</button>
+      <button class="contrButton" id="contr17" onclick="assignPotID(potentialAxes,contr[17])">Fire -- Wind</button>
+      <button class="contrButton" id="contr18" onclick="assignPotID(potentialAxes,contr[18])">Magma -- Ice</button>
+      <button class="contrButton" id="contr19" onclick="assignPotID(potentialAxes,contr[19])">Ash -- Clouds</button>
+      <button class="contrButton" id="contr20" onclick="assignPotID(potentialAxes,contr[20])">Static -- Dynamic</button>
+      <button class="contrButton" id="contr21" onclick="assignPotID(potentialAxes,contr[21])">Fog -- Storm</button>
+      <button class="contrButton" id="contr22" onclick="assignPotID(potentialAxes,contr[22])">Fog -- Dust</button>
+      <button class="contrButton" id="contr23" onclick="assignPotID(potentialAxes,contr[23])">Dust -- Smoke</button>
+      <button class="contrButton" id="contr24" onclick="assignPotID(potentialAxes,contr[24])">Dew -- Mist</button>
+      <button class="contrButton" id="contr25" onclick="assignPotID(potentialAxes,contr[25])">Climate -- Weather Pattern</button>
+      <button class="contrButton" id="contr26" onclick="assignPotID(potentialAxes,contr[26])">Color -- Sound</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[27])">Presence -- Absence</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[28])">Water -- Earth</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[29])">Water -- Dry</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[30])">Contained -- Released</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[31])">Order -- Chaos</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[32])">Life -- Death</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[33])">Animated Husk -- Intangible Spirit</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[34])">Kamikazee -- Birth</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[35])">Many -- None</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[36])">Pressure -- Vacuum</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[37])">Singularity -- Void</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[38])">Random -- Pattern</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[39])">Technicolor -- Monochrome</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[40])">Layered Sound -- Single Sound</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[41])">Sight -- Blind</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[42])">Hearing -- Deaf</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[43])">Blur -- Image</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[44])">Noise -- Speech</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[45])">Distance -- Location</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[46])">Time-Displacement -- Present</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[47])">Past -- Future</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[48])">Familiar -- New</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[49])">Memory -- Prediction</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[50])">Continuation -- Forever</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[51])">Experience -- Blank Slate</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[52])">Expectation -- Surprise</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[53])">Consciousness -- Unawareness</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[54])">Reincarnation -- Rebirth</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[55])">Sympathy -- Unfamiliar</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[56])">Sympathy -- Empathy</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[57])">Empathy -- Unfamiliar</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[58])">Unknown -- Unfamiliar</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[59])">Foreign -- Culture</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[60])">Home -- Lost</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[61])">Thought -- Action</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[62])">Shared -- Individual</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[63])">Erased -- Wiped</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[64])">Idea -- Act</button>
+      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[65])">Collaboration -- Act</button>
+    </div>
+
+    <div style="position: absolute; top: 750px">
+    <p style="position: absolute; left: 550px">Simplifier</p>
+    <canvas id="simplifier" width="700" height="150"></canvas>
+    <p style="position: absolute; top:55px; left: 330px" id="s1"></p>
+    <p style="position: absolute; top:55px; left: 830px" id="s2"></p>
+    
+    <div style="position: absolute; left: 1000px">
+    <p>Elements</p>
+    <select size="5" id="power" onchange="simplify()" style="position: absolute; left: 40px">
+      <option class="elementSelect" name="Light" value="light">Light</option>
+      <option class="elementSelect" name="Dark" value="dark">Dark</option>
+      <option class="elementSelect" value="energy">Energy</option>
+      <option class="elementSelect" value="matter">Matter</option>
+
+      <option class="elementSelect" value="space-time" e1="space" e2="time" selectCont="st">Space-Time</option>
+      
+      <option class="elementSelect" value="electrostatic_attraction">Electrostatic Attraction</option>
+      <option class="elementSelect" value="gravity">Gravity</option>
+      <option class="elementSelect" value="force" e1="push" e2="pull" selectCont="pp">Force</option>
+      <option class="elementSelect" value="push">Push</option>
+      <option class="elementSelect" value="pull">Pull</option>
+      <option class="elementSelect" value="space">Space</option>
+      <option class="elementSelect" value="time">Time</option>
+      <option class="elementSelect" value="fast">Fast</option>
+      <option class="elementSelect" value="slow">Slow</option>
+      <option class="elementSelect" value="expand">Expand</option>
+      <option class="elementSelect" value="compress">Compress</option>
+      <option class="elementSelect" value="heat" e1="hot" e2="cold" selectCont="hc">Heat</option>
+      <option class="elementSelect" value="spark" e1="positive" e2="negative" selectCont="pn">Spark</option>
+      <option class="elementSelect" value="reflection">Reflection</option>
+      <option class="elementSelect" value="invisible">Invisible</option>
+      <option class="elementSelect" value="hot">Hot</option>
+      <option class="elementSelect" value="cold">Cold</option>
+      <option class="elementSelect" value="positive">Positive</option>
+      <option class="elementSelect" value="negative">Negative</option>
+      <option class="elementSelect" value="electricity">Electricity</option>
+      <option class="elementSelect" value="teraforming">Teraforming</option>
+      <option class="elementSelect" value="fire">Fire</option>
+      <option class="elementSelect" value="wind">Wind</option>
+      <option class="elementSelect" value="magma">Magma</option>
+      <option class="elementSelect" value="ice">Ice</option>
+      <option class="elementSelect" value="plasma">Plasma</option>
+      <option class="elementSelect" value="flicker flame" e1="static" e2="dynamic" selectCont="sd">Flicker Flame</option>
+      <option class="elementSelect" value="clouds">Clouds</option>
+      <option class="elementSelect" value="ash">Ash</option>
+      <option class="elementSelect" value="storm">Storm</option>
+      <option class="elementSelect" value="fog">Fog</option>
+      <option class="elementSelect" value="dust">Dust</option>
+      <option class="elementSelect" value="smoke">Smoke</option>
+      <option class="elementSelect" value="dew">Dew</option>
+      <option class="elementSelect" value="mist">Mist</option>
+      <option class="elementSelect" value="climate">Climate</option>
+      <option class="elementSelect" value="weather pattern">Weather Pattern</option>
+      <option class="elementSelect" value="color">Color</option>
+      <option class="elementSelect" value="sound">Sound</option>
+      <option class="elementSelect" value="presence">Presence</option>
+      <option class="elementSelect" value="absence">Absence</option>
+      <option class="elementSelect" value="water">Water</option>
+      <option class="elementSelect" value="earth">Earth</option>
+      <option class="elementSelect" value="dry">Dry</option>
+      <option class="elementSelect" value="emptiness" e1="contained" e2="released" selectCont="cr">Emptiness</option>
+      <option class="elementSelect" value="contained">Contained</option>
+      <option class="elementSelect" value="released">Released</option>
+      <option class="elementSelect" value="order">Order</option>
+      <option class="elementSelect" value="chaos">Chaos</option>
+      <option class="elementSelect" value="life">Life</option>
+      <option class="elementSelect" value="death">Death</option>
+      <option class="elementSelect" value="fire rain">Fire Rain</option>
+      <option class="elementSelect" value="tornado">Tornado</option>
+      <option class="elementSelect" value="humidity">Humidity</option>
+      <option class="elementSelect" value="haze">Haze</option>
+      <option class="elementSelect" value="animated husk">Animated Husk</option>
+      <option class="elementSelect" value="intangible spirit">Intangible Spirit</option>
+      <option class="elementSelect" value="kamikaze">Kamikaze</option>
+      <option class="elementSelect" value="birth">Birth</option>
+      <option class="elementSelect" value="many">Many</option>
+      <option class="elementSelect" value="none">None</option>
+      <option class="elementSelect" value="pressure">Pressure</option>
+      <option class="elementSelect" value="vacuum">Vacuum</option>
+      <option class="elementSelect" value="singularity">Singularity</option>
+      <option class="elementSelect" value="void">Void</option>
+      <option class="elementSelect" value="random">Random</option>
+      <option class="elementSelect" value="pattern">Pattern</option>
+      <option class="elementSelect" value="technicolor">Technicolor</option>
+      <option class="elementSelect" value="monochrome">Monochrome</option>
+      <option class="elementSelect" value="layered noise">Layered Noise</option>
+      <option class="elementSelect" value="single sound">Single Sound</option>
+      <option class="elementSelect" value="hearing">Hearing</option>
+      <option class="elementSelect" value="deaf">Deaf</option>
+      <option class="elementSelect" value="sight">Sight</option>
+      <option class="elementSelect" value="blind">Blind</option>
+      <option class="elementSelect" value="blur">Blur</option>
+      <option class="elementSelect" value="image">Image</option>
+      <option class="elementSelect" value="noise">Noise</option>
+      <option class="elementSelect" value="speech">Speech</option>
+      <option class="elementSelect" value="distance">Distance</option>
+      <option class="elementSelect" value="location">Location</option>
+      <option class="elementSelect" value="timeline">Timeline</option>
+      <option class="elementSelect" value="present">Present</option>
+      <option class="elementSelect" value="past">Past</option>
+      <option class="elementSelect" value="future">Future</option>
+      <option class="elementSelect" value="familiar">Familiar</option>
+      <option class="elementSelect" value="new">New</option>
+      <option class="elementSelect" value="memory">Memory</option>
+      <option class="elementSelect" value="prediction">Prediction</option>
+      <option class="elementSelect" value="continuation">Continuation</option>
+      <option class="elementSelect" value="forever">Forever</option>
+      <option class="elementSelect" value="experience" e1="thought" e2="action" selectCont="ta">Experience</option>
+      <option class="elementSelect" value="blank slate">Blank Slate</option>
+      <option class="elementSelect" value="expectation">Expectation</option>
+      <option class="elementSelect" value="surprise">Surprise</option>
+      <option class="elementSelect" value="consciousness">Consciousness</option>
+      <option class="elementSelect" value="unawareness">Unawareness</option>
+      <option class="elementSelect" value="reincarnation">Reincarnation</option>
+      <option class="elementSelect" value="rebirth">Rebirth</option>
+      <option class="elementSelect" value="sympathy">Sympathy</option>
+      <option class="elementSelect" value="empathy">Empathy</option>
+      <option class="elementSelect" value="unfamiliarity">Unfamiliarity</option>
+      <option class="elementSelect" value="unknown">Unknown</option>
+      <option class="elementSelect" value="culture">Culture</option>
+      <option class="elementSelect" value="foreign">Foreign</option>
+      <option class="elementSelect" value="home">Home</option>
+      <option class="elementSelect" value="lost">Lost</option>
+      <option class="elementSelect" value="shared">Shared</option>
+      <option class="elementSelect" value="individual">Individual</option>
+      <option class="elementSelect" value="wiped">Wiped</option>
+      <option class="elementSelect" value="erased">Erased</option>
+      <option class="elementSelect" value="language">Language</option>
+      <option class="elementSelect" value="collaboration">Collaboration</option>
+      <option class="elementSelect" value="idea">Idea</option>
+      <option class="elementSelect" value="act">Act</option>
+    </select>
+    </div>
+    <div style="position: absolute; left: 290px; top: 200px; border: 1px solid white; padding: 20px; width: 665px">
+      <p id="elementTitle" style="text-align: center"></p>
+      <p id="elementInfo" style="font-size: 1rem"></p>
+    </div>
+    </div>
+    <audio id="discovery">
+      <source src="shortChimes.wav" type="audio/wav">
+    </audio>
+    <script type="text/javascript" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\binaries.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <title>Go for a Walk</title>
+
+    <link href="fancy.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+
+  <body style="background: url('file:///C:/Users/pcrow/Documents/Website/BiblioTech Website/Walking/library.png') no-repeat center center fixed; background-size: 100% 100%;">
+
+
+    <p class="walktext" style="position: absolute; top: 90%"><a href="walk2.html">Leave</a></p>
+    <div style="position: absolute; top: 50%; left: 50%; width: 20px; height: 50px; border: solid 2px black"><img id="shelf" onclick="grabBook('blackDefault')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Walking\black.png"/>
+    </div>
+    <img id="bookDefault" style="display: none" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Walking\black.png"/>
+
+    <div id="bookHolder"><img id="imageHolder" src="">
+    </div>
+		<div style="display: none">
+		<ul>
+        		<li class="book"><img id="Peregrine" onclick="grabBook('Peregrine')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCPeregrine.png"></li>
+
+        		<li class="book"><img id="EastOfEden" onclick="grabBook('EastOfEden')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCEast.png"></li>
+
+        		<li class="book"><img id="Dune" onclick="grabBook('Dune')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCDune.png"></li>
+
+        		<li class="book"><img id="Minutes" onclick="grabBook('Minutes')" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Book Spines\Cropped\PSBCMinutes.png"></li>
+
+      		</ul>
+                <img id="blackDefault" style="display: none" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Walking\black.png" />
+		</div>
+    <script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\walk.js"></script>
+  </body>
+
+</html>

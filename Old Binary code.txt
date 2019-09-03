@@ -1,0 +1,47 @@
+<div style="position: relative">
+
+      <div style="position: absolute; top: 40px; left: 25%">
+        <script>
+          document.write(q2f);
+        </script>
+      </div>
+
+      <div style="position: absolute; top: 31px; left: 50%; z-index:0">
+        <script>document.write(ypf);</script>
+        <script>document.write(ynf);</script>
+      </div>
+
+      <div style="position: absolute; top: 40px; left: 75%">
+        <script>
+          document.write(q1f);
+        </script>
+      </div>
+
+      <div style="position: absolute; left: 25%; top: 270px">
+        <script>document.write(xnf);</script>
+      </div>
+      <div style="position: absolute; left: 31.5%; top: 280px; z-index:1">
+        <hr width="500" size="3">      <!--HORIZONTAL LINE-->
+      </div>
+      <div style="position: absolute; left: 75%; top: 270px">
+        <script>document.write(ypf);</script>
+      </div>
+
+      <div style="position: absolute; top: 550px; left: 25%">
+        <script>
+          document.write(q3f);
+        </script>
+      </div>
+      <div style="position: absolute; top: 550px; left: 75%">
+        <script>
+          document.write(q4f);
+        </script>
+      </div>
+      
+    </div>
+    <div class="diagL"></div>
+    <div class="diagR"></div>
+    <div class="topline"></div>
+    <div class="bottomline"></div>
+    <div class="leftline"></div>
+    <div class="rightline"></div>

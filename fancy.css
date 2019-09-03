@@ -1,0 +1,418 @@
+.home
+{
+
+  background-image: url(http://4.bp.blogspot.com/-zmDuWZr9uzk/UT1ZTsNtS7I/AAAAAAAABY8/ki3g0Q4SphY/s1600/confetti.gif);
+
+  
+  /*background-color: #FF6CF3;*/
+
+  background-repeat: no-repeat;
+
+  background: linear-gradient(#FF6CF3 0,#2FD3FF 100%) fixed;
+
+  color: navy;
+
+  font-family: courier;
+
+  font-variant: small-caps;
+
+  margin: 15px;
+
+  min-height: 100%;
+
+}
+
+
+.front
+{
+ 
+  /*display: block;*/
+
+  background-color: blue;
+
+  background-image: url("http://1.bp.blogspot.com/_jx-KCnvjTuI/TJy9pIeeONI/AAAAAAAAU58/pA703WheTtQ/s400/Nebulabrot-large.jpg");
+
+  background-size: cover;
+
+  color: white;
+
+  font-family: sans-serif;
+
+  font-variant: small-caps;
+
+  margin: 20px;
+
+
+}
+
+#archives{
+    background: linear-gradient(#FFB000 0, #FFB0FF 100%) fixed;
+}
+.about
+{
+
+  background-color: #4b0082;
+
+  font-family: monaco;
+
+  font-variant: small-caps;
+
+  color: antiquewhite;
+
+  margin: 15px;
+
+}
+
+.journal
+{
+
+  border: 5px solid white;
+
+  padding: 5px;
+
+}
+
+.story
+{
+
+  background-color: #F3FE9F;
+
+}
+
+
+.diagL{
+  content:"";
+  position:absolute;
+  border-top:1px solid white;
+  left: 33%;
+  top: 150px;
+  width:700px;
+  transform: rotate(45deg);
+  transform-origin: 0% 0%;
+  z-index:3;
+  min-height: 100%;
+}
+
+.diagR{
+  content:"";
+  position:absolute;
+  border-top:1px solid white;
+  left: 70%;
+  top: 150px;
+  width:700px;
+  transform: rotate(135deg);
+  transform-origin: 0% 0%;
+  z-index:4;
+  min-height: 100%;
+}
+
+.topline{
+  position: absolute;
+  border-top: 1px solid white;
+  left: 33%;
+  top: 150px;
+  width: 468px;
+}
+.bottomline{
+  position: absolute;
+  border-top: 1px solid white;
+  left: 33%;
+  top: 650px;
+  width: 468px;
+}
+.leftline{
+  position: absolute;
+  border-top: 1px solid white;
+  transform: rotate(90deg);
+  left: 14.3%;
+  top: 385px;
+  width: 470px;
+}
+.rightline{
+  position: absolute;
+  border-top: 1px solid white;
+  transform: rotate(90deg);
+  left: 51.4%;
+  top: 385px;
+  width: 470px;
+}
+
+.diagL a:hover{
+  border-top: 1px solid green;
+}
+
+#Can{
+  position: absolute;
+  left: 31.5%;
+  top: 150px;
+}
+
+p
+{
+
+  text-indent: 30px;
+
+  color: white;
+
+  font-family: courier;
+
+  font-size: 1.75rem;
+
+}
+
+/*ul
+{
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+}*/
+
+li
+{
+
+  font-family: garamond, times;
+
+  font-size: 20px;
+
+  float: left;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  list-style-type: none;
+
+}
+
+#hudButton
+{
+
+  padding: 12px;
+
+  background-color: #81FFCD;
+
+}
+#hudButton a{
+  text-decoration: none;
+}
+.menu
+{
+
+  font-family: serif;
+
+  font-size: 1.5rem;
+
+  display: block;
+
+  display: flex;
+
+  background-color: inherit;
+
+  justify-content: center;
+
+}
+
+.navbar
+{
+
+ padding:0;
+
+  margin: 0;
+
+}
+
+.navbar-item
+{
+
+ float:left;
+
+}
+
+.navbar-item a 
+{
+
+  display: block;
+
+  color: green;
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none; 
+}
+
+.navbar-item a:hover
+{
+
+  background-color: #2195C4;
+}
+
+
+.gallery{
+
+  display: block;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  border: 3px dotted green;
+
+  padding: 6px;
+
+}
+
+
+.caption
+{
+
+  text-align: center;
+
+  color: white;
+
+  font-size: 12px;
+
+}
+
+
+#heading
+{
+
+  font-weight: bold; 
+
+   font-size:5rem;
+
+}
+
+.pOriginal
+{
+
+  
+  font-size: 1.75rem;
+
+}
+
+
+#home-quote
+{
+
+  color: black;
+
+  font-style: italic;
+
+  right: 300px;
+
+  background-color: white;
+
+  margin: 0;
+
+  padding: 20px;
+
+}
+
+#home-button
+{
+
+
+  background-color: antiquewhite;
+
+  padding: 5px;
+
+  text-decoration: none;
+}
+
+
+#summoned
+{
+
+  margin: 15px;
+
+  height: 100%;
+
+  -webkit-background-size: cover;
+
+  background: -webkit-linear-gradient(#002AFF,#EE2AFF);
+
+}
+
+
+
+.walk
+{
+  background-color: black;
+}
+.walk2
+{
+  background: url("file:///C:/Users/pcrow/Documents/Website/BiblioTech%20Website/Walking/SmallWhiteHousePixel.png") no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+.walktext
+{
+  position: absolute;
+  top: 280px;
+  left: 45%;
+}
+.walktext a
+{
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+}
+.walktext a:hover
+{
+  background-color: rgb(200,200,200,0.4);
+}
+.element
+{
+  color: white;
+}
+
+.book
+{
+  float: left;
+  list-style-type: none;
+}
+#bookHolder{
+  position: fixed;
+  top: 80%;
+  left: 90%;
+  border: solid 1px grey;
+  width: 100px;
+  height: 200px;
+}
+
+.contrButton{
+  border: none;
+  background-color: inherit;
+  color: white; 
+  display: none; 
+  text-indent: 10px;
+}
+.contrButton:active{
+  background-color: #2546B2;
+}
+.contrAnchor{
+  color: white;
+}
+.contrAnchor:visited{
+  color: #FE9335;
+}
+.contrButton:focus{
+  background-color: #2F40D7;
+}
+
+#simplifier{
+  position: absolute;
+  left: 275px;
+  margin: 20px;
+  border: solid 1px white;
+}
+.elementSelect{
+  display: none;
+}

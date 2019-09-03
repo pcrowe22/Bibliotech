@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bit Surfer</title>
+    <link href="game.css" rel="stylesheet" type="text/css" media="all">
+    <script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\jquery-3.4.1.min.js"></script>
+  </head>
+  <body style="background: black">
+    <img id="logo" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\OmniRay.png" style="position: absolute; height: 50%; width: 50%; left: 25%; top: 25%; display: none">
+
+	<div style="position: absolute; top: 35%; left: 46%">
+      <h1 class="gameText" id="gtext1" style="position: relative; display: none">Language</h1>
+       <div>
+		<label class="checkChoice" id="english">English<input type="radio"></label>
+	   </div>
+	   <div>
+		<label class="checkChoice" id="spanish">Spanish<input type="radio"></label>
+	   </div>
+	   <div>
+	     <p class="gameText" id="notSupported" style="display: none">We're sorry, but there are no builds of this game supported in that language.</p>
+	   </div>
+	   
+	  <h1 class="gameText1" id="gtext2">Brightness</h1>
+	  <img id="manta" src="C:\Users\pcrow\Documents\Website\BiblioTech Website\Game\mantaRay.png" style="position: absolute; height: 100%; width: 65%; display: none; left: -80%; top: -0.2%"/>
+	    <div>
+		  <p class="gameText1">Adjust the brightness until the manta ray is just barely visible</p>
+		</div>
+		<div>
+		 <input id="brightSlide" class="slider" style="display: none; width: 120%" type="range" min="0" max="200" value="100" oninput="changeBright()" onchange="changeBright()"/>
+		</div>
+	</div>
+
+    <script src="C:\Users\pcrow\Documents\Website\BiblioTech Website\JavaScript\game.js"></script>
+  </body>
+</html>
