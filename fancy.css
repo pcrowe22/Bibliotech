@@ -1,82 +1,43 @@
-.home
-{
-
+.home {
   background-image: url(http://4.bp.blogspot.com/-zmDuWZr9uzk/UT1ZTsNtS7I/AAAAAAAABY8/ki3g0Q4SphY/s1600/confetti.gif);
-
-  
-  /*background-color: #FF6CF3;*/
-
   background-repeat: no-repeat;
-
   background: linear-gradient(#FF6CF3 0,#2FD3FF 100%) fixed;
-
   color: navy;
-
   font-family: courier;
-
   font-variant: small-caps;
-
   margin: 15px;
-
   min-height: 100%;
-
 }
 
-
-.front
-{
- 
-  /*display: block;*/
-
+.front {
   background-color: blue;
-
   background-image: url("http://1.bp.blogspot.com/_jx-KCnvjTuI/TJy9pIeeONI/AAAAAAAAU58/pA703WheTtQ/s400/Nebulabrot-large.jpg");
-
   background-size: cover;
-
   color: white;
-
   font-family: sans-serif;
-
   font-variant: small-caps;
-
   margin: 20px;
-
-
 }
 
-#archives{
+#archives {
     background: linear-gradient(#FFB000 0, #FFB0FF 100%) fixed;
 }
-.about
-{
 
+.about {
   background-color: #4b0082;
-
   font-family: monaco;
-
   font-variant: small-caps;
-
   color: antiquewhite;
-
   margin: 15px;
-
 }
 
-.journal
-{
-
+.journal {
   border: 5px solid white;
-
   padding: 5px;
-
 }
 
-.story
-{
-
+.story {
   background-color: #F3FE9F;
-
 }
 
 
@@ -128,7 +89,7 @@
   top: 385px;
   width: 470px;
 }
-.rightline{
+.rightline {
   position: absolute;
   border-top: 1px solid white;
   transform: rotate(90deg);
@@ -137,85 +98,48 @@
   width: 470px;
 }
 
-.diagL a:hover{
+.diagL a:hover {
   border-top: 1px solid green;
 }
 
-#Can{
+#Can {
   position: absolute;
   left: 31.5%;
   top: 150px;
 }
 
-p
-{
-
+p {
   text-indent: 30px;
-
   color: white;
-
   font-family: courier;
-
   font-size: 1.75rem;
-
 }
 
-/*ul
-{
-
-  list-style-type: none;
-
-  margin: 0;
-
-  padding: 0;
-
-  overflow: hidden;
-
-}*/
-
-li
-{
-
+li {
   font-family: garamond, times;
-
   font-size: 20px;
-
   float: left;
-
   padding: 0;
-
   background-color: transparent;
-
   list-style-type: none;
-
 }
 
-#hudButton
-{
-
+#hudButton {
   padding: 12px;
-
   background-color: #81FFCD;
-
 }
-#hudButton a{
+
+#hudButton a {
   text-decoration: none;
 }
-.menu
-{
 
+.menu {
   font-family: serif;
-
   font-size: 1.5rem;
-
   display: block;
-
   display: flex;
-
   background-color: inherit;
-
   justify-content: center;
-
 }
 
 .navbar {
@@ -227,8 +151,7 @@ li
   float:left;
 }
 
-.navbar-item a 
-{
+.navbar-item a {
   display: block;
   color: green;
   text-align: center;
@@ -243,131 +166,81 @@ li
 }
 
 
-.gallery{
-
+.gallery {
   display: block;
-
   margin-left: auto;
-
   margin-right: auto;
-
   border: 3px dotted green;
-
   padding: 6px;
-
 }
 
-
-.caption
-{
-
+.caption {
   text-align: center;
-
   color: white;
-
   font-size: 12px;
-
 }
 
-
-#heading
-{
-
+#heading {
   font-weight: bold; 
-
-   font-size:5rem;
-
+  font-size:5rem;
 }
 
-.pOriginal
-{
-
-  
+.pOriginal {
   font-size: 1.75rem;
-
 }
 
-
-#home-quote
-{
-
+#home-quote {
   color: black;
-
   font-style: italic;
-
   right: 300px;
-
   background-color: white;
-
   margin: 0;
-
   padding: 20px;
-
 }
 
-#home-button
-{
-
-
+#home-button {
   background-color: antiquewhite;
-
   padding: 5px;
-
   text-decoration: none;
 }
 
 
-#summoned
-{
-
+#summoned {
   margin: 15px;
-
   height: 100%;
-
   -webkit-background-size: cover;
-
   background: -webkit-linear-gradient(#002AFF,#EE2AFF);
-
 }
 
-
-
-.walk
-{
+.walk {
   background-color: black;
 }
-.walk2
-{
+.walk2 {
   background: url("file:///C:/Users/pcrow/Documents/Website/BiblioTech%20Website/Walking/SmallWhiteHousePixel.png") no-repeat center center fixed;
   background-size: 100% 100%;
 }
-.walktext
-{
+.walktext {
   position: absolute;
   top: 280px;
   left: 45%;
 }
-.walktext a
-{
+.walktext a {
   text-decoration: none;
   color: white;
   padding: 14px 16px;
 }
-.walktext a:hover
-{
+.walktext a:hover {
   background-color: rgb(200,200,200,0.4);
 }
-.element
-{
+.element {
   color: white;
 }
 
-.book
-{
+.book {
   float: left;
   list-style-type: none;
 }
-#bookHolder{
+#bookHolder {
   position: fixed;
   top: 80%;
   left: 90%;
@@ -376,7 +249,7 @@ li
   height: 200px;
 }
 
-.contrButton{
+.contrButton {
   border: none;
   background-color: inherit;
   color: white; 
