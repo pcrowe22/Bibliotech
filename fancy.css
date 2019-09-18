@@ -233,7 +233,8 @@ li
   color: green;
   text-align: center;
   padding: 14px 16px;
-  border-bottom-style: 3px solid white;
+  border-bottom-color: white;
+  botder-bottom-width: thick;
   text-decoration: none; 
 }
 
