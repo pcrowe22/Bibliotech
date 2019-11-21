@@ -19,7 +19,7 @@ var Energy = {
 " forever-present. Forged from the purest of Light, Energy can be thought of as the activity of everything. Masters of Energy are considered the"+
 " most powerful of Channelers, as no one has been able to control a layer-0 element, Light or Dark. Energy Channelers are capable of forcing everything to do anything."
 };
-var Space-Time = {
+var SpaceTime = {
   name: "Space-Time",
   bio: "Beyond the elements of construction, the first planar element was created upon the First Convergence of Light and Dark. Matter and Energy"+
 " occupied the space that was created by Space-Time. Many Space-Times can exist, and currently do. Space-Time has seldom been manipulated"+
@@ -35,7 +35,7 @@ var Matter = {
 " their fusion, Matter came into existence as objects with qualities. These were completely stationary in nature until Energy manifested "+
 " itself within Matter and forced it to move. Matter Channelers have complete control over what defines an object and its properties."
 };
-var Electrostatic-Attraction = {
+var ElectrostaticAttraction = {
   name: "Electrostatic-Attraction",
   bio: "Simplified down to the atomic components, the domain Electromagnetic-Attraction spans to the atomic proton and electron."+
   " As a child element of Energy and Matter, Electrostatic-Attraction can be classified as a force, though more on the transparent, micro level." +
@@ -63,7 +63,7 @@ var axes = [ {
 	children: ["Energy -- Matter", "Space-Time"],
 	layer: "0",
 	graph: [1,1,0,0,0,0],
-	powers: [Light, Energy, Light, Space-Time, Dark, Matter, Dark, Space-Time],
+	powers: [Light, Energy, Light, SpaceTime, Dark, Matter, Dark, SpaceTime],
 },
 {
   name: "Energy -- Matter ++ Energy -- Matter",
@@ -73,7 +73,7 @@ var axes = [ {
 	children: ["Electrostatic-Attraction -- Gravity", "Force"],
 	layer: "1",
 	graph: [1,1,0,0,0,0],
-	powers: [Energy, Electrostatic-Attraction, Energy, Force, Matter, Gravity, Matter, Force]
+	powers: [Energy, ElectrostaticAttraction, Energy, Force, Matter, Gravity, Matter, Force]
 };
 var ppst = {
 	ID1: "pp",
