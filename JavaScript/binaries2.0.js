@@ -74,8 +74,8 @@ var axes = [ {
 	layer: "1",
 	graph: [1,1,0,0,0,0],
 	powers: [Energy, ElectrostaticAttraction, Energy, Force, Matter, Gravity, Matter, Force]
-};
-var ppst = {
+}];
+/*var ppst = {
 	ID1: "pp",
 	ID2: "st",
 	parent: "ldld",
@@ -523,7 +523,7 @@ var sita = {
 	p6: "Idea",
 	p7: "Thought",
 	p8: "Language"
-} ];
+} ];*/
 /*var csmn = {
   ID1: "cs",
   ID2: "mn",
