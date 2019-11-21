@@ -24,7 +24,7 @@ var SpaceTime = {
   bio: "Beyond the elements of construction, the first planar element was created upon the First Convergence of Light and Dark. Matter and Energy"+
 " occupied the space that was created by Space-Time. Many Space-Times can exist, and currently do. Space-Time has seldom been manipulated"+
 " and it is highly encouraged to avoid study involved with it. Magic exists because of our position in Space-Time, and toying with it could lead to the dissolution of magic completely."+
-" Space-Time is a duplex element, thought to contain Space and Time within one representative object, Space-Time."
+" Space-Time is a duplex element, thought to contain Space and Time within one representative object, Space-Time.",
   hiddenContr: "Space -- Time",
   power1: "Space",
   power2: "Time"
