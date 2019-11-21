@@ -687,7 +687,6 @@ function chooseAxes(potAxes){
 			for (var j=0; j<document.getElementById("power").length; j++){
 				if (document.getElementById("power").options[j].value == newAxes.p3.toLowerCase()){
 					if (document.getElementById("power").options[j].style.display == "none"){
-						document.write("functioning");
 						document.getElementById("discovery").play();
 					}
 					document.getElementById("power").options[j].style.display = "block";

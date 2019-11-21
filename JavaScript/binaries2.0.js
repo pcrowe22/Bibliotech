@@ -1,40 +1,79 @@
 
 var htmlContr = document.getElementsByClassName("contrButton");
-//these lists are synced
+
+var Light = {
+  name: "Light",
+  bio: "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
++" Color statitians classify light's representative color, white, as the combination of all colors."
++"Similarly, it can be said that light as an element is the combination of all elements, thus being both the alpha and omega of elemental abilities."
+};
+var Dark = {
+  name: "Dark",
+  bio: "Dark, the opposite of Light, gave what many cultures consider to be the Origin Element a contrary to compare with, thus making the element"+
+" more of a gradient than an absolute. Dark gives variability to Light. Or Light gives variability to Dark. One cannot vary without the other." +
+" As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure."
+};
+var Energy = {
+  name: "Energy",
+  bio: "In its pure form, Energy is action. Energy is movement. Energy is dynamicism. Without Energy, the multiverse would remain stationary in the"+
+" forever-present. Forged from the purest of Light, Energy can be thought of as the activity of everything. Masters of Energy are considered the"+
+" most powerful of Channelers, as no one has been able to control a layer-0 element, Light or Dark. Energy Channelers are capable of forcing everything to do anything."
+};
+var Space-Time = {
+  name: "Space-Time",
+  bio: "Beyond the elements of construction, the first planar element was created upon the First Convergence of Light and Dark. Matter and Energy"+
+" occupied the space that was created by Space-Time. Many Space-Times can exist, and currently do. Space-Time has seldom been manipulated"+
+" and it is highly encouraged to avoid study involved with it. Magic exists because of our position in Space-Time, and toying with it could lead to the dissolution of magic completely."+
+" Space-Time is a duplex element, thought to contain Space and Time within one representative object, Space-Time."
+  hiddenContr: "Space -- Time",
+  power1: "Space",
+  power2: "Time"
+};
+var Matter = {
+  name: "Matter",
+  bio: "Matter's domain extends to every existable object on the tangible plane. Light and Dark came to us from intangible planes, and with "+
+" their fusion, Matter came into existence as objects with qualities. These were completely stationary in nature until Energy manifested "+
+" itself within Matter and forced it to move. Matter Channelers have complete control over what defines an object and its properties."
+};
+var Electrostatic-Attraction = {
+  name: "Electrostatic-Attraction",
+  bio: "Simplified down to the atomic components, the domain Electromagnetic-Attraction spans to the atomic proton and electron."+
+  " As a child element of Energy and Matter, Electrostatic-Attraction can be classified as a force, though more on the transparent, micro level." +
+  " Many objects are influenced by Electrostatic-Attraction, despite not having the traditional electric/magnetic properties like conductance. With control over Electrostatic-Attraction, one can make an object a conductor."
+};
+var Force = {
+  name: "Force",
+  bio: "Force is the umbrella term given to any element that branches from Force or its siblings Gravity and Electrostatic-Attraction." +
+  " Many warriors and sages have attempted mastery over Force. While extremely versatile, it is also very dangerous. With so many magicians"+
+  " studying Force, there have been many cases where magicians fall to insanity, thought to be caused by Force's high proximity to the original elements." +
+  " Others speculate that too much study in Gravity and Electrostatic-Attraction could cause the same insanity, but too few people have mastered either field to conduct any conclusions yet."
+};
+var Gravity = {
+  name: "Gravity",
+  bio: "Gravity can be thought of the force acting between macro atoms. The more the Matter, the stronger the Gravity. That is why"+
+  " it is thought that Gravity is a combination of Matter and Matter. Gravity has also been recorded to manipulate Time, in some cases." +
+  " This speaks to the ever-incredible quality of the elements, and how one could master many things from just one field."
+};
 
 var axes = [ {
-  **name: "ldld",
-	ID1: "ld",
-	ID2: "ld",
+  name: "Light -- Dark ++ Light -- Dark",
+	ID1: "Light -- Dark",
+	ID2: "Light -- Dark",
 	parent: "none",
-	children: ["em", "space-time"],
+	children: ["Energy -- Matter", "Space-Time"],
 	layer: "0",
-	*graph: "rd_ld",
-	*p1: "Light",
-	p2: "Energy",
-	p3: "Light",
-	p4: "Space-Time",
-	p5: "Dark",
-	p6: "Matter",
-	p7: "Dark",
-	*p8: "Space-time"
+	graph: [1,1,0,0,0,0],
+	powers: [Light, Energy, Light, Space-Time, Dark, Matter, Dark, Space-Time],
 },
 {
-  name: "emem",
-	ID1: "em",
-	ID2: "em",
+  name: "Energy -- Matter ++ Energy -- Matter",
+	ID1: "Energy -- Matter",
+	ID2: "Energy -- Matter",
 	parent: "ldld",
-	children: ["eg", "force"],
+	children: ["Electrostatic-Attraction -- Gravity", "Force"],
 	layer: "1",
-	graph: "rd_ld",
-	p1: "Energy",
-	p2: "Electrostatic Attraction",
-	p3: "Energy",
-	p4: "Force", 
-	p5: "Matter",
-	p6: "Gravity",
-	p7: "Matter",
-	p8: "Force"
+	graph: [1,1,0,0,0,0],
+	powers: [Energy, Electrostatic-Attraction, Energy, Force, Matter, Gravity, Matter, Force]
 };
 var ppst = {
 	ID1: "pp",
@@ -500,6 +539,10 @@ document.getElementById("power").options[0].setAttribute("info",
 "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
 +" Color statitians classify light's representative color, white, as the combination of all colors."
 +"Similarly, it can be said that light as an element is the combination of all elements, thus being both the alpha and omega of elemental abilities.");
+document.getElementById("power").options[1].setAttribute("info,
+"Dark, the opposite of Light, gave what many cultures consider to be the Origin Element a contrary to compare with, thus making the element"+
+" more of a gradient than an absolute. Dark gives variability to Light. Or Light gives variability to Dark. One cannot vary without the other." +
+" As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure.");
 
 var circles = document.getElementById("dots");
 var circtx = circles.getContext("2d");
@@ -577,7 +620,7 @@ function drawrb(){
       rb.lineTo(500,500);
       rb.stroke();
 }
-var listOfDraws = [drawld(), drawrd(), drawtb(), drawbb(), drawrb(), drawlb()];
+var listOfDraws = [drawld(), drawrd(), drawtb(), drawbb(), drawlb(), drawrb()];
 
 function drawContraries(newAxes){
   var ctx = c.getContext("2d");
@@ -592,44 +635,6 @@ function drawContraries(newAxes){
 	for (var i=0; i<newAxes.powers.length; i++){ 
     htmlAxes[i]=newAxes.powers[i];
 	}
-   
-  //for adding the children properties of the axes to the contr list so you don't have to do it manually
-  for (var i=0; i<newAxes.children.length; i++) {
-    var included = false;
-    for (var j=0; j<contr.length; j++) {
-      if (newAxes.children[i].localeCompare(contr[j]) == 0) {
-        included = true;
-      }
-    }
-    if (included == false) {
-      //add contrary to the hidden list
-      contr.push(newAxes.children[i]);
-      //physically add a new button for that contrary
-      var newButton = document.createElement("button");
-      newButton.innerHTML = newAxes.displayName;
-      newButton.classList.add("contrButton");
-      newButton.onclick = assignPotID(potentialAxes, children[i]);
-      htmlContr.push(newButton);
-      document.getElementById("buttonDiv").appendChild(newButton);
-    }
-  }
-  //for adding an elemental power to the list of select options
-  var selectList = document.getElementById("power").options;
-  for (var i=0; i<newAxes.powers.length; i++) {
-    var included = false;
-    for (var j=0; j<selectList.length; j++) {
-      if (newAxes.powers[i].toLowerCase().localeCompare(selectList[i=j].value) == 0) {
-        included = true;
-      }
-    }
-    if (included == false) {
-      var newOption = document.createElement("option");
-      newOption.text = newAxes.powers[i];
-      newOption.value = newAxes.powers[i].toLowerCase();
-      newOption.classList.add("elementSelect");
-      document.getElementById("power").add(newOption);
-    }
-  }
 }
 
 var potentialAxes={ID1: "none",
@@ -670,18 +675,36 @@ function chooseAxes(potAxes){
 		if ((axes[i].name.startsWith(potentialAxes.ID1)&&axes[i].name.endsWith(potentialAxes.ID2))
 		|| (axes[i].name.startsWith(potentialAxes.ID2)&&axes[i].name.endsWith(potentialAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
 			newAxes=axes[i];
-			for (var j=0; j<contr.length; j++){				//goes through list of all contraries
-				if (newAxes.children.includes(contr[j])){		//checks to see if the contrary is also a child
-					htmlContr[j].style.display = "block";						//if it is, display the corresponding button
-				}
-			}
-			for (var j=0; j<document.getElementById("power").length; j++){
-        for (var k=0; k<newAxes.powers.length; k++) {
-          if (document.getElementById("power").options[j].value == newAxes.powers[k].toLowerCase()){
-            if (document.getElementById("power").options[j].style.display!="block"){
-              document.getElementById("discovery").play();
+			  //for adding the children properties of the axes to the contr list so you don't have to do it manually
+        for (var i=0; i<newAxes.children.length; i++) {
+          if (!contr.includes(newAxes.children[i]) {
+            //add contrary to the hidden list
+            contr.push(newAxes.children[i]);
+            //physically add a new button for that contrary
+            var newButton = document.createElement("button");
+            newButton.innerHTML = newAxes.children[i];
+            newButton.classList.add("contrButton");
+            newButton.onclick = assignPotID(potentialAxes, children[i]);
+            htmlContr.push(newButton);
+            document.getElementById("buttonDiv").appendChild(newButton);
+            document.getElementById("discovery").play(); 
+          }
+        }
+        //for adding an elemental power to the list of select options
+        var selectList = document.getElementById("power").options;
+        for (var i=0; i<newAxes.powers.length; i++) {
+          if (!selectList.includes(newAxes.powers[i]) {
+            var newOption = document.createElement("option");
+            newOption.text = newAxes.powers[i].name;
+            newOption.value = newAxes.powers[i].name.toLowerCase();
+            newOption.info = newAxes.powers[i].bio;
+            if (newAxes.powers[i].splittable == true) {
+              newOption.selectCont = newAxes.powers[i].hiddenContr;
+              newOption.e1 = newAxes.powers[i].power1;
+              newOption.e2 = newAxes.powers[i].power2;
             }
-            document.getElementById("power").options[j].style.display = "block";
+            newOption.classList.add("elementSelect");
+            document.getElementById("power").add(newOption);
           }
         }
 			}
@@ -714,30 +737,45 @@ function simplify(){
 	document.getElementById("s2").innerHTML=att2;
 	if (att1!=null){
 		drawsimp();
-		for (var i=0; i<contr.length; i++){				//goes through list of all contraries
-			if (sCont.includes(contr[i])){		//checks to see if the contrary is also the simplified contrary
-				if (htmlContr[i].style.display!="block"){
-					document.getElementById("discovery").play();
-				}
-				htmlContr[i].style.display = "block";					
-			}
+    if (!contr.includes(sCont)){		
+      contr.push(sCont);
+      var newButton = document.createElement("button");
+      newButton.innerHTML = sCont;
+      newButton.classList.add("contrButton");
+      newButton.onclick = assignPotID(sCont);
+      htmlContr.push(newButton);
+      document.getElementById("buttonDiv").appendChild(newButton);
+      document.getElementById("discovery").play();
 		}
-		for (var j=0; j<document.getElementById("power").length; j++){
-			if (document.getElementById("power").options[j].value == att1.toLowerCase()){
-				if (document.getElementById("power").options[j].style.display!="block"){
-					document.getElementById("discovery").play();
-				}
-				document.getElementById("power").options[j].style.display = "block";
-			}
-		}
-		for (var j=0; j<document.getElementById("power").length; j++){
-			if (document.getElementById("power").options[j].value == att2.toLowerCase()){
-				if (document.getElementById("power").options[j].style.display!="block"){
-					document.getElementById("discovery").play();
-				}
-				document.getElementById("power").options[j].style.display = "block";
-			}
-		}
+    var selectList = document.getElementById("power").options;
+    if (!selectList.includes(att1) {
+      var newOption = document.createElement("option");
+      newOption.text = att1;
+      newOption.value = att1.toLowerCase();
+      newOption.info = att1.bio;
+      if (att1.splittable == true) {
+        newOption.selectCont = att1.hiddenContr;
+        newOption.e1 = att1.power1;
+        newOption.e2 = att1.power2;
+      }
+      newOption.classList.add("elementSelect");
+      document.getElementById("power").add(newOption);
+      }
+    }
+    if (!selectList.includes(att2) {
+      var newOption = document.createElement("option");
+      newOption.text = att2;
+      newOption.value = att2.toLowerCase();
+      newOption.info = att2.bio;
+      if (att2.splittable == true) {
+        newOption.selectCont = att2.hiddenContr;
+        newOption.e1 = att2.power1;
+        newOption.e2 = att2.power2;
+      }
+      newOption.classList.add("elementSelect");
+      document.getElementById("power").add(newOption);
+      }
+    }
 	}
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
