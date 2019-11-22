@@ -25,6 +25,7 @@ var SpaceTime = {
 " occupied the space that was created by Space-Time. Many Space-Times can exist, and currently do. Space-Time has seldom been manipulated"+
 " and it is highly encouraged to avoid study involved with it. Magic exists because of our position in Space-Time, and toying with it could lead to the dissolution of magic completely."+
 " Space-Time is a duplex element, thought to contain Space and Time within one representative object, Space-Time.",
+  splittable = true;
   hiddenContr: "Space -- Time",
   power1: "Space",
   power2: "Time"
@@ -677,7 +678,7 @@ function chooseAxes(potAxes){
 			newAxes=axes[i];
 			  //for adding the children properties of the axes to the contr list so you don't have to do it manually
         for (var i=0; i<newAxes.children.length; i++) {
-          if (!contr.includes(newAxes.children[i]) {
+          if (!contr.includes(newAxes.children[i])) {
             //add contrary to the hidden list
             contr.push(newAxes.children[i]);
             //physically add a new button for that contrary
@@ -693,7 +694,7 @@ function chooseAxes(potAxes){
         //for adding an elemental power to the list of select options
         var selectList = document.getElementById("power").options;
         for (var i=0; i<newAxes.powers.length; i++) {
-          if (!selectList.includes(newAxes.powers[i]) {
+          if (!selectList.includes(newAxes.powers[i])) {
             var newOption = document.createElement("option");
             newOption.text = newAxes.powers[i].name;
             newOption.value = newAxes.powers[i].name.toLowerCase();
@@ -748,7 +749,7 @@ function simplify(){
       document.getElementById("discovery").play();
 		}
     var selectList = document.getElementById("power").options;
-    if (!selectList.includes(att1) {
+    if (!selectList.includes(att1)) {
       var newOption = document.createElement("option");
       newOption.text = att1;
       newOption.value = att1.toLowerCase();
@@ -762,7 +763,7 @@ function simplify(){
       document.getElementById("power").add(newOption);
       }
     }
-    if (!selectList.includes(att2) {
+    if (!selectList.includes(att2)) {
       var newOption = document.createElement("option");
       newOption.text = att2;
       newOption.value = att2.toLowerCase();
