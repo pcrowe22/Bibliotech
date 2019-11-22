@@ -676,8 +676,8 @@ function chooseAxes(potAxes){
 		if ((axes[i].name.startsWith(potentialAxes.ID1)&&axes[i].name.endsWith(potentialAxes.ID2))
 		|| (axes[i].name.startsWith(potentialAxes.ID2)&&axes[i].name.endsWith(potentialAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
 			newAxes=axes[i];
-			  //for adding the children properties of the axes to the contr list so you don't have to do it manually
-        for (var i=0; i<newAxes.children.length; i++) {
+			//for adding the children properties of the axes to the contr list so you don't have to do it manually
+      for (var i=0; i<newAxes.children.length; i++) {
           if (!contr.includes(newAxes.children[i])) {
             //add contrary to the hidden list
             contr.push(newAxes.children[i]);
@@ -691,10 +691,10 @@ function chooseAxes(potAxes){
             document.getElementById("discovery").play(); 
           }
         }
-        //for adding an elemental power to the list of select options
-        var selectList = document.getElementById("power").options;
-        for (var i=0; i<newAxes.powers.length; i++) {
-          if (!selectList.includes(newAxes.powers[i])) {
+      //for adding an elemental power to the list of select options
+      var selectList = document.getElementById("power").options;
+      for (var i=0; i<newAxes.powers.length; i++) {
+        if (!selectList.includes(newAxes.powers[i])) {
             var newOption = document.createElement("option");
             newOption.text = newAxes.powers[i].name;
             newOption.value = newAxes.powers[i].name.toLowerCase();
@@ -707,10 +707,8 @@ function chooseAxes(potAxes){
             newOption.classList.add("elementSelect");
             document.getElementById("power").add(newOption);
           }
-        }
-			}
-			return newAxes;
-			
+      }
+      return newAxes;
 		} else {
 			newAxes.graph = [0, 0, 0, 0, 0, 0];
 		}
