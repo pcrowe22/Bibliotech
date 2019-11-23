@@ -759,7 +759,6 @@ function simplify(){
       }
       newOption.classList.add("elementSelect");
       document.getElementById("power").add(newOption);
-      }
     }
     if (!selectList.includes(att2)) {
       var newOption = document.createElement("option");
