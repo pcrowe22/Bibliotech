@@ -773,9 +773,8 @@ function simplify(){
       }
       newOption.classList.add("elementSelect");
       document.getElementById("power").add(newOption);
-      }
     }
-	}
+  }
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
 }
