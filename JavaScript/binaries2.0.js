@@ -536,6 +536,8 @@ var contr=["ld", "em", "st", "pp", "ce", "fs", "et", "bs", "vo", "hc", "pn", "sh
 "pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
 "ew", "ia", "ca"];
 
+document.getElementById("power").options[0].createAttribute("info");
+document.getElementById("power").options[1].createAttribute("info");
 document.getElementById("power").options[0].setAttribute("info", 
 "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
 +" Color statitians classify light's representative color, white, as the combination of all colors."
