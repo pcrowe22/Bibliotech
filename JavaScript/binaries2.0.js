@@ -530,23 +530,12 @@ var sita = {
   ID2: "mn",
   parent: "*/
 
-var contr=["ld", "em", "st", "pp", "ce", "fs", "et", "bs", "vo", "hc", "pn", "sh", "ri", "cs", "sf", "mc", "mf", "fw", "mi", "ac", "sd", 
+var contr=["Light -- Dark", "em", "st", "pp", "ce", "fs", "et", "bs", "vo", "hc", "pn", "sh", "ri", "cs", "sf", "mc", "mf", "fw", "mi", "ac", "sd", 
 "FogS", "FogD", "ds", "dm", "cw", "sc", "pa", "we", "wd", "cr", "oc", "LifeD",
 "ai", "kb", "mn", "pv", "sv", "rp", "tm", "ls", "sb", "hd", "bi", "ns", "dl", "tp",
 "pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
 "ew", "ia", "ca"];
 
-/*document.getElementById("power").options[0].createAttribute("info");
-document.getElementById("power").options[1].createAttribute("info");
-document.getElementById("power").options[0].setAttribute("info", 
-"Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
-+" Color statitians classify light's representative color, white, as the combination of all colors."
-+"Similarly, it can be said that light as an element is the combination of all elements, thus being both the alpha and omega of elemental abilities.");
-document.getElementById("power").options[1].setAttribute("info",
-"Dark, the opposite of Light, gave what many cultures consider to be the Origin Element a contrary to compare with, thus making the element"+
-" more of a gradient than an absolute. Dark gives variability to Light. Or Light gives variability to Dark. One cannot vary without the other." +
-" As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure.");
-*/
 var circles = document.getElementById("dots");
 var circtx = circles.getContext("2d");
 circtx.strokeStyle = "green";
