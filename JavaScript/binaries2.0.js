@@ -676,7 +676,7 @@ function chooseAxes(potAxes){
             var newButton = document.createElement("button");
             newButton.innerHTML = newAxes.children[i];
             newButton.classList.add("contrButton");
-            newButton.onclick = assignPotID(potAxes, children[i]);
+            newButton.onclick = assignPotID(potAxes, newAxes.children[i]);
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
