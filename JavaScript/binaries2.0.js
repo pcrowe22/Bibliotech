@@ -536,7 +536,7 @@ var contr=["ld", "em", "st", "pp", "ce", "fs", "et", "bs", "vo", "hc", "pn", "sh
 "pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
 "ew", "ia", "ca"];
 
-document.getElementById("power").options[0].createAttribute("info");
+/*document.getElementById("power").options[0].createAttribute("info");
 document.getElementById("power").options[1].createAttribute("info");
 document.getElementById("power").options[0].setAttribute("info", 
 "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
@@ -546,7 +546,7 @@ document.getElementById("power").options[1].setAttribute("info",
 "Dark, the opposite of Light, gave what many cultures consider to be the Origin Element a contrary to compare with, thus making the element"+
 " more of a gradient than an absolute. Dark gives variability to Light. Or Light gives variability to Dark. One cannot vary without the other." +
 " As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure.");
-
+*/
 var circles = document.getElementById("dots");
 var circtx = circles.getContext("2d");
 circtx.strokeStyle = "green";
