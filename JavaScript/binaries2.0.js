@@ -664,8 +664,8 @@ function chooseAxes(potAxes){
 	};
 
 	for (var i=0; i<axes.length; i++){
-		if ((axes[i].name.startsWith(potentialAxes.ID1)&&axes[i].name.endsWith(potentialAxes.ID2))
-		|| (axes[i].name.startsWith(potentialAxes.ID2)&&axes[i].name.endsWith(potentialAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
+		if ((axes[i].name.startsWith(potAxes.ID1)&&axes[i].name.endsWith(potAxes.ID2))
+		|| (axes[i].name.startsWith(potAxes.ID2)&&axes[i].name.endsWith(potAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
 			newAxes=axes[i];
 			//for adding the children properties of the axes to the contr list so you don't have to do it manually
       for (var i=0; i<newAxes.children.length; i++) {
@@ -676,7 +676,7 @@ function chooseAxes(potAxes){
             var newButton = document.createElement("button");
             newButton.innerHTML = newAxes.children[i];
             newButton.classList.add("contrButton");
-            newButton.onclick = assignPotID(potentialAxes, children[i]);
+            newButton.onclick = assignPotID(potAxes, children[i]);
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
