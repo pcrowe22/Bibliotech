@@ -737,7 +737,7 @@ function simplify(){
       document.getElementById("buttonDiv").appendChild(newButton);
       document.getElementById("discovery").play();
 		}
-    var selectList = document.getElementById("power").options;
+    var selectList = new Array(document.getElementById("power").options);
     if (!selectList.includes(att1)) {
       var newOption = document.createElement("option");
       newOption.text = att1;
