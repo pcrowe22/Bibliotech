@@ -5,19 +5,22 @@ var Light = {
   name: "Light",
   bio: "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
 +" Color statitians classify light's representative color, white, as the combination of all colors."
-+"Similarly, it can be said that light as an element is the combination of all elements, thus being both the alpha and omega of elemental abilities."
++"Similarly, it can be said that light as an element is the combination of all elements, thus being both the alpha and omega of elemental abilities.",
+  splittable: false
 };
 var Dark = {
   name: "Dark",
   bio: "Dark, the opposite of Light, gave what many cultures consider to be the Origin Element a contrary to compare with, thus making the element"+
 " more of a gradient than an absolute. Dark gives variability to Light. Or Light gives variability to Dark. One cannot vary without the other." +
-" As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure."
+" As the 'Opposite Element,' Dark represents the absence of Light. The properties are reversed. Their locations are perpendicular in the Lucavi belief structure.",
+  splittable: false
 };
 var Energy = {
   name: "Energy",
   bio: "In its pure form, Energy is action. Energy is movement. Energy is dynamicism. Without Energy, the multiverse would remain stationary in the"+
 " forever-present. Forged from the purest of Light, Energy can be thought of as the activity of everything. Masters of Energy are considered the"+
-" most powerful of Channelers, as no one has been able to control a layer-0 element, Light or Dark. Energy Channelers are capable of forcing everything to do anything."
+" most powerful of Channelers, as no one has been able to control a layer-0 element, Light or Dark. Energy Channelers are capable of forcing everything to do anything.",
+  splittable: false
 };
 var SpaceTime = {
   name: "Space-Time",
@@ -34,26 +37,30 @@ var Matter = {
   name: "Matter",
   bio: "Matter's domain extends to every existable object on the tangible plane. Light and Dark came to us from intangible planes, and with "+
 " their fusion, Matter came into existence as objects with qualities. These were completely stationary in nature until Energy manifested "+
-" itself within Matter and forced it to move. Matter Channelers have complete control over what defines an object and its properties."
+" itself within Matter and forced it to move. Matter Channelers have complete control over what defines an object and its properties.",
+  splittable: false
 };
 var ElectrostaticAttraction = {
   name: "Electrostatic-Attraction",
   bio: "Simplified down to the atomic components, the domain Electromagnetic-Attraction spans to the atomic proton and electron."+
   " As a child element of Energy and Matter, Electrostatic-Attraction can be classified as a force, though more on the transparent, micro level." +
-  " Many objects are influenced by Electrostatic-Attraction, despite not having the traditional electric/magnetic properties like conductance. With control over Electrostatic-Attraction, one can make an object a conductor."
+  " Many objects are influenced by Electrostatic-Attraction, despite not having the traditional electric/magnetic properties like conductance. With control over Electrostatic-Attraction, one can make an object a conductor.",
+  splittable: false
 };
 var Force = {
   name: "Force",
   bio: "Force is the umbrella term given to any element that branches from Force or its siblings Gravity and Electrostatic-Attraction." +
   " Many warriors and sages have attempted mastery over Force. While extremely versatile, it is also very dangerous. With so many magicians"+
   " studying Force, there have been many cases where magicians fall to insanity, thought to be caused by Force's high proximity to the original elements." +
-  " Others speculate that too much study in Gravity and Electrostatic-Attraction could cause the same insanity, but too few people have mastered either field to conduct any conclusions yet."
+  " Others speculate that too much study in Gravity and Electrostatic-Attraction could cause the same insanity, but too few people have mastered either field to conduct any conclusions yet.",
+  splittable: false
 };
 var Gravity = {
   name: "Gravity",
   bio: "Gravity can be thought of the force acting between macro atoms. The more the Matter, the stronger the Gravity. That is why"+
   " it is thought that Gravity is a combination of Matter and Matter. Gravity has also been recorded to manipulate Time, in some cases." +
-  " This speaks to the ever-incredible quality of the elements, and how one could master many things from just one field."
+  " This speaks to the ever-incredible quality of the elements, and how one could master many things from just one field.",
+  splittable: false
 };
 
 var axes = [ {
