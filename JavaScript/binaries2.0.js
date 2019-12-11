@@ -699,13 +699,13 @@ function chooseAxes(potAxes){
             var newOption = document.createElement("option");
             newOption.text = axes[i].powers[j].name;
             newOption.value = axes[i].powers[j].name.toLowerCase();
-            newOption.info = axes[i].powers[j].bio;
+            newOption.setAttribute("info", axes[i].powers[j].bio);
             if (axes[i].powers[j].splittable == true) {
-              newOption.selectCont = axes[i].powers[j].hiddenContr;
-              newOption.e1 = axes[i].powers[j].power1;
-              newOption.e2 = axes[i].powers[j].power2;
+              newOption.setAttribute("selectCont", axes[i].powers[j].hiddenContr);
+              newOption.setAttribute("e1", axes[i].powers[j].power1);
+              newOption.setAttribute("e2", axes[i].powers[j].power2);
             }
-            newOption.classList.add("elementSelect");
+            //newOption.classList.add("elementSelect");
             document.getElementById("power").add(newOption);
           }
       }
@@ -756,7 +756,7 @@ function simplify(){
         newOption.e1 = att1.power1;
         newOption.e2 = att1.power2;
       }
-      newOption.classList.add("elementSelect");
+     // newOption.classList.add("elementSelect");
       document.getElementById("power").add(newOption);
     }
     if (!selectList.includes(att2)) {
@@ -769,7 +769,7 @@ function simplify(){
         newOption.e1 = att2.power1;
         newOption.e2 = att2.power2;
       }
-      newOption.classList.add("elementSelect");
+     // newOption.classList.add("elementSelect");
       document.getElementById("power").add(newOption);
     }
   }
