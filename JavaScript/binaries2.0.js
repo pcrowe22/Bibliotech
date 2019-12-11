@@ -761,6 +761,7 @@ function simplify(){
       if (selectList.options[i].text.localeCompare(combo.getAttribute("e1").name)==0){
         included = true;
       }
+    }
     if (included == false) {
       var newOption = document.createElement("option");
       newOption.text = combo.getAttribute("e1").name;
@@ -778,6 +779,7 @@ function simplify(){
       if (selectList.options[i].text.localeCompare(combo.getAttribute("e2"))==0){
         included = true;
       }
+    }
     if (included == false) {
       var newOption = document.createElement("option");
       newOption.text = combo.getAttribute("e2").name;
