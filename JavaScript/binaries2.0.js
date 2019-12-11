@@ -545,9 +545,9 @@ circtx.fillStyle = "green";
 
 
 var c = document.getElementById("Can");
-var htmlAxes = [document.getElementById('yp').innerHTML, document.getElementById('q1').innerHTML, document.getElementById('xp').innerHTML, 
-document.getElementById('q4').innerHTML, document.getElementById('yn').innerHTML, document.getElementById('q3').innerHTML,
-document.getElementById('xn').innerHTML, document.getElementById('q2').innerHTML];
+var htmlAxes = [document.getElementById('yp'), document.getElementById('q1'), document.getElementById('xp'), 
+document.getElementById('q4'), document.getElementById('yn'), document.getElementById('q3'),
+document.getElementById('xn'), document.getElementById('q2')];
 function drawld(){
 	var ldtx = c.getContext("2d");
     ldtx.strokeStyle = 'blue';
@@ -625,7 +625,7 @@ function drawContraries(newAxes){
     }
   }
 	for (var i=0; i<newAxes.powers.length; i++){ 
-    /*htmlAxes[i]*/document.getElementById('q2').innerHTML="works";//newAxes.powers[i].name;
+    htmlAxes[i].innerHTML="works";//newAxes.powers[i].name;
 	}
 }
 
@@ -674,7 +674,7 @@ function chooseAxes(potAxes){
             contr.push(newAxes.children[i]);
             //physically add a new button for that contrary
             var newButton = document.createElement("button");
-            newButton.innerHTML = newAxes.children[i];
+            newButton.innerHTML = newAxes.children[i].name;
             newButton.classList.add("contrButton");
             newButton.onclick = assignPotID(potAxes, newAxes.children[i]);
             htmlContr.push(newButton);
