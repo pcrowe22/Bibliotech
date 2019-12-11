@@ -1,5 +1,5 @@
 
-var htmlContr = document.getElementsByClassName("contrButton");
+var htmlContr = new Array(document.getElementsByClassName("contrButton"));
 
 var Light = {
   name: "Light",
