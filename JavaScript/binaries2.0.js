@@ -655,9 +655,12 @@ function assignPotID(potAxes, contrary){
 	}
 }
 function chooseAxes(potAxes){
-	var newAxes={ID1: "none",
+	var newAxes={
+  name: "none",
+  ID1: "none",
 	ID2: "none",
 	parent: "none",
+  children: [];
 	layer: "none",
 	graph: [0, 0, 0, 0, 0, 0],
 	powers: ["none", "none", "none", "none", "none", "none", "none", "none"]
