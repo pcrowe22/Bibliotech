@@ -30,8 +30,14 @@ var SpaceTime = {
 " Space-Time is a duplex element, thought to contain Space and Time within one representative object, Space-Time.",
   splittable: true,
   hiddenContr: "Space -- Time",
-  power1: "Space",
-  power2: "Time"
+  power1: Space = {
+    name: "Space",
+    bio: "Plane of existence",
+    splittable: false},
+  power2: Time = {
+    name: "Time",
+    bio: "Plane of change",
+    splittable: false}
 };
 var Matter = {
   name: "Matter",
@@ -733,12 +739,11 @@ function drawsimp(){
 
 function simplify(){
 	stx.clearRect(0,0,500,100);
-	var att1 = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("e1");
-	var att2 = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("e2");
+	var combo = document.getElementById("power").options[document.getElementById("power").selectedIndex];
 	var sCont = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("selectCont");
-	document.getElementById("s1").innerHTML=att1;
-	document.getElementById("s2").innerHTML=att2;
-	if (att1!=null){
+	document.getElementById("s1").innerHTML=combo.getAttribute("e1");
+	document.getElementById("s2").innerHTML=combo.getAttribute("e2");
+	if (combo.getAttribute("e1")!=null){
 		drawsimp();
     if (!contr.includes(sCont)){		
       contr.push(sCont);
@@ -750,28 +755,38 @@ function simplify(){
       document.getElementById("buttonDiv").appendChild(newButton);
       document.getElementById("discovery").play();
 		}
-    var selectList = new Array(document.getElementById("power").options);
-    if (!selectList.includes(att1)) {
+    var selectList = document.getElementById("power");
+    var included = false;
+    for (var i=0; i<selectList.options.length; i++) {
+      if (selectList.options[i].text.localeCompare(combo.getAttribute("e1").name)==0){
+        included = true;
+      }
+    if (included == false) {
       var newOption = document.createElement("option");
-      newOption.text = att1;
-      newOption.value = att1.toLowerCase();
-      newOption.setAttribute("info", att1.bio);
+      newOption.text = combo.getAttribute("e1").name;
+      newOption.value = combo.getAttribute("e1").name;
+      newOption.setAttribute("info", combo.getAttribute("e1").bio);
       if (att1.splittable == true) {
-        newOption.setAttribute("selectCont", att1.hiddenContr);
-        newOption.setAttribute("e1", att1.power1);
-        newOption.setAttribute("e2", att1.power2);
+        newOption.setAttribute("selectCont", combo.hiddenContr);
+        newOption.setAttribute("e1", combo.getAttribute("e1").power1);
+        newOption.setAttribute("e2", combo.getAttribute("e1").power2);
       }
       document.getElementById("power").add(newOption);
     }
-    if (!selectList.includes(att2)) {
+    included = false;
+    for (var i=0; i<selectList.options.length; i++) {
+      if (selectList.options[i].text.localeCompare(combo.getAttribute("e2"))==0){
+        included = true;
+      }
+    if (included == false) {
       var newOption = document.createElement("option");
-      newOption.text = att2;
-      newOption.value = att2.toLowerCase();
-      newOption.setAttribute("info", att2.bio);
-      if (att2.splittable == true) {
-        newOption.setAttribute("selectCont", att2.hiddenContr);
-        newOption.setAttribute("e1", att2.power1);
-        newOption.setAttribute("e2", att2.power2);
+      newOption.text = combo.getAttribute("e2").name;
+      newOption.value = combo.getAttribute("e2").name;
+      newOption.setAttribute("info", combo.getAttribute("e2").bio);
+      if (combo.getAttribute("e2").splittable == true) {
+        newOption.setAttribute("selectCont", combo.getAttribute("e2").hiddenContr);
+        newOption.setAttribute("e1", combo.getAttribute("e2").power1);
+        newOption.setAttribute("e2", combo.getAttribute("e2").power2);
       }
       document.getElementById("power").add(newOption);
     }
