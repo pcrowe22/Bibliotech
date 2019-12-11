@@ -671,15 +671,15 @@ function chooseAxes(potAxes){
 		|| (axes[i].name.startsWith(potAxes.ID2)&&axes[i].name.endsWith(potAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
 			newAxes=axes[i];
 			//for adding the children properties of the axes to the contr list so you don't have to do it manually
-      for (var i=0; i<newAxes.children.length; i++) {
-         // if (!contr.includes(newAxes.children[i])) {
+      for (var j=0; j<axes[i].children.length; j++) {
+         // if (!contr.includes(axes[i].children[j])) {
             //add contrary to the hidden list
-            contr.push(newAxes.children[i]);
+            contr.push(axes[i].children[j]);
             //physically add a new button for that contrary
             var newButton = document.createElement("button");
-            newButton.innerHTML = newAxes.children[i].name;
+            newButton.innerHTML = axes[i].children[j].name;
             newButton.classList.add("contrButton");
-            newButton.onclick = assignPotID(potAxes, newAxes.children[i]);
+            newButton.onclick = assignPotID(potAxes, axes[i].children[j]);
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
@@ -687,24 +687,22 @@ function chooseAxes(potAxes){
         }
       //for adding an elemental power to the list of select options
       var selectList = new Array(document.getElementById("power").options);
-      for (var i=0; i<newAxes.powers.length; i++) {
-        if (!selectList.includes(newAxes.powers[i])) {
+      for (var j=0; j<axes[i].powers.length; j++) {
+        if (!selectList.includes(axes[i].powers[j])) {
             var newOption = document.createElement("option");
-            newOption.text = newAxes.powers[i].name;
-            newOption.value = newAxes.powers[i].name.toLowerCase();
-            newOption.info = newAxes.powers[i].bio;
-            if (newAxes.powers[i].splittable == true) {
-              newOption.selectCont = newAxes.powers[i].hiddenContr;
-              newOption.e1 = newAxes.powers[i].power1;
-              newOption.e2 = newAxes.powers[i].power2;
+            newOption.text = axes[i].powers[j].name;
+            newOption.value = axes[i].powers[j].name.toLowerCase();
+            newOption.info = axes[i].powers[j].bio;
+            if (axes[i].powers[j].splittable == true) {
+              newOption.selectCont = axes[i].powers[j].hiddenContr;
+              newOption.e1 = axes[i].powers[j].power1;
+              newOption.e2 = axes[i].powers[j].power2;
             }
             newOption.classList.add("elementSelect");
             document.getElementById("power").add(newOption);
           }
       }
-      return newAxes;
-		} else {
-			newAxes.graph = [0, 0, 0, 0, 0, 0];
+      return axes[i];
 		}
 	}
 	return newAxes;
