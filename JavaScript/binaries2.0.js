@@ -61,7 +61,7 @@ var axes = [ {
 	ID1: "Light -- Dark",
 	ID2: "Light -- Dark",
 	parent: "none",
-	children: ["Energy -- Matter", "Space-Time"],
+	children: ["Energy -- Matter"],
 	layer: "0",
 	graph: [1,1,0,0,0,0],
 	powers: [Light, Energy, Light, SpaceTime, Dark, Matter, Dark, SpaceTime],
@@ -71,7 +71,7 @@ var axes = [ {
 	ID1: "Energy -- Matter",
 	ID2: "Energy -- Matter",
 	parent: "ldld",
-	children: ["Electrostatic-Attraction -- Gravity", "Force"],
+	children: ["Electrostatic-Attraction -- Gravity"],
 	layer: "1",
 	graph: [1,1,0,0,0,0],
 	powers: [Energy, ElectrostaticAttraction, Energy, Force, Matter, Gravity, Matter, Force]
