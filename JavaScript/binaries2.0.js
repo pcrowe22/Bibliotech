@@ -625,7 +625,7 @@ function drawContraries(newAxes){
     }
   }
 	for (var i=0; i<newAxes.powers.length; i++){ 
-    htmlAxes[i].innerHTML="works";//newAxes.powers[i].name;
+    htmlAxes[i].innerHTML=newAxes.powers[i].name;
 	}
 }
 
