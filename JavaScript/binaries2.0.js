@@ -660,7 +660,7 @@ function chooseAxes(potAxes){
   ID1: "none",
 	ID2: "none",
 	parent: "none",
-  children: [];
+  children: [],
 	layer: "none",
 	graph: [0, 0, 0, 0, 0, 0],
 	powers: ["none", "none", "none", "none", "none", "none", "none", "none"]
