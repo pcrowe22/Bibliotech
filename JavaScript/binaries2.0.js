@@ -683,7 +683,7 @@ function chooseAxes(potAxes){
           }
         }
       //for adding an elemental power to the list of select options
-      var selectList = document.getElementById("power").options;
+      var selectList = new Array(document.getElementById("power").options);
       for (var i=0; i<newAxes.powers.length; i++) {
         if (!selectList.includes(newAxes.powers[i])) {
             var newOption = document.createElement("option");
