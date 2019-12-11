@@ -648,7 +648,7 @@ function assignPotID(potAxes, contrary){
 	    circtx.fill();
 	} else {
 		potentialAxes.ID1=contrary;
-		potentialAxes.ID2="None";
+		potentialAxes.ID2="none";
 		circtx.clearRect(0,0,100,50);
 		circtx.stroke();
 
