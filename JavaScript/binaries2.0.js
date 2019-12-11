@@ -677,7 +677,7 @@ function chooseAxes(potAxes){
             contr.push(axes[i].children[j]);
             //physically add a new button for that contrary
             var newButton = document.createElement("button");
-            newButton.innerHTML = axes[i].children[j].name;
+            newButton.innerHTML = axes[i].children[j];
             newButton.classList.add("contrButton");
             newButton.onclick = assignPotID(potAxes, axes[i].children[j]);
             htmlContr.push(newButton);
