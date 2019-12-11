@@ -750,7 +750,7 @@ function simplify(){
       var newButton = document.createElement("button");
       newButton.innerHTML = sCont;
       newButton.classList.add("contrButton");
-      newButton.onclick = assignPotID(sCont);
+      newButton.addEventListener("click", function() {assignPotID(potAxes, axes[i].children[j]);});
       htmlContr.push(newButton);
       document.getElementById("buttonDiv").appendChild(newButton);
       document.getElementById("discovery").play();
