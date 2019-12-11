@@ -672,7 +672,7 @@ function chooseAxes(potAxes){
 			newAxes=axes[i];
 			//for adding the children properties of the axes to the contr list so you don't have to do it manually
       for (var j=0; j<axes[i].children.length; j++) {
-         // if (!contr.includes(axes[i].children[j])) {
+          if (!contr.includes(axes[i].children[j])) {
             //add contrary to the hidden list
             contr.push(axes[i].children[j]);
             //physically add a new button for that contrary
@@ -683,7 +683,7 @@ function chooseAxes(potAxes){
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
-         // }
+          }
         }
       //for adding an elemental power to the list of select options
       var selectList = new Array(document.getElementById("power").options.text);
