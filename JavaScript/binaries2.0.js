@@ -688,7 +688,7 @@ function chooseAxes(potAxes){
       //for adding an elemental power to the list of select options
       var selectList = new Array(document.getElementById("power").options.text);
       for (var j=0; j<axes[i].powers.length; j++) {
-        if (!selectList.includes(axes[i].powers[j].name)) {
+        if (!selectList.includes(axes[i].powers[j].name.toLowerCase())) {
             var newOption = document.createElement("option");
             newOption.text = axes[i].powers[j].name;
             newOption.value = axes[i].powers[j].name.toLowerCase();
