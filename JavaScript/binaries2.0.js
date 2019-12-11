@@ -612,7 +612,7 @@ function drawrb(){
       rb.lineTo(500,500);
       rb.stroke();
 }
-var listOfDraws = [drawld(), drawrd(), drawtb(), drawbb(), drawlb(), drawrb()];
+var listOfDraws = [drawld, drawrd, drawtb, drawbb, drawlb, drawrb];
 
 function drawContraries(newAxes){
   var ctx = c.getContext("2d");
@@ -621,7 +621,7 @@ function drawContraries(newAxes){
 	drawhor();
   for (var i=0; i<newAxes.graph.length; i++) {
 	  if (newAxes.graph[i]==1){
-        listOfDraws[i];
+        listOfDraws[i]();
     }
   }
 	for (var i=0; i<newAxes.powers.length; i++){ 
