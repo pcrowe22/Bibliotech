@@ -253,7 +253,7 @@ li {
   border: none;
   background-color: inherit;
   color: white; 
-
+  display: block;
   text-indent: 10px;
 }
 .contrButton:active{
