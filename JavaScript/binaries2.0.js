@@ -695,19 +695,23 @@ function chooseAxes(potAxes){
       //for adding an elemental power to the list of select options
       var selectList = new Array(document.getElementById("power").options);
       for (var j=0; j<axes[i].powers.length; j++) {
+        var included = false;
         for (var k=0; k<selectList.length; k++) {
-        if (!selectList[k].text.includes(axes[i].powers[j].name)) {
-            var newOption = document.createElement("option");
-            newOption.text = axes[i].powers[j].name;
-            newOption.value = axes[i].powers[j].name;
-            newOption.setAttribute("info", axes[i].powers[j].bio);
-            if (axes[i].powers[j].splittable == true) {
-              newOption.setAttribute("selectCont", axes[i].powers[j].hiddenContr);
-              newOption.setAttribute("e1", axes[i].powers[j].power1);
-              newOption.setAttribute("e2", axes[i].powers[j].power2);
-            }
-            document.getElementById("power").add(newOption);
+          if (selectList[k].text.localeCompare(axes[i].powers[j].name)==0) {
+            included = true;
           }
+        }
+        if (included == false) {
+          var newOption = document.createElement("option");
+          newOption.text = axes[i].powers[j].name;
+          newOption.value = axes[i].powers[j].name;
+          newOption.setAttribute("info", axes[i].powers[j].bio);
+          if (axes[i].powers[j].splittable == true) {
+            newOption.setAttribute("selectCont", axes[i].powers[j].hiddenContr);
+            newOption.setAttribute("e1", axes[i].powers[j].power1);
+            newOption.setAttribute("e2", axes[i].powers[j].power2);
+          }
+          document.getElementById("power").add(newOption);
         }
       }
       return axes[i];
