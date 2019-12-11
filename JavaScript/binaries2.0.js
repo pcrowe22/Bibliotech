@@ -693,11 +693,11 @@ function chooseAxes(potAxes){
           }
         }
       //for adding an elemental power to the list of select options
-      var selectList = new Array(document.getElementById("power").options);
+      var selectList = document.getElementById("power");
       for (var j=0; j<axes[i].powers.length; j++) {
         var included = false;
-        for (var k=0; k<selectList.length; k++) {
-          if (selectList[k].text.localeCompare(axes[i].powers[j].name)==0) {
+        for (var k=0; k<selectList.options.length; k++) {
+          if (selectList.options[k].text.localeCompare(axes[i].powers[j].name)==0) {
             included = true;
           }
         }
