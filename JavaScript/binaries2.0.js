@@ -741,8 +741,8 @@ function simplify(){
 	stx.clearRect(0,0,500,100);
 	var combo = document.getElementById("power").options[document.getElementById("power").selectedIndex];
 	var sCont = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("selectCont");
-	document.getElementById("s1").innerHTML=combo.getAttribute("e1");
-	document.getElementById("s2").innerHTML=combo.getAttribute("e2");
+	document.getElementById("s1").innerHTML=combo.getAttribute("e1").name;
+	document.getElementById("s2").innerHTML=combo.getAttribute("e2").name;
 	if (combo.getAttribute("e1")!=null){
 		drawsimp();
     if (!contr.includes(sCont)){		
