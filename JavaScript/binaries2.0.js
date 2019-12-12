@@ -119,6 +119,68 @@ var Bright = {
   bio: "The incrementation of luminosity",
   splittable: false
 };
+var Electricity = {
+  name: "Electricity",
+  bio: "Some say Electricity is the interaction between protons and electrons. Others think it is the work of gods.",
+  splittable: false
+};
+var Teraforming = {
+  name: "Teraforming",
+  bio: "'The shaping of material', and 'the metamorphosis of planets'",
+  splittable: false
+};
+var Heat = {
+  name: "Heat",
+  bio: "Represents both the presence and absence of Heat."
+  splittable: true,
+  hiddenContr: "Hot -- Cold",
+  power1: Hot = {
+    name: "Hot",
+    bio: "A rush of energy, and the collision of particles."
+    splittable: false
+  },
+  power2: Cold = {
+    name: "Cold",
+    bio: "No moving particles, no collisions, but that does not mean no Heat. Heat is always present in all its aspects.",
+    splittable: false
+  }
+};
+var Spark = {
+  name: "Spark".
+  bio: "Electricity's relative. It is decomposible.",
+  splittable: true,
+  hiddenContr: "Positive -- Negative",
+  power1: Positive = {
+    name: "Positive",
+    bio: "One half of Spark's power."
+    splittable: false
+  },
+  power2: Negative = {
+    name: "Negative",
+    bio: "The second half of Spark's power.",
+    splittable: false
+  }
+};
+var SnapFreeze = {
+  name: "Snap-Freeze",
+  bio: "Cold that cuts so deep so quickly, it can shatter material like glass.",
+  splittable: false
+};
+var Freeze = {
+  name: "Freeze",
+  bio: "Freeze takes material and moves everything in it to a stand still, effectively freezing it solid.",
+  splittable: false
+};
+var Melt = {
+  name: "Melt",
+  bio: "Melt gradually makes the particles of matter move faster, effectively allowing any material to slide over itself like an ice cube melting.",
+  splittable: false
+};
+var Combustion = {
+  name: "Combustion",
+  bio: "When particles move too quickly, material spontaneously combusts into a fiery mass until all the particles have shot away from each other and left the original material completely disintegrated.",
+  splittable: false
+};
 
 var axes = [ {
   name: "Light -- Dark ++ Light -- Dark",
@@ -161,56 +223,39 @@ var axes = [ {
   layer: 0,
   graph: [0,0,0,0,1,1],
   powers: [Light, Visible, Expand, Obscure, Dark, Shadow, Compress, Bright]
-}];
+},
+{
+  name: "Push -- Pull ++ Energy -- Matter",
+  ID1: "Push -- Pull",
+  ID2: "Energy -- Matter",
+  parent: "ldld",
+  children: ["Electricity -- Teraforming"],
+  layer: 1,
+  graph: [0,0,1,1,0,0],
+  powers: [Push, Electricity, Energy, Electricity, Pull, Teraforming, Matter, Teraforming]
+},
+{
+  name: "Electricity -- Teraforming ++ Visible -- Obscure",
+  ID1: "Electricity -- Teraforming",
+  ID2: "Visible -- Obscure",
+  parent: "celd",
+  children: ["Spark -- Heat", "Reflection -- Invisible"],
+  layer: 1,
+  graph: [0,0,1,1,0,0],
+  powers: [Electricity, Heat, Obscure, Invisible, Teraforming, Reflection, Visible, Spark]
+},
+{
+  name: "Hot -- Cold ++ Fast -- Slow",
+  ID1: "Hot -- Cold",
+  ID2: "Fast -- Slow",
+  parent: "ppem",
+  children: ["Combusion -- Snap-Freeze", "Snap-Freeze -- Freeze", "Melt -- Combustion", "Melt -- Freeze"],
+  layer: 2,
+  graph: [0,0,1,1,1,1],
+  powers: [Fast, SnapFreeze, Cold, Freeze, Slow, Melt, Hot, Combustion]
+}
+  ];
 /*
-var ppem = {
-	ID1: "pp",
-	ID2: "em",
-	parent: "ldld",
-	children: ["et"],
-	layer: "1",
-	graph: "rb_lb",
-	p1: "Push",
-	p2: "Electricity**",
-	p3: "Energy",
-	p4: "Electricity**",
-	p5: "Pull",
-	p6: "Teraforming*",
-	p7: "Matter",
-	p8: "Teraforming*"
-};
-var etvo = {
-	ID1: "et",
-	ID2: "vo",
-	parent: "celd",
-	children: ["sh", "ri"],
-	layer: "1",
-	graph: "tb_bb",
-	p1: "Electricity",
-	p2: "Heat",
-	p3: "Obscure",
-	p4: "Invisible",
-	p5: "Teraforming",
-	p6: "Reflection",
-	p7: "Visible",
-	p8: "Spark"
-};
-var hcfs = {
-	ID1: "hc",
-	ID2: "fs",
-	parent: "ppem",
-	children: ["cs", "sf", "mc", "mf"],
-	layer: "2",
-	graph: "rb_tb_lb_bb",
-	p1: "Fast",
-	p2: "Snap-Freeze",
-	p3: "Cold",
-	p4: "Freeze",
-	p5: "Slow", 
-	p6: "Melt",
-	p7: "Hot",
-	p8: "Combustion"
-};
 var emhc = {
 	ID1: "em",
 	ID2: "hc",
