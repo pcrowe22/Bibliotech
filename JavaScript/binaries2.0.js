@@ -714,8 +714,12 @@ function chooseAxes(potAxes){
           newOption.setAttribute("info", axes[i].powers[j].bio);
           if (axes[i].powers[j].splittable == true) {
             newOption.setAttribute("selectCont", axes[i].powers[j].hiddenContr);
-            newOption.setAttribute("e1", axes[i].powers[j].power1);
-            newOption.setAttribute("e2", axes[i].powers[j].power2);
+            newOption.setAttribute("e1Name", axes[i].powers[j].power1.name);
+            newOption.setAttribute("e1Bio", axes[i].powers[j].power1.bio);
+            newOption.setAttribute("e1Split", axes[i].powers[j].power1.splittable);
+            newOption.setAttribute("e2Name", axes[i].powers[j].power2.name);
+            newOption.setAttribute("e2Bio", axes[i].powers[j].power2.bio);
+            newOption.setAttribute("e2Split", axes[i].powers[j].power2.splittable);
           }
           document.getElementById("power").add(newOption);
         }
@@ -741,9 +745,9 @@ function simplify(){
 	stx.clearRect(0,0,500,100);
 	var combo = document.getElementById("power").options[document.getElementById("power").selectedIndex];
 	var sCont = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("selectCont");
-	if (combo.getAttribute("e1")!=null){
-    document.getElementById("s1").innerHTML=combo.power1.name;
-    document.getElementById("s2").innerHTML=combo.power2.name;
+	if (combo.getAttribute("e1Name")!=null){
+    document.getElementById("s1").innerHTML=combo.getAttribute("e1Name");
+    document.getElementById("s2").innerHTML=combo.getAttribute("e2Name");
 		drawsimp();
     if (!contr.includes(sCont)){		
       contr.push(sCont);
@@ -758,35 +762,35 @@ function simplify(){
     var selectList = document.getElementById("power");
     var included = false;
     for (var i=0; i<selectList.options.length; i++) {
-      if (selectList.options[i].text.localeCompare(combo.getAttribute("e1").name)==0){
+      if (selectList.options[i].text.localeCompare(combo.getAttribute("e1Name"))==0){
         included = true;
       }
     }
     if (included == false) {
       var newOption = document.createElement("option");
-      newOption.text = combo.getAttribute("e1").name;
-      newOption.value = combo.getAttribute("e1").name;
-      newOption.setAttribute("info", combo.getAttribute("e1").bio);
-      if (combo.getAttribute("e1").splittable == true) {
-        newOption.setAttribute("selectCont", combo.hiddenContr);
-        newOption.setAttribute("e1", combo.getAttribute("e1").power1);
-        newOption.setAttribute("e2", combo.getAttribute("e1").power2);
+      newOption.text = combo.getAttribute("e1Name");
+      newOption.value = combo.getAttribute("e1Name");
+      newOption.setAttribute("info", combo.getAttribute("e1Bio"));
+      if (combo.getAttribute("e1Split") == true) {
+        newOption.setAttribute("selectCont", combo.getAttribute("e1Contr"));
+        newOption.setAttribute("e1", combo.getAttribute("e1Power1"));
+        newOption.setAttribute("e2", combo.getAttribute("e1Power2"));
       }
       document.getElementById("power").add(newOption);
     }
     included = false;
     for (var i=0; i<selectList.options.length; i++) {
-      if (selectList.options[i].text.localeCompare(combo.getAttribute("e2"))==0){
+      if (selectList.options[i].text.localeCompare(combo.getAttribute("e2Name"))==0){
         included = true;
       }
     }
     if (included == false) {
       var newOption = document.createElement("option");
-      newOption.text = combo.getAttribute("e2").name;
-      newOption.value = combo.getAttribute("e2").name;
-      newOption.setAttribute("info", combo.getAttribute("e2").bio);
-      if (combo.getAttribute("e2").splittable == true) {
-        newOption.setAttribute("selectCont", combo.getAttribute("e2").hiddenContr);
+      newOption.text = combo.getAttribute("e2Name");
+      newOption.value = combo.getAttribute("e2Name");
+      newOption.setAttribute("info", combo.getAttribute("e2Bio"));
+      if (combo.getAttribute("e2Split") == true) {
+        newOption.setAttribute("selectCont", combo.getAttribute("e2Contr"));
         newOption.setAttribute("e1", combo.getAttribute("e2").power1);
         newOption.setAttribute("e2", combo.getAttribute("e2").power2);
       }
