@@ -796,6 +796,9 @@ function simplify(){
       }
       document.getElementById("power").add(newOption);
     }
+  } else {
+    document.getElementById("s1").innerHTML="";
+    document.getElementById("s2").innerHTML="";
   }
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
