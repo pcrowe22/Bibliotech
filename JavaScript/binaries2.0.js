@@ -649,7 +649,7 @@ var potentialAxes={ID1: "none",
 	graph: [0, 0, 0, 0, 0, 0],
 	powers: ["none", "none", "none", "none", "none", "none", "none", "none"]
 };
-function assignPotID(potAxes, contrary){
+function assignPotID(contrary){
 	if (potentialAxes.ID1=="none"){
 		potentialAxes.ID1=contrary;
 		circtx.clearRect(0,0,100,50);
@@ -692,7 +692,7 @@ function chooseAxes(potAxes){
             var newButton = document.createElement("button");
             newButton.innerHTML = axes[i].children[j];
             newButton.classList.add("contrButton");
-            newButton.addEventListener("click", function() {assignPotID(potAxes, axes[i].children[j]);});
+            newButton.addEventListener("click", function() {assignPotID(axes[i].children[j]);});
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
