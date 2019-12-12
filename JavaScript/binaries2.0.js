@@ -796,7 +796,7 @@ function simplify(){
       var newButton = document.createElement("button");
       newButton.innerHTML = sCont;
       newButton.classList.add("contrButton");
-      newButton.addEventListener("click", function() {assignPotID(potentialAxes, axes[i].children[j]);});
+      newButton.addEventListener("click", function() {assignPotID(potentialAxes, newButton.innerHTML);});
       htmlContr.push(newButton);
       document.getElementById("buttonDiv").appendChild(newButton);
       document.getElementById("discovery").play();
