@@ -278,3 +278,6 @@ li {
 .elementSelect{
   display: none;
 }
+#stats{
+  font-size: 1em;
+}

@@ -947,11 +947,21 @@ function simplify(){
 }
 function showStats(contrary) {
   var display = "";
+  document.getElementById("statsContainer").removeChild("stats");
+  var newStats = document.createElement("ul");
+  newStats.setAttribute("id", "stats");
+  document.getElementById("statsContainer").appendChild("stats");
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
-      display = display+axes[i].name+"\n";
+      var newName = document.createElement("li");
+      newName.setAttribute("id", "newId");
+      newName.innerHTML = axes[i].name;
+      document.getElementById("stats").appendChild("newId");
     } else if (contrary.localeCompare(axes[i].ID2)==0) {
-      display = display+axes[i].name+"\n";
+      var newName = document.createElement("li");
+      newName.setAttribute("id", "newId");
+      newName.innerHTML = axes[i].name;
+      document.getElementById("stats").appendChild("newId");
     }
   }
   document.getElementById("stats").innerHTML = display;
