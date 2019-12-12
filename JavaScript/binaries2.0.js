@@ -131,12 +131,12 @@ var Teraforming = {
 };
 var Heat = {
   name: "Heat",
-  bio: "Represents both the presence and absence of Heat."
+  bio: "Represents both the presence and absence of Heat.",
   splittable: true,
   hiddenContr: "Hot -- Cold",
   power1: Hot = {
     name: "Hot",
-    bio: "A rush of energy, and the collision of particles."
+    bio: "A rush of energy, and the collision of particles.",
     splittable: false
   },
   power2: Cold = {
@@ -152,7 +152,7 @@ var Spark = {
   hiddenContr: "Positive -- Negative",
   power1: Positive = {
     name: "Positive",
-    bio: "One half of Spark's power."
+    bio: "One half of Spark's power.",
     splittable: false
   },
   power2: Negative = {
