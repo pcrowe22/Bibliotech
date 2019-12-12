@@ -767,7 +767,7 @@ function simplify(){
       newOption.text = combo.getAttribute("e1").name;
       newOption.value = combo.getAttribute("e1").name;
       newOption.setAttribute("info", combo.getAttribute("e1").bio);
-      if (att1.splittable == true) {
+      if (combo.getAttribute("e1").splittable == true) {
         newOption.setAttribute("selectCont", combo.hiddenContr);
         newOption.setAttribute("e1", combo.getAttribute("e1").power1);
         newOption.setAttribute("e2", combo.getAttribute("e1").power2);
