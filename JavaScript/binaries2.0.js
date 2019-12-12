@@ -146,7 +146,7 @@ var Heat = {
   }
 };
 var Spark = {
-  name: "Spark".
+  name: "Spark",
   bio: "Electricity's relative. It is decomposible.",
   splittable: true,
   hiddenContr: "Positive -- Negative",
