@@ -59,13 +59,64 @@ var Force = {
   " Many warriors and sages have attempted mastery over Force. While extremely versatile, it is also very dangerous. With so many magicians"+
   " studying Force, there have been many cases where magicians fall to insanity, thought to be caused by Force's high proximity to the original elements." +
   " Others speculate that too much study in Gravity and Electrostatic-Attraction could cause the same insanity, but too few people have mastered either field to conduct any conclusions yet.",
-  splittable: false
+  splittable: true,
+  hiddenContr: "Push -- Pull",
+  power1: Push = {
+    name: "Push",
+    bio: "Outward force",
+    splittable: false
+  },
+  power2: Pull = {
+    name: "Pull",
+    bio: "Inward force",
+    splittable: false
+  }
 };
 var Gravity = {
   name: "Gravity",
   bio: "Gravity can be thought of the force acting between macro atoms. The more the Matter, the stronger the Gravity. That is why"+
   " it is thought that Gravity is a combination of Matter and Matter. Gravity has also been recorded to manipulate Time, in some cases." +
   " This speaks to the ever-incredible quality of the elements, and how one could master many things from just one field.",
+  splittable: false
+};
+var Fast = {
+  name: "Fast",
+  bio: "The act of traveling further in the space dimension than in the time dimension.",
+  splittable: false
+};
+var Slow = {
+  name: "Slow",
+  bio: "The act of traveling less in the space dimension than in the time dimension.",
+  splittable: false
+};
+var Expand = {
+  name: "Expand",
+  bio: "Equal and constant force outward (pushing force).",
+  splittable: false
+};
+var Compress = {
+  name: "Compress",
+  bio: "Equal and constant force inward (pulling force).",
+  splittable: false
+};
+var Visible = {
+  name: "Visible",
+  bio: "That which can be perceived",
+  splittable: false
+};
+var Obscure = {
+  name: "Obscure",
+  bio: "That which cannot be observed",
+  splittable: false
+};
+var Shadow = {
+  name: "Shadow",
+  bio: "A reduction in photons, of sorts",
+  splittable: false
+};
+var Bright = {
+  name: "Bright",
+  bio: "The incrementation of luminosity",
   splittable: false
 };
 
@@ -76,7 +127,9 @@ var axes = [ {
 	parent: "none",
 	children: ["Energy -- Matter"],
 	layer: "0",
+        //left diagonal, right diagonal, top, bottom, left, right
 	graph: [1,1,0,0,0,0],
+          //clockwise, starting at 12
 	powers: [Light, Energy, Light, SpaceTime, Dark, Matter, Dark, SpaceTime],
 },
 {
@@ -88,39 +141,28 @@ var axes = [ {
 	layer: "1",
 	graph: [1,1,0,0,0,0],
 	powers: [Energy, ElectrostaticAttraction, Energy, Force, Matter, Gravity, Matter, Force]
+},
+{
+  name: "Push -- Pull ++ Space -- Time",
+  ID1: "Push -- Pull",
+  ID2: "Space -- Time",
+  parent: "ldld",
+  children: ["Compress -- Expand", "Fast -- Slow"],
+  layer: "1",
+  graph: [0,0,0,0,1,1],
+  powers: [Push, Fast, Time, Slow, Pull, Expand, Space, Compress]
+},
+{
+  name: "Compress -- Expand ++ Light -- Dark",
+  ID1: "Compress -- Expand",
+  ID2: "Light -- Dark",
+  parent: "none",
+  children: ["Bright -- Shadow", "Visible -- Obscure"],
+  layer: 0,
+  graph: [0,0,0,0,1,1],
+  powers: [Light, Visible, Expand, Obscure, Dark, Shadow, Compress, Bright]
 }];
-/*var ppst = {
-	ID1: "pp",
-	ID2: "st",
-	parent: "ldld",
-	children: ["ce", "fs"],
-	layer: "1",
-	graph: "rb_lb",
-	p1: "Push",
-	p2: "Fast",
-	p3: "Time",
-	p4: "Slow",
-	p5: "Pull",
-	p6: "Expand",
-	p7: "Space",
-	p8: "Compress"
-};
-var celd = {
-	ID1: "ce",
-	ID2: "ld",
-	parent: "none",
-	children: ["bs", "vo"],
-	layer: "0",
-	graph: "rb_lb",
-	p1: "Light",
-	p2: "Visible",
-	p3: "Expand",
-	p4: "Obscure",
-	p5: "Dark",
-	p6: "Shadow",
-	p7: "Compress",
-	p8: "Bright"
-};
+/*
 var ppem = {
 	ID1: "pp",
 	ID2: "em",
@@ -542,8 +584,8 @@ var sita = {
   ID1: "cs",
   ID2: "mn",
   parent: "*/
-
-var contr=["Light -- Dark", "em", "st", "pp", "ce", "fs", "et", "bs", "vo", "hc", "pn", "sh", "ri", "cs", "sf", "mc", "mf", "fw", "mi", "ac", "sd", 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var contr=["Light -- Dark", "et", "bs", "vo", "hc", "pn", "sh", "ri", "cs", "sf", "mc", "mf", "fw", "mi", "ac", "sd", 
 "FogS", "FogD", "ds", "dm", "cw", "sc", "pa", "we", "wd", "cr", "oc", "LifeD",
 "ai", "kb", "mn", "pv", "sv", "rp", "tm", "ls", "sb", "hd", "bi", "ns", "dl", "tp",
 "pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
