@@ -212,7 +212,7 @@ var Magma = {
   splittable: false
 };
 var Plasma = {
-  name: Plasma",
+  name: "Plasma",
   bio: "Plasma is said to be Fire that behaves like liquid.",
   splittable: false
 };
