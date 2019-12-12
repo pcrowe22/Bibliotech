@@ -949,7 +949,7 @@ function showStats(contrary) {
   var display = "";
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
-      display = display+axes[i].name+"/n";
+      display = display+axes[i].name+"\n";
     } else if (contrary.localeCompare(axes[i].ID2)==0) {
       display = display+axes[i].name+"\n";
     }
