@@ -211,7 +211,26 @@ var Magma = {
   bio: "Earth's bloody pores spill Magma, condensed fire that can be scooped up and held.",
   splittable: false
 };
-
+var Plasma = {
+  name: Plasma",
+  bio: "Plasma is said to be Fire that behaves like liquid.",
+  splittable: false
+};
+var FlickerFlame = {
+  name: "Flicker Flame",
+  bio: "A unique element, thought to occur in Fire only when it is first ignited and when it is dying.",
+  splittable: false
+};
+var Cloud = {
+  name: "Cloud",
+  bio: "An airy collection of frost.",
+  splittable: false
+};
+var Ash = {
+  name: "Ash",
+  bio: "Heavy, dark chucks of what remains after something has been burned.",
+  splittable: false
+};
 var axes = [ 
 {
   name: "Light -- Dark ++ Light -- Dark",
@@ -300,10 +319,10 @@ var axes = [
   ID1: "Magma -- Ice",
   ID2: "Fire -- Wind",
   parent: "emhc",
-  children: ["Ash -- Clouds"],
+  children: ["Ash -- Cloud"],
   layer: 2, 
   graph: [0,0,0,0,1,0],
-  powers: [Magma, Plasma, Fire, FlickerFlame, Ice, Clouds, Wind, Ash]
+  powers: [Magma, Plasma, Fire, FlickerFlame, Ice, Cloud, Wind, Ash]
 }
   ];
 /*
