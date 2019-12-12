@@ -181,6 +181,26 @@ var Combustion = {
   bio: "When particles move too quickly, material spontaneously combusts into a fiery mass until all the particles have shot away from each other and left the original material completely disintegrated.",
   splittable: false
 };
+var Wind = {
+  name: "Wind",
+  bio: "Gusts of air represent Wind.",
+  splittable: false
+};
+var Fire = {
+  name: "Fire",
+  bio: "Fire is just hot Wind.",
+  splittable: false
+};
+var Ice = {
+  name: "Ice",
+  bio: "Ice is the cruel winter wind solidified into a solid object.",
+  splittable: false
+};
+var Magma = {
+  name: "Magma",
+  bio: "Earth's bloody pores spill Magma, condensed fire that can be scooped up and held.",
+  splittable: false
+};
 
 var axes = [ {
   name: "Light -- Dark ++ Light -- Dark",
@@ -253,25 +273,29 @@ var axes = [ {
   layer: 2,
   graph: [0,0,1,1,1,1],
   powers: [Fast, SnapFreeze, Cold, Freeze, Slow, Melt, Hot, Combustion]
+},
+{
+  name: "Energy -- Matter ++ Hot -- Cold",
+  ID1: "Energy -- Matter",
+  ID2: "Hot -- Cold",
+  parent: "ldld",
+  children: ["Fire -- Wind", "Magma -- Ice"],
+  layer: 1,
+  graph: [0,0,1,1,0,0,],
+  powers: [Energy, Wind, Cold, Ice, Matter, Magma, Hot, Fire]
+},
+{
+  name: "Magma -- Ice ++ Fire -- Wind",
+  ID1: "Magma -- Ice",
+  ID2: "Fire -- Wind",
+  parent: "emhc",
+  children: ["Ash -- Clouds"],
+  layer: 2, 
+  graph: [0,0,0,0,1,0],
+  powers: [Magma, Plasma, Fire, FlickerFlame, Ice, Clouds, Wind, Ash]
 }
   ];
 /*
-var emhc = {
-	ID1: "em",
-	ID2: "hc",
-	parent: "ldld",
-	children: ["fw", "mi"],
-	layer: "1",
-	graph: "tb_bb",
-	p1: "Energy",
-	p2: "Wind",
-	p3: "Cold",
-	p4: "Ice",
-	p5: "Matter",
-	p6: "Magma",
-	p7: "Hot",
-	p8: "Fire"
-};
 var mifw = {
 	ID1: "mi",
 	ID2: "fw",
@@ -753,6 +777,7 @@ function assignPotID(potentialAxes, contrary){
 		circtx.stroke();
 
 	}
+  showStats(contrary);
 }
 function chooseAxes(potAxes){
 	var newAxes={
@@ -889,4 +914,15 @@ function simplify(){
   }
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
+}
+function showStats(contrary) {
+  var display = "";
+  for (var i=0; i<axes.length; i++) {
+    if (contrary.localeCompare(axes[i].ID1)==0){
+      display = display+axes[i].name+"/n";
+    } else if (contrary.localeCompare(axes[i].ID2)==0) {
+      display = display+axes[i].name+"\n";
+    }
+  }
+  document.getElementById("stats").innerHTML = display;
 }
