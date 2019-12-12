@@ -692,7 +692,7 @@ function chooseAxes(potAxes){
             var newButton = document.createElement("button");
             newButton.innerHTML = axes[i].children[j];
             newButton.classList.add("contrButton");
-            newButton.addEventListener("click", function() {assignPotID(potentialAxes, axes[i].children[j]);});
+            newButton.addEventListener("click", function() {assignPotID(potentialAxes, newButton.innerHTML);});
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
