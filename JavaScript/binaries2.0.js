@@ -161,6 +161,16 @@ var Spark = {
     splittable: false
   }
 };
+var Invisible = {
+  name: "Invisible",
+  bio: "Translucence and the ability to allow light waves to pass through that which exists",
+  splittable: false
+};
+var Reflection = {
+  name: "Reflection",
+  bio: "Reflection specifically refers to the ricochet effect of light waves bouncing off a surface.",
+  splittable: false
+};
 var SnapFreeze = {
   name: "Snap-Freeze",
   bio: "Cold that cuts so deep so quickly, it can shatter material like glass.",
@@ -202,7 +212,8 @@ var Magma = {
   splittable: false
 };
 
-var axes = [ {
+var axes = [ 
+{
   name: "Light -- Dark ++ Light -- Dark",
 	ID1: "Light -- Dark",
 	ID2: "Light -- Dark",
