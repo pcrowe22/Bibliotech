@@ -863,17 +863,18 @@ function chooseAxes(potAxes){
 			//for adding the children properties of the axes to the contr list so you don't have to do it manually
       for (var j=0; j<axes[i].children.length; j++) {
           if (!contr.includes(axes[i].children[j])) {
+            (function() {
             //add contrary to the hidden list
             contr.push(axes[i].children[j]);
             //physically add a new button for that contrary
             var newButton = document.createElement("button");
-            var temp = axes[i].children[j]
-            newButton.innerHTML = temp;
+            newButton.innerHTML = axes[i].children[j];
             newButton.classList.add("contrButton");
-            newButton.addEventListener("click", function() {assignPotID(potentialAxes, temp);});
+            newButton.addEventListener("click", function() {assignPotID(potentialAxes, newButton.innerHTML);});
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
+            }());
           }
         }
       //for adding an elemental power to the list of select options
