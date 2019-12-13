@@ -948,6 +948,7 @@ function simplify(){
 function showStats(contrary) {
   document.getElementById("stats").remove();
   var newStats = document.createElement("ul");
+  newStats.setAttribute("id", "stats");
   document.getElementById("statsContainer").appendChild(newStats);
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
