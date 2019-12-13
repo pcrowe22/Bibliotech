@@ -867,9 +867,10 @@ function chooseAxes(potAxes){
             contr.push(axes[i].children[j]);
             //physically add a new button for that contrary
             var newButton = document.createElement("button");
-            newButton.innerHTML = axes[i].children[j];
+            var temp = axes[i].children[j]
+            newButton.innerHTML = temp;
             newButton.classList.add("contrButton");
-            newButton.addEventListener("click", function() {assignPotID(potentialAxes, newButton.innerHTML);});
+            newButton.addEventListener("click", function() {assignPotID(potentialAxes, temp);});
             htmlContr.push(newButton);
             document.getElementById("buttonDiv").appendChild(newButton);
             document.getElementById("discovery").play(); 
