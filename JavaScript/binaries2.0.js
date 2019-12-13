@@ -282,6 +282,26 @@ var Climate = {
   bio: "Consistency in Storms, the Dynamic form of Clouds over locations.",
   splittable: false
 };
+var Sound = {
+  name: "Sound",
+  bio: "Waves that carry sensations perceivable with auditory input.",
+  splittable: false
+};
+var Color = {
+  name: "Color",
+  bio: "Waves that bring visual stimulation to observers."
+  splittable: false
+};
+var Absence = {
+  name: "Absence",
+  bio: "What is not must also be defined, just as the Romans declared 0 for the first time.",
+  splittable: false
+};
+var Presence = {
+  name: "Presence",
+  bio: "A simple concept, however not the bottom criteria for existence. Presence is just existence within a perceivable zone.",
+  splittable: false
+};
 var axes = [ 
 {
   name: "Light -- Dark ++ Light -- Dark",
@@ -394,25 +414,19 @@ var axes = [
   layer: 3,
   graph: [0,0,1,1,0,0],
   powers: [Storm, WeatherPattern, Dynamic, Mist, Fog, Dew, Static, Climate]
+},
+{
+  name: "Energy -- Matter ++ Visible -- Obscure",
+  ID1: "Energy -- Matter",
+  ID2: "Visible -- Obscure",
+  parent: "ldld",
+  children: ["Sound -- Color", "Presence -- Absence"],
+  layer: 1,
+  graph: [0,0,1,1,0,0],
+  powers: [Energy, Sound, Obscure, Absence, Matter, Presence, Visible, Color]
 }
   ];
 /*
-var emvo = {
-	ID1: "em",
-	ID2: "vo",
-	parent: "ldld",
-	layer: "1",
-	children: ["sc", "pa"],
-	graph: "tb_bb",
-	p1: "Energy",
-	p2: "Sound",
-	p3: "Obscure",
-	p4: "Absence",
-	p5: "Matter",
-	p6: "Presence",
-	p7: "Visible",
-	p8: "Color"
-};
 var FogDpa = {
 	ID1: "FogD",
 	ID2: "pa",
@@ -971,7 +985,6 @@ function showStats(contrary) {
   document.getElementById("stats").remove();
   var newStats = document.createElement("ul");
   newStats.setAttribute("id", "stats");
-  newStats.
   document.getElementById("statsContainer").appendChild(newStats);
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
