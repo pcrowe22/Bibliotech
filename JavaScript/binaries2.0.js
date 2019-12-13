@@ -948,20 +948,16 @@ function simplify(){
 function showStats(contrary) {
   document.getElementById("stats").remove();
   var newStats = document.createElement("ul");
-  newStats.setAttribute("id", "stats");
-  document.getElementById("statsContainer").appendChild("stats");
+  document.getElementById("statsContainer").appendChild(newStats);
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
       var newName = document.createElement("li");
-      newName.setAttribute("id", "newId");
       newName.innerHTML = axes[i].name;
-      document.getElementById("stats").appendChild("newId");
+      document.getElementById("stats").appendChild(newName);
     } else if (contrary.localeCompare(axes[i].ID2)==0) {
       var newName = document.createElement("li");
-      newName.setAttribute("id", "newId");
       newName.innerHTML = axes[i].name;
-      document.getElementById("stats").appendChild("newId");
+      document.getElementById("stats").appendChild(newName);
     }
   }
-  document.getElementById("stats").innerHTML = display;
 }
