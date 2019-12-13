@@ -946,7 +946,7 @@ function simplify(){
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
 }
 function showStats(contrary) {
-  document.getElementById("stats").parentNode.removeChild("stats");
+  document.getElementById("stats").remove();
   var newStats = document.createElement("ul");
   newStats.setAttribute("id", "stats");
   document.getElementById("statsContainer").appendChild("stats");
