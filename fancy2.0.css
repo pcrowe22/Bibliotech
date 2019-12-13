@@ -280,4 +280,5 @@ li {
 }
 #stats{
   font-size: 0.8em;
+  list-style-type: circle;
 }
