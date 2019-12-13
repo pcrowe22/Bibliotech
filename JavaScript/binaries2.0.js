@@ -720,8 +720,7 @@ var sita = {
   ID2: "mn",
   parent: "*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var contr=["Light -- Dark", "et", "bs", "vo", "hc", "pn", "sh", "ri", "cs", "sf", "mc", "mf", "fw", "mi", "ac", "sd", 
-"FogS", "FogD", "ds", "dm", "cw", "sc", "pa", "we", "wd", "cr", "oc", "LifeD",
+var contr=["Light -- Dark", "we", "wd", "cr", "oc", "LifeD",
 "ai", "kb", "mn", "pv", "sv", "rp", "tm", "ls", "sb", "hd", "bi", "ns", "dl", "tp",
 "pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
 "ew", "ia", "ca"];
@@ -990,7 +989,7 @@ function showStats(contrary) {
     if (contrary.localeCompare(axes[i].ID1)==0){
       var newName = document.createElement("li");
       newName.style.color = "white";
-      if (htmlContr.includes(axes[i].ID2)) {
+      if (contr.includes(axes[i].ID2)) {
         newName.innerHTML = axes[i].name;
       } else {
         newName.innerHTML = "?";
@@ -999,7 +998,7 @@ function showStats(contrary) {
     } else if (contrary.localeCompare(axes[i].ID2)==0) {
       var newName = document.createElement("li");
       newName.style.color = "white";
-      if (htmlContr.includes(axes[i].ID1)) {
+      if (contr.includes(axes[i].ID1)) {
         newName.innerHTML = axes[i].name;
       } else {
         newName.innerHTML = "?";
