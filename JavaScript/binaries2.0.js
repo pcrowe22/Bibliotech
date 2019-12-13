@@ -289,7 +289,7 @@ var Sound = {
 };
 var Color = {
   name: "Color",
-  bio: "Waves that bring visual stimulation to observers."
+  bio: "Waves that bring visual stimulation to observers.",
   splittable: false
 };
 var Absence = {
