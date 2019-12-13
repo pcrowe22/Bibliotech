@@ -219,7 +219,18 @@ var Plasma = {
 var FlickerFlame = {
   name: "Flicker Flame",
   bio: "A unique element, thought to occur in Fire only when it is first ignited and when it is dying.",
-  splittable: false
+  splittable: true,
+  hiddenContr: "Static -- Dynamic",
+  power1: Static = {
+    name: "Static",
+    bio: "Lacking change does not mean lacking existence.",
+    splittable: false
+  },
+  power2: Dynamic = {
+    name: "Dynamic",
+    bio: "Ever changing, always different.",
+    splittable: false
+  }
 };
 var Cloud = {
   name: "Cloud",
@@ -229,6 +240,46 @@ var Cloud = {
 var Ash = {
   name: "Ash",
   bio: "Heavy, dark chucks of what remains after something has been burned.",
+  splittable: false
+};
+var Dust = {
+  name: "Dust",
+  bio: "Particles separate, but united, by its elemental definition.",
+  splittable: false
+};
+var Smoke = {
+  name: "Smoke",
+  bio: "Dust in motion, yet united as Smoke",
+  splittable: false
+};
+var Storm = {
+  name: "Storm",
+  bio: "The gentleness of Cloud twisted into a tumultuous fervor inscribed in Dynamic",
+  splittable: false
+};
+var Fog = {
+  name: "Fog",
+  bio: "A Cloud, laying still and stopped.",
+  splittable: false
+};
+var WeatherPattern = {
+  name: "Weather Pattern",
+  bio: "This is the changing of Storm into something new or something old",
+  splittable: false
+};
+var Mist = {
+  name: "Mist",
+  bio: "Slightly activated Fog.",
+  splittable: false
+};
+var Dew = {
+  name: "Dew",
+  bio: "Fog that has settled",
+  splittable: false
+};
+var Climate = {
+  name: "Climate",
+  bio: "Consistency in Storms, the Dynamic form of Clouds over locations.",
   splittable: false
 };
 var axes = [ 
@@ -323,58 +374,29 @@ var axes = [
   layer: 2, 
   graph: [0,0,0,0,1,0],
   powers: [Magma, Plasma, Fire, FlickerFlame, Ice, Cloud, Wind, Ash]
+},
+{
+  name: "Static -- Dynamic ++ Ash -- Cloud",
+  ID1: "Static -- Dynamic",
+  ID2: "Ash -- Cloud",
+  parent: "mifw",
+  children: ["Fog -- Smoke", "Fog -- Dust", "Dust -- Smoke"],
+  layer: 3,
+  graph: [0,0,1,0,1,1],
+  powers: [Static, Dust, Ash, Smoke, Dynamic, Storm, Cloud, Fog]
+},
+{
+  name: "Static -- Dynamic ++ Fog -- Smoke",
+  ID1: "Static -- Dynamic",
+  ID2: "Fog -- Smoke",
+  parent: "mifw",
+  children: ["Dew -- Mist", "Climate -- Weather Pattern"],
+  layer: 3,
+  graph: [0,0,1,1,0,0],
+  powers: [Storm, WeatherPattern, Dynamic, Mist, Fog, Dew, Static, Climate]
 }
   ];
 /*
-var mifw = {
-	ID1: "mi",
-	ID2: "fw",
-	parent: "emhc", 
-	children: ["ac", "plasma", "flicker flame"],
-	layer: "2",
-	graph: "lb",
-	p1: "Magma",
-	p2: "Plasma",
-	p3: "Fire",
-	p4: "Flicker Flame",
-	p5: "Ice",
-	p6: "Clouds",
-	p7: "Winds",
-	p8: "Ash"
-};
-var sdac = {
-	ID1: "sd",
-	ID2: "ac",
-	parent: "mifw",
-	children: ["FogS", "FogD", "ds"],
-	layer: "3",
-	graph: "rb_tb_lb",
-	p1: "Static",
-	p2: "Dust",
-	p3: "Ash",
-	p4: "Smoke",
-	p5: "Dynamic",
-	p6: "Storm",
-	p7: "Clouds",
-	p8: "Fog"
-};
-var sdFogS = {
-	ID1: "sd",
-	ID2: "FogS",
-	parent: "mifw",
-	children: ["dm", "cw"],
-	layer: "3",
-	graph: "tb_bb",
-	p1: "Storm",
-	p2: "Weather Pattern",
-	p3: "Dynamic",
-	p4: "Mist",
-	p5: "Fog",
-	p6: "Dew",
-	p7: "Static",
-	p8: "Climate"
-};
-
 var emvo = {
 	ID1: "em",
 	ID2: "vo",
