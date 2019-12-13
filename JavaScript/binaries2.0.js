@@ -947,7 +947,7 @@ function simplify(){
 }
 function showStats(contrary) {
   var display = "";
-  document.getElementById("statsContainer").removeChild("stats");
+  document.getElementById("statsContainer").parentNode.removeChild("stats");
   var newStats = document.createElement("ul");
   newStats.setAttribute("id", "stats");
   document.getElementById("statsContainer").appendChild("stats");
