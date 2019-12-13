@@ -949,14 +949,17 @@ function showStats(contrary) {
   document.getElementById("stats").remove();
   var newStats = document.createElement("ul");
   newStats.setAttribute("id", "stats");
+  newStats.
   document.getElementById("statsContainer").appendChild(newStats);
   for (var i=0; i<axes.length; i++) {
     if (contrary.localeCompare(axes[i].ID1)==0){
       var newName = document.createElement("li");
       newName.innerHTML = axes[i].name;
+      newName.style.color = white;
       document.getElementById("stats").appendChild(newName);
     } else if (contrary.localeCompare(axes[i].ID2)==0) {
       var newName = document.createElement("li");
+      newName.style.color = white;
       newName.innerHTML = axes[i].name;
       document.getElementById("stats").appendChild(newName);
     }
