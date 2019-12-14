@@ -704,7 +704,7 @@ var axes = [
   children: ["Many -- None", "Pressure -- Vacuum"],
   layer: 2,
   graph: [0,0,1,1,0,0],
-  powers: [Contained, None, Absence, Vacuum, Released, Pressurce, Presence, Many]
+  powers: [Contained, None, Absence, Vacuum, Released, Pressure, Presence, Many]
 },
 {
   name: "Many -- None ++ Order -- Chaos",
