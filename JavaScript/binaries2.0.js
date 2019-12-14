@@ -756,7 +756,7 @@ var axes = [
   powers: [Many, Timeline, Time, Present, None, Location, Space, Distance]
 },
 {
-  name: "Reflection -- Invisible ++ Timeline -- Present"],
+  name: "Reflection -- Invisible ++ Timeline -- Present",
   ID1: "Reflection -- Invisible",
   ID2: "Timeline -- Present",
   children: ["Past -- Future", "Familiar -- New"],
