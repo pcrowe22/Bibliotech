@@ -763,6 +763,7 @@ var axes = [
   layer: 2,
   graph: [0,0,1,1,0,0],
   powers: [Timeline, Future, Invisible, New, Present, Familiar, Reflection, Past]
+}
   ];
 /*
 var sdpf = {
