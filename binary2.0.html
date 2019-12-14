@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Polarity</title>
     <link href="fancy2.0.css" rel="stylesheet" type="text/css" media="all">
-    <!--<script async src="JavaScript/binaries2.0.js"></script>-->
   </head>
   <body style="background-color: black">
     <h1 style="position: relative; color: white; z-index: 2">Discover the Array</h1>
@@ -44,27 +43,6 @@
       <p>Contraries</p>
       <button class="contrButton" id="contr0" style="display: block" onclick="assignPotID(potentialAxes, contr[0])">Light -- Dark</button>
       <!--
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[28])">Water -- Earth</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[29])">Water -- Dry</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[30])">Contained -- Released</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[31])">Order -- Chaos</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[32])">Life -- Death</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[33])">Animated Husk -- Intangible Spirit</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[34])">Kamikazee -- Birth</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[35])">Many -- None</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[36])">Pressure -- Vacuum</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[37])">Singularity -- Void</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[38])">Random -- Pattern</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[39])">Technicolor -- Monochrome</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[40])">Layered Sound -- Single Sound</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[41])">Sight -- Blind</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[42])">Hearing -- Deaf</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[43])">Blur -- Image</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[44])">Noise -- Speech</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[45])">Distance -- Location</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[46])">Time-Displacement -- Present</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[47])">Past -- Future</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[48])">Familiar -- New</button>
       <button class="contrButton" onclick="assignPotID(potentialAxes,contr[49])">Memory -- Prediction</button>
       <button class="contrButton" onclick="assignPotID(potentialAxes,contr[50])">Continuation -- Forever</button>
       <button class="contrButton" onclick="assignPotID(potentialAxes,contr[51])">Experience -- Blank Slate</button>
@@ -94,52 +72,6 @@
         <form>
         <select size="5" id="power" onchange="simplify()" style="position: absolute; left: 40px">
       <!--
-      <option class="elementSelect" value="water">Water</option>
-      <option class="elementSelect" value="earth">Earth</option>
-      <option class="elementSelect" value="dry">Dry</option>
-      <option class="elementSelect" value="emptiness" e1="contained" e2="released" selectCont="cr">Emptiness</option>
-      <option class="elementSelect" value="contained">Contained</option>
-      <option class="elementSelect" value="released">Released</option>
-      <option class="elementSelect" value="order">Order</option>
-      <option class="elementSelect" value="chaos">Chaos</option>
-      <option class="elementSelect" value="life">Life</option>
-      <option class="elementSelect" value="death">Death</option>
-      <option class="elementSelect" value="fire rain">Fire Rain</option>
-      <option class="elementSelect" value="tornado">Tornado</option>
-      <option class="elementSelect" value="humidity">Humidity</option>
-      <option class="elementSelect" value="haze">Haze</option>
-      <option class="elementSelect" value="animated husk">Animated Husk</option>
-      <option class="elementSelect" value="intangible spirit">Intangible Spirit</option>
-      <option class="elementSelect" value="kamikaze">Kamikaze</option>
-      <option class="elementSelect" value="birth">Birth</option>
-      <option class="elementSelect" value="many">Many</option>
-      <option class="elementSelect" value="none">None</option>
-      <option class="elementSelect" value="pressure">Pressure</option>
-      <option class="elementSelect" value="vacuum">Vacuum</option>
-      <option class="elementSelect" value="singularity">Singularity</option>
-      <option class="elementSelect" value="void">Void</option>
-      <option class="elementSelect" value="random">Random</option>
-      <option class="elementSelect" value="pattern">Pattern</option>
-      <option class="elementSelect" value="technicolor">Technicolor</option>
-      <option class="elementSelect" value="monochrome">Monochrome</option>
-      <option class="elementSelect" value="layered noise">Layered Noise</option>
-      <option class="elementSelect" value="single sound">Single Sound</option>
-      <option class="elementSelect" value="hearing">Hearing</option>
-      <option class="elementSelect" value="deaf">Deaf</option>
-      <option class="elementSelect" value="sight">Sight</option>
-      <option class="elementSelect" value="blind">Blind</option>
-      <option class="elementSelect" value="blur">Blur</option>
-      <option class="elementSelect" value="image">Image</option>
-      <option class="elementSelect" value="noise">Noise</option>
-      <option class="elementSelect" value="speech">Speech</option>
-      <option class="elementSelect" value="distance">Distance</option>
-      <option class="elementSelect" value="location">Location</option>
-      <option class="elementSelect" value="timeline">Timeline</option>
-      <option class="elementSelect" value="present">Present</option>
-      <option class="elementSelect" value="past">Past</option>
-      <option class="elementSelect" value="future">Future</option>
-      <option class="elementSelect" value="familiar">Familiar</option>
-      <option class="elementSelect" value="new">New</option>
       <option class="elementSelect" value="memory">Memory</option>
       <option class="elementSelect" value="prediction">Prediction</option>
       <option class="elementSelect" value="continuation">Continuation</option>

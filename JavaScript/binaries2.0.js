@@ -302,6 +302,237 @@ var Presence = {
   bio: "A simple concept, however not the bottom criteria for existence. Presence is just existence within a perceivable zone.",
   splittable: false
 };
+var Dry = {
+  name: "Dry",
+  bio: "Arid and lacking Water.",
+  splittable: false
+};
+var Emptiness = {
+  name: "Emptiness",
+  bio: "When there is nothing present, not even Dust, one can consider it Emptiness",
+  splittable: true,
+  hiddenContr: "Contained -- Released",
+  power1: Contained = {
+    name: "Contained",
+    bio: "Originally from Emptiness. This aspect of Emptiness represents the Contained side, the side where Emptiness ends.",
+    splittable: false
+  },
+  power2: Released = {
+    name: "Released",
+    bio: "Originally from Emptiness. This aspect of Emptiness represents the Released side, the side where Emptiness never ends.",
+    splittable: false
+  }
+};
+var Earth = {
+  name: "Earth",
+  bio: "So much Dust that it becomes solid Earth.",
+  splittable: false
+};
+var Water = {
+  name: "Water",
+  bio: "Wetness, and the high presence of Fog",
+  splittable: false
+};
+var Death = {
+  name: "Death",
+  bio: "The end to consciousness",
+  splittable: false
+};
+var Life = {
+  name: "Life",
+  bio: "The beginning of consciousness",
+  splittable: false
+};
+var Order = {
+  name: "Order",
+  bio: "Following logic and consistency.",
+  splittable: false
+};
+var Chaos = {
+  name: "Chaos",
+  bio: "Spontanaity and free from reason.",
+  splittable: false
+};
+var Tornado = {
+  name: "Tornado",
+  bio: "Chaotic Wind with no remorse.",
+  splittable: false
+};
+var Haze = {
+  name: "Haze",
+  bio: "Slithering, suspicious air.",
+  splittable: false
+};
+var Humidity = {
+  name: "Humidity",
+  bio: "Air so saturated that it's tangible.",
+  splittable: false
+};
+var FireRain = {
+  name: "Fire Rain",
+  bio: "Precipitation that's ignited like mini suns.",
+  splittable: false
+};
+var Kamikaze = {
+  name: "Kamikaze",
+  bio: "Taking a life with another life.",
+  splittable: false
+};
+var IntangibleSpirit = {
+  name: "Intangible Spirit",
+  bio: "The Life without corpus.",
+  splittable: false
+};
+var Birth = {
+  name: "Birth",
+  bio: "Making a life with another life.",
+  splittable: false
+};
+var AnimatedHusk = {
+  name: "Animated Husk",
+  bio: "The corpse without Life.",
+  splittable: false
+};
+var None = {
+  name: "None",
+  bio: "Definite nothingness.",
+  splittable: false
+};
+var Many = {
+  name: "Many", 
+  bio: "A definitive collection of many.",
+  splittable: false
+};
+var Vacuum = {
+  name: "Vacuum",
+  bio: "A heavy Force occurring in the Absence of everything.",
+  splittable: false
+};
+var Pressure = {
+  name: "Pressure",
+  bio: "A heavy Force occurring in the Presence of Many.",
+  splittable: false
+};
+var Random = {
+  name: "Random",
+  bio: "Lots of Chaos.",
+  splittable: false
+};
+var Pattern = {
+  name: "Pattern",
+  bio: "Absolutely no Chaos.",
+  splittable: false
+};
+var Void = {
+  name: "Void",
+  bio: "Nothing put into Order.",
+  splittable: false
+};
+var Singularity = {
+  name: "Singularity",
+  bio: "Many things put into Order.",
+  splittable: false
+};
+var Monochrome = {
+  name: "Monochrome",
+  bio: "No colors, just one Color.",
+  splittable: false
+};
+var Technicolor = {
+  name: "Technicolor",
+  bio: "Every Color of imagination and beyond.",
+  splittable: false
+};
+var LayeredNoise = {
+  name: "Layered Noise",
+  bio: "Noise on top of noise. None are similar. All coexist.",
+  splittable: false
+};
+var SingleSound = {
+  name: "Single Sound",
+  bio: "The universe does not care if Sound comes from one origin or many. If there is no variation, the Sound becomes Single Sound.",
+  splittable: false
+};
+var Sight = {
+  name: "Sight",
+  bio: "The ability to perceive Color waves.",
+  splittable: false
+};
+var Blind = {
+  name: "Blind",
+  bio: "The ability to ignore Color.",
+  splittable: false
+};
+var Hearing = {
+  name: "Hearing",
+  bio: "The ability to perceive Sound waves.",
+  splittable: false
+};
+var Deaf = {
+  name: "Deaf",
+  bio: "The ability to ignore Sound waves.",
+  splittable: false
+};
+var Image = {
+  name: "Image",
+  bio: "Color Ordered into a definable Image.",
+  splittable: false
+};
+var Blur = {
+  name: "Blur",
+  bio: "Color Randomized into a distinguishable Blur.",
+  splittable: false
+};
+var Speech = {
+  name: "Speech",
+  bio: "Sound Ordered into a recognizable Speech.",
+  splittable: false
+};
+var Noise = {
+  name: "Noise",
+  bio: "Sound Randomized into a garbled Noise.",
+  splittable: false
+};
+var Present = {
+  name: "Present",
+  bio: "When there have been no Time instances other than the current one, it is known as Present.",
+  splittable: false
+};
+var Timeline = {
+  name: "Timeline",
+  bio: "When there have been many Time instances, it is considered a Timeline.",
+  splittable: false
+};
+var Location = {
+  name: "Location",
+  bio: "Space with no variation.",
+  splittable: false
+};
+var Distance = {
+  name: "Distance",
+  bio: "Space that is varied from Location to Location.",
+  splittable: false
+};
+var Future = {
+  name: "Future",
+  bio: "Some part of the Timeline, unknowable.",
+  splittable: false
+};
+var Past = {
+  name: "Past",
+  bio: "Some part of the Timeline that is reached through Reflection.",
+  splittable: false
+};
+var New = {
+  name: "New",
+  bio: "An unknowable circumstance in the Present moment.",
+  splittable: false
+};
+var Familiar = {
+  name: "Familiar",
+  bio: "A revisited experience occurring in the Present.",
+  splittable: false
+};
 var axes = [ 
 {
   name: "Light -- Dark ++ Light -- Dark",
@@ -400,7 +631,7 @@ var axes = [
   ID1: "Static -- Dynamic",
   ID2: "Ash -- Cloud",
   parent: "mifw",
-  children: ["Fog -- Smoke", "Fog -- Dust", "Dust -- Smoke"],
+  children: ["Fog -- Storm", "Fog -- Dust", "Dust -- Smoke"],
   layer: 3,
   graph: [0,0,1,0,1,1],
   powers: [Static, Dust, Ash, Smoke, Dynamic, Storm, Cloud, Fog]
@@ -424,185 +655,116 @@ var axes = [
   layer: 1,
   graph: [0,0,1,1,0,0],
   powers: [Energy, Sound, Obscure, Absence, Matter, Presence, Visible, Color]
-}
+},
+{
+  name: "Fog -- Dust ++ Presence -- Absence",
+  ID1: "Fog -- Dust",
+  ID2: "Presence -- Absence",
+  parent: "emvo",
+  children: ["Water -- Earth", "Water -- Dry"],
+  layer: 2,
+  graph: [0,0,1,0,1,0],
+  powers: [Fog, Dry, Absence, Emptiness, Dust, Earth, Presence, Water]
+},
+{
+  name: "Static -- Dynamic ++ Contained -- Released",
+  ID1: "Static -- Dynamic",
+  ID2: "Contained -- Released",
+  parent: "flicker flame",
+  children: ["Order -- Chaos", "Life -- Death"],
+  layer: 4,
+  graph: [1,1,0,0,0,0],
+  powers: [Static, Death, Released, Chaos, Dynamic, Life, Contained, Order]
+},
+{
+  name: "Fog -- Storm ++ Fire -- Wind",
+  ID1: "Fog -- Storm",
+  ID2: "Fire -- Wind",
+  parent: "emhc",
+  children: [],
+  layer: 2,
+  graph: [0,0,0,0,0,0],
+  powers: [Storm, Tornado, Wind, Haze, Fog, Humidity, Fire, FireRain]
+},
+{
+  name: "Life -- Death ++ Life -- Death",
+  ID1: "Life -- Death",
+  ID2: "Life -- Death",
+  parent: "sdcr",
+  children: ["Animated Husk -- Intangible Spirit", "Kamikaze -- Birth"],
+  layer: 5,
+  graph: [0,0,0,0,1,1],
+  powers: [Death, Kamikaze, Death, IntangibleSpirit, Life, Birth, Life, AnimatedHusk]
+}, 
+{
+  name: "Contained -- Released ++ Presence -- Absence",
+  ID1: "Contained -- Released",
+  ID2: "Presence -- Absence",
+  parent: "emvo",
+  children: ["Many -- None", "Pressure -- Vacuum"],
+  layer: 2,
+  graph: [0,0,1,1,0,0],
+  powers: [Contained, None, Absence, Vacuum, Released, Pressurce, Presence, Many]
+},
+{
+  name: "Many -- None ++ Order -- Chaos",
+  ID1: "Many -- None",
+  ID2: "Order -- Chaos",
+  parent: "crpa",
+  children: ["Singularity -- Void", "Random -- Pattern"],
+  layer: 3,
+  graph: [0,0,0,0,1,1],
+  powers: [Many, Random, Chaos, Pattern, None, Void, Order, Singularity]
+},
+{
+  name: "Sound -- Color ++ Many -- None",
+  ID1: "Sound -- Color",
+  ID2: "Many -- None",
+  parent: "hcfs",
+  children: ["Technicolor -- Monochrome", "Layered Noise -- Single Sound"],
+  layer: 3,
+  graph: [0,0,1,1,0,0],
+  powers: [Color, Monochrome, None, SingleSound, Sound, LayeredNoise, Many, Technicolor]
+},
+{
+  name: "Sound -- Color ++ Presence -- Absence",
+  ID1: "Sound -- Color",
+  ID2: "Presence -- Absence",
+  parent: "hcfs",
+  children: ["Sight -- Blind", "Hearing -- Deaf"],
+  layer: 3,
+  graph: [0,0,1,1,0,0],
+  powers: [Color, Blind, Absence, Deaf, Sound, Hearing, Presence, Sight]
+},
+{
+  name: "Sound -- Color ++ Random -- Pattern",
+  ID1: "Sound -- Color",
+  ID2: "Random -- Pattern",
+  parent: "hcfs",
+  children: ["Blur -- Image", "Noise -- Speech"],
+  layer: 3,
+  graph: [0,0,1,1,0,0],
+  powers: [Color, Image, Pattern, Speech, Sound, Noise, Random, Blur]
+},
+{
+  name: "Space -- Time ++ Many -- None",
+  ID1: "Space -- Time",
+  ID2: "Random -- Pattern",
+  children: ["Distance -- Location", "Timeline -- Present"],
+  layer: 3,
+  graph: [0,0,0,0,1,1],
+  powers: [Many, Timeline, Time, Present, None, Location, Space, Distance]
+},
+{
+  name: "Reflection -- Invisible ++ Timeline -- Present"],
+  ID1: "Reflection -- Invisible",
+  ID2: "Timeline -- Present",
+  children: ["Past -- Future", "Familiar -- New"],
+  layer: 2,
+  graph: [0,0,1,1,0,0],
+  powers: [Timeline, Future, Invisible, New, Present, Familiar, Reflection, Past]
   ];
 /*
-var FogDpa = {
-	ID1: "FogD",
-	ID2: "pa",
-	parent: "emvo",
-	layer: "2",
-	children: ["we", "wd", "emptiness"],
-	graph: "lb_tb",
-	p1: "Fog",
-	p2: "Dry",
-	p3: "Absence",
-	p4: "Emptiness",
-	p5: "Dust",
-	p6: "Earth",
-	p7: "Presence",
-	p8: "Water"
-};
-var sdcr = {
-	ID1: "sd",
-	ID2: "cr",
-	parent: "flicker flame",
-	layer: "4",
-	children: ["oc", "LifeD"],
-	graph: "ld_rd",
-	p1: "Static",
-	p2: "Death",
-	p3: "Released",
-	p4: "Chaos",
-	p5: "Dynamic",
-	p6: "Life",
-	p7: "Contained",
-	p8: "Order"
-};
-var FogSfw = {
-	ID1: "FogS",
-	ID2: "fw",
-	parent: "emhc",
-	layer: "2",
-	children: ["fire rain", "tornado", "haze", "humidity"],
-	graph: "none",
-	p1: "Storm",
-	p2: "Tornado",
-	p3: "Wind",
-	p4: "Haze",
-	p5: "Fog",
-	p6: "Humidity",
-	p7: "Fire",
-	p8: "Fire Rain"
-};
-var LifeDLifeD = {
-	ID1: "LifeD",
-	ID2: "LifeD",
-	parent: "sdcr",
-	layer: "5",
-	children: ["ai", "kb"],
-	graph: "ld_rd",
-	p1: "Death",
-	p2: "Kamikaze",
-	p3: "Death",
-	p4: "Intangible Spirit",
-	p5: "Life",
-	p6: "Birth",
-	p7: "Life",
-	p8: "Animated Husk"
-};
-var crpa = {
-	ID1: "cr",
-	ID2: "pa",
-	parent: "emvo",
-	layer: "2",
-	children: ["mn", "pv"],
-	graph: "tb_bb",
-	p1: "Contained",
-	p2: "None",
-	p3: "Absence",
-	p4: "Vacuum",
-	p5: "Released",
-	p6: "Pressure",
-	p7: "Presence",
-	p8: "Many"
-};
-var mnoc = {
-	ID1: "mn",
-	ID2: "oc",
-	parent: "crpa",
-	layer: "3",
-	children: ["sv", "rp"],
-	graph: "rb_lb",
-	p1: "Many",
-	p2: "Random",
-	p3: "Chaos",
-	p4: "Pattern",
-	p5: "None",
-	p6: "Void",
-	p7: "Order",
-	p8: "Singularity"
-};
-var scmn = {
-	ID1: "sc",
-	ID2: "mn",
-	parent: "hcfs",
-	layer: "3",
-	children: ["tm", "ls"],
-	graph: "tb_bb",
-	p1: "Color",
-	p2: "Monochrome",
-	p3: "None",
-	p4: "Single Sound",
-	p5: "Sound",
-	p6: "Layered Noise",
-	p7: "Many",
-	p8: "Technicolor"
-};
-var scpa = {
-	ID1: "sc",
-	ID2: "pa",
-	parent: "hcfs",
-	layer: "3",
-	children: ["sb", "hd"],
-	graph: "tb_bb",
-	p1: "Color",
-	p2: "Blind",
-	p3: "Absence",
-	p4: "Deaf",
-	p5: "Sound",
-	p6: "Hearing",
-	p7: "Presence",
-	p8: "Sight"
-};
-var scrp = {
-	ID1: "sc",
-	ID2: "rp",
-	parent: "hcfs",
-	layer: "3",
-	children: ["bi", "ns"],
-	graph: "tb_bb",
-	p1: "Color",
-	p2: "Image",
-	p3: "Pattern",
-	p4: "Speech",
-	p5: "Sound",
-	p6: "Noise",
-	p7: "Random",
-	p8: "Blur"
-};
-var stmn = {
-	ID1: "st",
-	ID2: "mn",
-	parent: "space-time",
-	layer: "3",
-	children: ["dl", "tp"],
-	graph: "lb_rb",
-	p1: "Many",
-	p2: "Timeline",
-	p3: "Time",
-	p4: "Present",
-	p5: "None",
-	p6: "Location",
-	p7: "Space",
-	p8: "Distance"
-};
-var ritp = {
-	ID1: "ri",
-	ID2: "tp",
-	parent: "celd",
-	layer: "2",
-	children: ["pf", "fn"],
-	graph: "tb_bb",
-	p1: "Timeline",
-	p2: "Future",
-	p3: "Invisible",
-	p4: "New",
-	p5: "Present",
-	p6: "Familiar",
-	p7: "Reflection",
-	p8: "Past"
-};
 var sdpf = {
 	ID1: "sd",
 	ID2: "pf",
