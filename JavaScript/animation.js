@@ -16,8 +16,8 @@ const c = cvs.getContext("2d");
 var myOval = {
   x: cvs.width/2,
   y: cvs.height/2,
-  width: cvs.width/4,
-  height: cvs.height/8,
+  width: cvs.width/8,
+  height: cvs.height/16,
   currentPercent: 0,
   endPercent: 10,
 };
@@ -38,26 +38,8 @@ function drawOval(shape, ctx) {
 }
 var numOvals = 0;
 function animate(shape, canvas, ctx, numOvals, initialOval) {
-  /*var newW = shape.width*1.1;
-  var newH = shape.height*1.1;
-  if (newW < canvas.width-canvas.width*.1) {
-    shape.width = newW;
-    shape.height = newH;
-  } else if (numOvals<5){
-    numOvals++;
-    var newOval = {
-      x: initialOval.x,
-      y: initialOval.y,
-      width: initialOval.width,
-      height: initialOval.height,
-      currentPercent: initialOval.currentPercent,
-      endPercent: initialOval.endPercent,
-    };
-    drawOval(newOval, ctx);
-    animate(newOval, canvas, ctx, numOvals, initialOval);
-  }*/
-  shape.width = shape.width*1.1;
-  shape.height = shape.height*1.1;
+  shape.width = shape.width*1.05;
+  shape.height = shape.height*1.05;
   ctx.clearRect(0,0,canvas.width, canvas.height);
   drawOval(shape, ctx);
   shape.currentPercent++;
