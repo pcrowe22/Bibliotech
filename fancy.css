@@ -291,8 +291,9 @@ li {
   width: 50%;
   margin: 0 auto;
   display: block;
-  z-index: 0;
+  z-index: 1;
 }
 #ovalButton{
   margin: 0 auto;
+  display: block;
 }
