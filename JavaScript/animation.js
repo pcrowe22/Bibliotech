@@ -1,7 +1,7 @@
 const cvs = document.getElementById("cvs");
 const c = cvs.getContext("2d");
-cvs.width = 50%;
-cvs.height = 50%;
+cvs.setAttribute("width", "50%");
+cvs.setAttribute("height", "50%");
 cvs.margin = "0 auto";
 
 var myOval = {
