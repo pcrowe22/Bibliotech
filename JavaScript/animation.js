@@ -31,13 +31,15 @@ function drawOval(shape, ctx) {
   ctx.strokeStyle = "black";
   ctx.stroke();
 }
+var numOvals = 0;
 function animate(shape, canvas, ctx) {
   var newW = shape.width*1.1;
   var newH = shape.height*1.1;
   if (newW < canvas.width-canvas.width*.1) {
     shape.width = newW;
     shape.height = newH;
-  } else {
+  } else if (numOvals<5){
+    numOvals++;
     var newOval = initialOval;
     drawOval(newOval, ctx);
     animate(newOval, canvas, ctx);
