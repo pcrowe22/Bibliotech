@@ -281,3 +281,7 @@ li {
 .elementSelect{
   display: none;
 }
+
+#animationsPage{
+  background-color: light blue;
+}
