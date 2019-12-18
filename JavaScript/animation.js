@@ -19,7 +19,7 @@ var myOval = {
   width: cvs.width/8,
   height: cvs.height/16,
   currentPercent: 0,
-  endPercent: 10,
+  endPercent: 20,
 };
 var initialOval = {
   x: myOval.x,
