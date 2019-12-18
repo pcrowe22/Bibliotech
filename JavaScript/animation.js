@@ -65,10 +65,8 @@ function animate(shape, canvas, ctx, numOvals, initialOval) {
     requestAnimFrame(function() {
       animate(shape, canvas, ctx, numOvals, initialOval);
     });
-  } else {
+  } else if(numOvals<3){
     numOvals++;
-  }
-  if (numOvals<3) {
     var newOval = {
       x: initialOval.x,
       y: initialOval.y,
