@@ -12,9 +12,10 @@ window.requestAnimFrame = (
   })();
 const cvs = document.getElementById("cvs");
 const c = cvs.getContext("2d");
-cvs.setAttribute("width", "50%");
-cvs.setAttribute("height", "50%");
-cvs.margin = "0 auto";
+cvs.setAttribute("width", "90%");
+cvs.setAttribute("height", "70%");
+cvs.setAttribute("margin-left", "auto");
+cvs.setAttribute("margin-right", "auto");
 
 var myOval = {
   x: cvs.width/2,
