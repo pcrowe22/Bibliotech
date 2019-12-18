@@ -33,7 +33,7 @@ function drawOval(shape, ctx) {
   ctx.beginPath();
   ctx.ellipse(shape.x, shape.y, shape.width, shape.height, 0, 0, 2*Math.PI);
   ctx.lineWidth = 1;
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "#"+((1<<24)*Math.random()|0).toString(16);//"black";
   ctx.stroke();
 }
 var numOvals = 0;
