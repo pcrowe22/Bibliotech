@@ -1,3 +1,7 @@
+var mantaRay = $("#hypnotized");
+var imageWidth = mantaRay.width;
+
+mantaRay.setAttribute("left-margin", "calc(-imageWidth/2)");
 window.requestAnimFrame = (
   function(callback) {
     return window.requestAnimationFrame ||

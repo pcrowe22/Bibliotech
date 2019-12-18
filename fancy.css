@@ -298,3 +298,8 @@ li {
   margin: 0 auto;
   display: block;
 }
+#hypnotized{
+  position: absolute; 
+  left: 50%; 
+  z-index: 0;
+}
