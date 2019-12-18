@@ -1,4 +1,4 @@
-const cvs = document.querySelector("canvas");
+const cvs = document.getElementById("cvs");
 const c = cvs.getContext("2d");
 cvs.width = 50%;
 cvs.height = 50%;
