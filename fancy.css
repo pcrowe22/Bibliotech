@@ -124,11 +124,14 @@ li {
   list-style-type: none;
 }
 
-#hudButton {
+.hudButton, #hudButton {
   padding: 12px;
   background-color: #81FFCD;
 }
 
+.hudButton a {
+  text-decoration: none;
+}
 #hudButton a {
   text-decoration: none;
 }
