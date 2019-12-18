@@ -1,3 +1,15 @@
+window.requestAnimFrame = (
+  function(callback) {
+    return window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.moxRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+       window.setTimeout(callback, 1000/60);
+    };
+  })();
 const cvs = document.getElementById("cvs");
 const c = cvs.getContext("2d");
 cvs.setAttribute("width", "50%");
