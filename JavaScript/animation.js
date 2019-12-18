@@ -16,10 +16,10 @@ const c = cvs.getContext("2d");
 var myOval = {
   x: cvs.width/2,
   y: cvs.height/2,
-  width: cvs.width/8,
-  height: cvs.height/16,
+  width: cvs.width/12,
+  height: cvs.height/24,
   currentPercent: 0,
-  endPercent: 20,
+  endPercent: 50,
 };
 var initialOval = {
   x: myOval.x,
