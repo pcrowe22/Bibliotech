@@ -32,5 +32,5 @@ function animate(shape, canvas, ctx) {
 }
 
 drawOval(myOval, c);
-animate(myOval, cvs, c);
+document.getElementById("ovalButton").addEventListener("click", function() {animate(myOval, cvs, c);});
   
