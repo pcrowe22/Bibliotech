@@ -1,4 +1,4 @@
-var mantaRay = $("#hypnotized");
+var mantaRay = document.getElementById("hypnotized");
 var imageWidth = mantaRay.width;
 
 mantaRay.setAttribute("left-margin", "calc(-imageWidth/2)");
@@ -51,7 +51,7 @@ function animate(shape, canvas, ctx, numOvals, initialOval) {
     requestAnimFrame(function() {
       animate(shape, canvas, ctx, numOvals, initialOval);
     });
-  } else if(numOvals<3){
+  } else if(numOvals<4){
     numOvals++;
     var newOval = {
       x: initialOval.x,
@@ -66,5 +66,5 @@ function animate(shape, canvas, ctx, numOvals, initialOval) {
     
 }
 
-drawOval(myOval, c);
+//drawOval(myOval, c);
 document.getElementById("ovalButton").addEventListener("click", function() {animate(myOval, cvs, c, numOvals, initialOval);});
