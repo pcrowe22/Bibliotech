@@ -23,6 +23,7 @@ var myOval = {
   width: cvs.width/4,
   height: cvs.height/8,
 };
+var initialOval = myOval;
 function drawOval(shape, ctx) {
   ctx.beginPath();
   ctx.ellipse(shape.x, shape.y, shape.width, shape.height, 0, 0, 2*Math.PI);
@@ -36,6 +37,10 @@ function animate(shape, canvas, ctx) {
   if (newW < canvas.width-canvas.width*.1) {
     shape.width = newW;
     shape.height = newH;
+  } else {
+    var newOval = initialOval;
+    drawOval(newOval, ctx);
+    animate(newOval, canvas, ctx);
   }
   ctx.clearRect(0,0,canvas.width, canvas.height);
   drawOval(shape, ctx);
