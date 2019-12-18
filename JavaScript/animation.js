@@ -28,7 +28,7 @@ function drawOval(shape, ctx) {
   ctx.stroke();
 }
 var numOvals = 0;
-function animate(shape, canvas, ctx) {
+function animate(shape, canvas, ctx, numOvals, initialOval) {
   var newW = shape.width*1.1;
   var newH = shape.height*1.1;
   if (newW < canvas.width-canvas.width*.1) {
@@ -38,12 +38,12 @@ function animate(shape, canvas, ctx) {
     numOvals++;
     var newOval = initialOval;
     drawOval(newOval, ctx);
-    animate(newOval, canvas, ctx);
+    animate(newOval, canvas, ctx, numOvals, initialOval);
   }
   ctx.clearRect(0,0,canvas.width, canvas.height);
   drawOval(shape, ctx);
   requestAnimFrame(function() {
-    animate(shape, canvas, ctx);
+    animate(shape, canvas, ctx, numOvals, initialOval);
   });
 }
 
