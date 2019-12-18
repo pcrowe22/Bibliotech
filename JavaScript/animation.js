@@ -19,7 +19,12 @@ var myOval = {
   width: cvs.width/4,
   height: cvs.height/8,
 };
-var initialOval = myOval;
+var initialOval = {
+  x: myOval.x,
+  y: myOval.y,
+  width: myOval.width,
+  height: myOval.height,
+};
 function drawOval(shape, ctx) {
   ctx.beginPath();
   ctx.ellipse(shape.x, shape.y, shape.width, shape.height, 0, 0, 2*Math.PI);
@@ -36,7 +41,12 @@ function animate(shape, canvas, ctx, numOvals, initialOval) {
     shape.height = newH;
   } else if (numOvals<5){
     numOvals++;
-    var newOval = initialOval;
+    var newOval = {
+      x: initialOval.x,
+      y: initialOval.y,
+      width: initialOval.width,
+      height: initialOval.height
+    };
     drawOval(newOval, ctx);
     animate(newOval, canvas, ctx, numOvals, initialOval);
   }
