@@ -12,7 +12,7 @@ var myOval = {
 };
 function drawOval(shape, ctx) {
   ctx.beginPath();
-  ctx.ellipse(shape.x, shape.y, shape.width, shape.height);
+  ctx.ellipse(shape.x, shape.y, shape.width, shape.height, 0, 0, 2*Math.PI);
   ctx.lineWidth = 5;
   ctx.strokeStyle = "black";
   ctx.stroke();
