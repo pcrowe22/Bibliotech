@@ -1298,7 +1298,7 @@ var simple_chart_config = {
         children: [
           {text: {name: "Light"}},
           {text: {name: "Light"}}
-        ]}
+        ]},
         {text: {name: "Matter"},
         children: [
           {text: {name: "Dark"}},
