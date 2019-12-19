@@ -395,12 +395,12 @@ var AnimatedHusk = {
 };
 var None = {
   name: "None",
-  bio: "Definite nothingness.",
+  bio: "No varying traits or iterations.",
   splittable: false
 };
 var Many = {
   name: "Many", 
-  bio: "A definitive collection of many.",
+  bio: "A definitive collection of Many, rife with variation and every iteration imaginable.",
   splittable: false
 };
 var Vacuum = {
@@ -531,6 +531,157 @@ var New = {
 var Familiar = {
   name: "Familiar",
   bio: "A revisited experience occurring in the Present.",
+  splittable: false
+};
+var Prediction = {
+  name: "Prediction",
+  bio: "A single potential moment in the future.",
+  splittable: false
+};
+var Memory = {
+  name: "Memory",
+  bio: "A single set unchanging moment in the past.",
+  splittable: false
+};
+var Forever = {
+  name: "Forever",
+  bio: "The unchanging future, never achievable.",
+  splittable: false
+};
+var Continuation = {
+  name: "Continuation",
+  bio: "A set of many instances that resist change in the past.",
+  splittable: false
+};
+var Expectation = {
+  name: "Expectation",
+  bio: "A high amount of Predictions that build into an Expectation.",
+  splittable: false
+};
+var Surprise = {
+  name: "Surprise",
+  bio: "No Prediction means only Surprise.",
+  splittable: false
+};
+var Experience = {
+  name: "Experience",
+  bio: "A large amount of Memories creates an Experience.",
+  splittable: true,
+  hiddenContr: "Thought -- Action",
+  power1: Thought = {
+    name: "Thought",
+    bio: "The intangible half resulting from and contributing to an Experience.",
+    splittable: false
+  },
+  power2: Action = {
+    name: "Action",
+    bio: "The exterior half resulting from and contributing to an Experience.",
+    splittable: false
+  }
+};
+var BlankSlate = {
+  name: "Blank Slate",
+  bio: "Definable by it's opposite, Blank Slate is the complete lack of Experience. It is openness and naivity purely.",
+  splittable: false
+};
+var Unawareness = {
+  name: "Unawareness",
+  bio: "An entity lacking experience.",
+  splittable: false
+};
+var Consciousness = {
+  name: "Consciousness",
+  bio: "Life and experience forming an ever-changing event carrynig wisdom.",
+  splittable: false
+};
+var Rebirth = {
+  name: "Rebirth",
+  bio: "The potential to be Unaware after Death.",
+  splittable: false
+};
+var Reincarnation = {
+  name: "Reincarnation",
+  bio: "The potential to retain Experiences after Death.",
+  splittable: false
+};
+var Unfamiliarity = {
+  name: "Unfamiliarity",
+  bio: "A cognizant lack of knowledge. The strangeness does not come from a lack of knowledge, it comes from a lack of experience.",
+  splittable: false
+};
+var Unknown = {
+  name: "Unknown",
+  bio: "The Unknown is preserved through its impossibility to be experienced.",
+  splittable: false
+};
+var Empathy = {
+  name: "Empathy",
+  bio: "Seeking that which relates, despite direct ties.",
+  splittable: false
+};
+var Sympathy = {
+  name: "Sympathy",
+  bio: "Finding similarity because the Experience is shared between entities.",
+  splittable: false
+};
+var Home = {
+  name: "Home",
+  bio: "A distinguishable place, with no iterations, that surrounds an entity with Sympathy and Familiarity.",
+  splittable: false
+};
+var Lost = {
+  name: "Lost",
+  bio: "An unwavering sense of not belonging.",
+  splittable: false
+};
+var Culture = {
+  name: "Culture",
+  bio: "The pleasure of Sympathy from a wide variety of sources.",
+  splittable: false
+};
+var Foreign = {
+  name: "Foreign",
+  bio: "The struggle to find something familiar, spanning across Many occasions.",
+  splittable: false
+};
+var Wiped = {
+  name: "Wiped",
+  bio: "Describing something completely destroyed from all sources.",
+  splittable: false
+};
+var Erased = {
+  name: "Erased",
+  bio: "Describing something eliminated from a single source.",
+  splittable: false
+};
+var Shared = {
+  name: "Shared",
+  bio: "A single trait spread across Many variations.",
+  splittable: false
+};
+var Individual = {
+  name: "Individual",
+  bio: "Some single thing that does not vary enough to distinguish it as a separate entity.",
+  splittable: false
+};
+var Collaboration = {
+  name: "Collaboration",
+  bio: "An Action Shared between many entities.",
+  splittable: false
+};
+var Act = {
+  name: "Act",
+  bio: "A single Action resulting from an Individual.",
+  splittable: false
+};
+var Idea = {
+  name: "Idea",
+  bio: "A single Thought originating from an Individual.",
+  splittable: false
+};
+var Language = {
+  name: "Language",
+  bio: "A Language consists more than just words, it is verbal and nonverbal thoughts being passed from one entity to another as communication.",
   splittable: false
 };
 var axes = [ 
@@ -763,105 +914,72 @@ var axes = [
   layer: 2,
   graph: [0,0,1,1,0,0],
   powers: [Timeline, Future, Invisible, New, Present, Familiar, Reflection, Past]
+},
+{
+  name: "Static -- Dynamic ++ Past -- Future",
+  ID1: "Static -- Dynamic",
+  ID2: "Past -- Future",
+  children: ["Memory -- Prediction", "Continuation -- Forever"],
+  layer: 4,
+  graph: [0,0,1,1,0,0],
+  powers: [Dynamic, Prediction, Future, Forever, Static, Continuation, Past, Memory]
+},
+{
+  name: "Many -- None ++ Memory -- Prediction",
+  ID1: "Many -- None",
+  ID2: "Memory -- Prediction",
+  children: ["Expectation -- Surprise", "Experience -- Blank Slate"],
+  layer: 3,
+  graph: [0,0,0,0,1,1],
+  powers: [Many, Expectation, Prediction, Surprise, None, BlankSlate, Memory, Experience]
+},
+{
+  name: "Experience -- Blank Slate ++ Life -- Death",
+  ID1: "Experience -- Blank Slate",
+  ID2: "Life -- Death",
+  children: ["Consciousness -- Unawareness", "Rebirth -- Reincarnation"],
+  layer: 4,
+  graph: [0,0,1,1,0,0],
+  powers: [Life, Unawareness, BlankSlate, Rebirth, Death, Reincarnation, Experience, Consciousness]
+},
+{
+  name: "Consciousness -- Unawareness ++ Familiar -- New",
+  ID1: "Consciousness -- Unawareness",
+  ID2: "Familiar -- New",
+  children: ["Sympathy -- Unknown", "Sympath -- Empathy", "Sympathy -- Unfamiliarity", "Empathy -- Unfamiliarity", "Unfamiliarity -- Unknown"],
+  layer: 3,
+  graph: [1,1,1,0,1,1],
+  powers: [Consciousness, Unfamiliarity, New, Unknown, Unawareness, Empathy, Familiar, Sympathy]
+},
+{
+  name: "Sympathy -- Unfamiliarity ++ Many -- None",
+  ID1: "Sympathy -- Unfamiliarity",
+  ID2: "Many -- None",
+  children: ["Foreign -- Culture", "Home -- Lost"],
+  layer: 3, 
+  graph: [0,0,0,0,1,1],
+  powers: [Sympathy, Home, None, Lost, Unfamiliarity, Foreign, Many, Culture]
+},
+{
+  name: "Many -- None ++ Singularity -- Void"
+  ID1: "Many -- None",
+  ID2: "Singularity -- Void",
+  children: ["Shared -- Individual", "Erased -- Wiped"],
+  layer: 3,
+  graph: [0,0,0,0,1,1],
+  powers: [Many, Wiped, Void, Erased, None, Individual, Singularity, Shared]
+},
+{
+  name: "Shared -- Individual ++ Thought -- Action",
+  ID1: "Shared -- Individual",
+  ID2: "Thought -- Action",
+  children: ["Idea -- Act", "Collaboration -- Act"],
+  layer: 4,
+  graph: [0,0,0,1,0,1],
+  powers: [Shared, Collaboration, Action, Act, Individual, Idea, Thought, Language]
 }
   ];
 /*
-var sdpf = {
-	ID1: "sd",
-	ID2: "pf",
-	parent: "flicker flame",
-	layer: "4",
-	children: ["mp", "cf"],
-	graph: "tb_bb",
-	p1: "Dynamic",
-	p2: "Prediction",
-	p3: "Future",
-	p4: "Forever",
-	p5: "Static",
-	p6: "Continuation",
-	p7: "Past",
-	p8: "Memory"
-};
-var mnmp = {
-	ID1: "mn",
-	ID2: "mp",
-	parent: "crpa",
-	layer: "3",
-	children: ["eb", "es"],
-	graph: "rb_lb",
-	p1: "Many",
-	p2: "Expectation",
-	p3: "Prediction",
-	p4: "Surprise",
-	p5: "None",
-	p6: "Blank Slate",
-	p7: "Memory",
-	p8: "Experience"
-};
-var ebLifeD = {
-	ID1: "eb",
-	ID2: "LifeD",
-	parent: "mnmp",
-	layer: "4",
-	children: ["cu", "rr"],
-	graph: "tb_bb",
-	p1: "Life",
-	p2: "Unawareness",
-	p3: "Blank Slate",
-	p4: "Rebirth",
-	p5: "Death",
-	p6: "Reincarnation",
-	p7: "Experience",
-	p8: "Consciousness"
-};
-var cufn = {
-	ID1: "cu",
-	ID2: "fn",
-	parent: "ritp",
-	layer: "3",
-	children: ["su", "se", "eu", "uu"],
-	graph: "tb_lb_rd_rb",
-	p1: "Consciousness",
-	p2: "Unfamiliarity",
-	p3: "New",
-	p4: "Unknown",
-	p5: "Unawareness",
-	p6: "Empathy",
-	p7: "Familiar",
-	p8: "Sympathy"
-};
-var sumn = {
-	ID1: "su",
-	ID2: "mn",
-	parent: "crpa",
-	layer: "3",
-	children: ["fc", "hl"],
-	graph: "rb_lb",
-	p1: "Sympathy",
-	p2: "Home",
-	p3: "None",
-	p4: "Lost", 
-	p5: "Unfamiliarity",
-	p6: "Foreign",
-	p7: "Many", 
-	p8: "Culture"
-};
-var mnsv = {
-	ID1: "mn",
-	ID2: "sv",
-	parent: "crpa",
-	layer: "3",
-	children: ["si", "ew"],
-	graph: "rb_lb",
-	p1: "Many",
-	p2: "Wiped",
-	p3: "Void",
-	p4: "Erased",
-	p5: "None",
-	p6: "Individual",
-	p7: "Singularity",
-	p8: "Shared"
-};
 var sita = {
 	ID1: "si",
 	ID2: "ta",
@@ -1022,7 +1140,6 @@ function chooseAxes(potAxes){
 	for (var i=0; i<axes.length; i++){
 		if ((axes[i].name.startsWith(potAxes.ID1)&&axes[i].name.endsWith(potAxes.ID2))
 		|| (axes[i].name.startsWith(potAxes.ID2)&&axes[i].name.endsWith(potAxes.ID1))){		//verifies that the potential axes do exist within the list of axes
-			newAxes=axes[i];
 			//for adding the children properties of the axes to the contr list so you don't have to do it manually
       for (var j=0; j<axes[i].children.length; j++) {
           if (!contr.includes(axes[i].children[j])) {
