@@ -1241,7 +1241,7 @@ function simplify(){
     document.getElementById("s1").innerHTML="";
     document.getElementById("s2").innerHTML="";
   }
-  var search = combo.value;
+ /* var search = combo.value;
   for (var i=0; i<axes.length; i++) {
     for (var j=0; j<children.length; j++) {
       if (splittable == true) {
@@ -1251,7 +1251,7 @@ function simplify(){
         } else if (power2.name.localeCompare(search)==0) {
           lineage = "-->" + search + lineage;
       }
-  }
+  }*/
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
 }
