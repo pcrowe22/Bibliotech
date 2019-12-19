@@ -1314,5 +1314,5 @@ var simple_chart_config = {
         ]}
       ]}
     ]}
-  ]
+  ]}
 }
