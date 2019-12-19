@@ -1282,3 +1282,37 @@ function showStats(contrary) {
     }
   }
 }
+var my_chart = new Treant(simple_chart_config);
+var simple_chart_config = {
+  chart: {
+    container: "#lineage"
+  },
+  nodeStructure: {
+    text: {name: "Fast"},
+    children: [
+      {text: {name: "Push"},
+      children: [
+       {text: {name: "Force"},
+       children: [
+        {text: {name: "Energy"},
+        children: [
+          {text: {name: "Light"}},
+          {text: {name: "Light"}}
+        ]}
+        {text: {name: "Matter"},
+        children: [
+          {text: {name: "Dark"}},
+          {text: {name: "Dark"}}
+        ]}
+      ]}
+      {text: {name: "Time"},
+      children: [
+        {text: {name: "Space-Time"},
+        children: [
+          {text: {name: "Light"}},
+          {text: {name: "Light"}}
+        ]}
+      ]}
+    ]}
+  ]
+}
