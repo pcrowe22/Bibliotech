@@ -42,24 +42,6 @@
       <br>
       <p>Contraries</p>
       <button class="contrButton" id="contr0" style="display: block" onclick="assignPotID(potentialAxes, contr[0])">Light -- Dark</button>
-      <!--
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[49])">Memory -- Prediction</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[50])">Continuation -- Forever</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[51])">Experience -- Blank Slate</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[52])">Expectation -- Surprise</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[53])">Consciousness -- Unawareness</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[54])">Reincarnation -- Rebirth</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[55])">Sympathy -- Unfamiliar</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[56])">Sympathy -- Empathy</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[57])">Empathy -- Unfamiliar</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[58])">Unknown -- Unfamiliar</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[59])">Foreign -- Culture</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[60])">Home -- Lost</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[61])">Thought -- Action</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[62])">Shared -- Individual</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[63])">Erased -- Wiped</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[64])">Idea -- Act</button>
-      <button class="contrButton" onclick="assignPotID(potentialAxes,contr[65])">Collaboration -- Act</button>-->
     </div>
     <div style="position: absolute; top: 750px">
       <p style="position: absolute; left: 550px">Simplifier</p>
@@ -71,41 +53,13 @@
         <p>Elements</p>
         <form>
         <select size="5" id="power" onchange="simplify()" style="position: absolute; left: 40px">
-      <!--
-      <option class="elementSelect" value="memory">Memory</option>
-      <option class="elementSelect" value="prediction">Prediction</option>
-      <option class="elementSelect" value="continuation">Continuation</option>
-      <option class="elementSelect" value="forever">Forever</option>
-      <option class="elementSelect" value="experience" e1="thought" e2="action" selectCont="ta">Experience</option>
-      <option class="elementSelect" value="blank slate">Blank Slate</option>
-      <option class="elementSelect" value="expectation">Expectation</option>
-      <option class="elementSelect" value="surprise">Surprise</option>
-      <option class="elementSelect" value="consciousness">Consciousness</option>
-      <option class="elementSelect" value="unawareness">Unawareness</option>
-      <option class="elementSelect" value="reincarnation">Reincarnation</option>
-      <option class="elementSelect" value="rebirth">Rebirth</option>
-      <option class="elementSelect" value="sympathy">Sympathy</option>
-      <option class="elementSelect" value="empathy">Empathy</option>
-      <option class="elementSelect" value="unfamiliarity">Unfamiliarity</option>
-      <option class="elementSelect" value="unknown">Unknown</option>
-      <option class="elementSelect" value="culture">Culture</option>
-      <option class="elementSelect" value="foreign">Foreign</option>
-      <option class="elementSelect" value="home">Home</option>
-      <option class="elementSelect" value="lost">Lost</option>
-      <option class="elementSelect" value="shared">Shared</option>
-      <option class="elementSelect" value="individual">Individual</option>
-      <option class="elementSelect" value="wiped">Wiped</option>
-      <option class="elementSelect" value="erased">Erased</option>
-      <option class="elementSelect" value="language">Language</option>
-      <option class="elementSelect" value="collaboration">Collaboration</option>
-      <option class="elementSelect" value="idea">Idea</option>
-      <option class="elementSelect" value="act">Act</option>-->
         </select>
         </form>
       </div>
       <div style="position: absolute; left: 290px; top: 200px; border: 1px solid white; padding: 20px; width: 665px">
         <p id="elementTitle" style="text-align: center"></p>
         <p id="elementInfo" style="font-size: 1rem"></p>
+        <p id="lineage"></p>
       </div>
     </div>
     <audio id="discovery">

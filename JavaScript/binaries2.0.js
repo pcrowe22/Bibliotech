@@ -961,7 +961,7 @@ var axes = [
   powers: [Sympathy, Home, None, Lost, Unfamiliarity, Foreign, Many, Culture]
 },
 {
-  name: "Many -- None ++ Singularity -- Void"
+  name: "Many -- None ++ Singularity -- Void",
   ID1: "Many -- None",
   ID2: "Singularity -- Void",
   children: ["Shared -- Individual", "Erased -- Wiped"],
@@ -980,31 +980,12 @@ var axes = [
 }
   ];
 /*
-var sita = {
-	ID1: "si",
-	ID2: "ta",
-	parent: "mnsv",
-	layer: "4",
-	children: ["ia", "ca"],
-	graph: "bb_rb",
-	p1: "Shared",
-	p2: "Collaboration",
-	p3: "Action",
-	p4: "Act",
-	p5: "Individual",
-	p6: "Idea",
-	p7: "Thought",
-	p8: "Language"
-} ];*/
 /*var csmn = {
   ID1: "cs",
   ID2: "mn",
   parent: "*/
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var contr=["Light -- Dark", "we", "wd", "cr", "oc", "LifeD",
-"ai", "kb", "mn", "pv", "sv", "rp", "tm", "ls", "sb", "hd", "bi", "ns", "dl", "tp",
-"pf", "fn", "mp", "cf", "eb", "es", "cu", "rr", "su", "se", "eu", "uu", "fc", "hl", "ta", "si",
-"ew", "ia", "ca"];
+var contr=["Light -- Dark"];
 
 var circles = document.getElementById("dots");
 var circtx = circles.getContext("2d");
@@ -1202,6 +1183,7 @@ function drawsimp(){
 
 function simplify(){
 	stx.clearRect(0,0,500,100);
+  var lineage = "";
 	var combo = document.getElementById("power").options[document.getElementById("power").selectedIndex];
 	var sCont = document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("selectCont");
 	if (combo.getAttribute("e1Name")!=null){
@@ -1258,6 +1240,17 @@ function simplify(){
   } else {
     document.getElementById("s1").innerHTML="";
     document.getElementById("s2").innerHTML="";
+  }
+  var search = combo.value;
+  for (var i=0; i<axes.length; i++) {
+    for (var j=0; j<children.length; j++) {
+      if (splittable == true) {
+        if (power1.name.localeCompare(search)==0) {
+          lineage = "-->" + search + lineage;
+          search = 
+        } else if (power2.name.localeCompare(search)==0) {
+          lineage = "-->" + search + lineage;
+      }
   }
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
