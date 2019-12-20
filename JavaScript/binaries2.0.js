@@ -1304,7 +1304,7 @@ var simple_chart_config = {
           {text: {name: "Dark"}},
           {text: {name: "Dark"}}
         ]}
-      ]}
+      ]},
       {text: {name: "Time"},
       children: [
         {text: {name: "Space-Time"},
