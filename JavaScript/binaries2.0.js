@@ -1241,7 +1241,19 @@ function simplify(){
     document.getElementById("s1").innerHTML="";
     document.getElementById("s2").innerHTML="";
   }
- /* var search = combo.value;
+ /* var elementTree = new Treant(tree_config);
+var tree_config = {
+  chart: {
+    container: "#lineage"
+  },
+  nodeStructure: {
+    text: {name: combo.value},
+    children: []
+  }
+}
+
+ 
+ var search = combo.value;
   for (var i=0; i<axes.length; i++) {
     for (var j=0; j<children.length; j++) {
       if (splittable == true) {
@@ -1282,7 +1294,6 @@ function showStats(contrary) {
     }
   }
 }
-var my_chart = new Treant(simple_chart_config);
 var simple_chart_config = {
   chart: {
     container: "#lineage"
@@ -1316,3 +1327,4 @@ var simple_chart_config = {
     ]}
   ]}
 }
+var my_chart = new Treant(simple_chart_config);
