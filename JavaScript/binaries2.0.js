@@ -1391,5 +1391,5 @@ var simple_chart_config = {
       ]}
     ]}
   ]}
-}
+};
 var my_chart = new Treant(simple_chart_config);
