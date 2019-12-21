@@ -282,3 +282,8 @@ nav li {
   font-size: 0.8em;
   list-style-type: circle;
 }
+#lineage{
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid white;
+}

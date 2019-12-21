@@ -1253,16 +1253,37 @@ var tree_config = {
 }
 
  
- var search = combo.value;
+var search = combo.value;
+function findNode(search, tree_config) {
+  if (search.localeCompare("Light")!=0 || search.localeCompare("Dark")!=0) {
   for (var i=0; i<axes.length; i++) {
-    for (var j=0; j<children.length; j++) {
-      if (splittable == true) {
-        if (power1.name.localeCompare(search)==0) {
-          lineage = "-->" + search + lineage;
-          search = 
-        } else if (power2.name.localeCompare(search)==0) {
-          lineage = "-->" + search + lineage;
+    for (var j=0; j<axes[i].powers.length; j++) {
+      if (axes[i].powers[j].splittable == true) {
+        if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
+          var child = findNode(axes[i].powers[j].name, tree_config);
+          //tree_config.nodeStructure.children.push({text: {name: search}, children: 
+        } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
+          findNode(axes[i].powers[j].name, tree_config);
+          
+        }
+      } else if (axes[i].powers[j].name.localeCompare(search)==0) {
+        if (j==0) {
+          findNode(axes[i].powers[powers.length-1].name, tree_config);
+          findNode(axes[i].powers[j+1].name, tree_config);
+          
+        } else if (j==powers.length-1) {
+          findNode(axes[i].powers[j-1].name, tree_config);
+          findNode(axes[i].powers[0].name, tree_config);
+          
+        } else {
+          findNode(axes[i].powers[j-1].name, tree_config);
+          findNode(axes[i].powers[j+1].name, tree_config);
+          
+        }
       }
+    }
+  } else {
+    tree_config.nodeStructure.___.children.push({text: {name: search}})
   }*/
 	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
