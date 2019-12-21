@@ -1290,7 +1290,7 @@ function simplify(){
               var child2 = {text: {name: child2Name}, children: []};
               findNode(child2Name, newPath);
               path.push(child2);
-            } else if (j==powers.length-1) {
+            } else if (j==axes[i].powers.length-1) {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               var newPath = path.children;
