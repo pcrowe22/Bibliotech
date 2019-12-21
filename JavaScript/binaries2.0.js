@@ -1354,7 +1354,7 @@ function showStats(contrary) {
 }
 var simple_chart_config = {
   chart: {
-    container: "#testLineage"
+    container: "#testLineage",
     rootOrientation: "SOUTH",
     connectors: {
       type: "step",
