@@ -1244,6 +1244,13 @@ function simplify(){
   var tree_config = {
     chart: {
       container: "#lineage"
+      rootOrientation: "SOUTH",
+      connectors: {
+        type: "step",
+        style: {
+          "stroke": "white"
+        }
+      }
     },
     nodeStructure: {
       text: {name: combo.value},
@@ -1348,6 +1355,13 @@ function showStats(contrary) {
 var simple_chart_config = {
   chart: {
     container: "#testLineage"
+    rootOrientation: "SOUTH",
+    connectors: {
+      type: "step",
+      style: {
+        "stroke": "white"
+      }
+    }
   },
   nodeStructure: {
     text: {name: "Fast"},
