@@ -1309,9 +1309,9 @@ function simplify(){
             }
           }
         }
-      } else {
-        path.push({text: {name: search}});
       }
+    } else {
+      path.push({text: {name: search}});
     }
   }
   document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
