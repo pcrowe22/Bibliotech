@@ -1264,21 +1264,7 @@ function simplify(){
     if (search.localeCompare("Light")!=0 || search.localeCompare("Dark")!=0) {
       for (var i=0; i<axes.length; i++) {
         for (var j=0; j<axes[i].powers.length; j++) {
-          if (axes[i].powers[j].splittable == true) {
-            if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
-              var childName = axes[i].powers[j].name;
-              var child = {text: {name: childName}, children: []};
-              var newPath = path.children;
-              findNode(childName, newPath);
-              path.push(child);
-            } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
-              var childName = axes[i].powers[j].name
-              var child = {text: {name: childName}, children: []};
-              var newPath = path.children;
-              findNode(childName, newPath);
-              path.push(child);
-            }
-          } else if (axes[i].powers[j].name.localeCompare(search)==0) {
+          if (axes[i].powers[j].name.localeCompare(search)==0) {
             if (j==0) {
               var child1Name = axes[i].powers[powers.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
@@ -1313,8 +1299,22 @@ function simplify(){
               findNode(child2Name, newPath);
               path.push(child1);
             }
-          }
-        }
+          } else if (axes[i].powers[j].splittable == true) {
+            if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
+              var childName = axes[i].powers[j].name;
+              var child = {text: {name: childName}, children: []};
+              var newPath = path.children;
+              findNode(childName, newPath);
+              path.push(child);
+            } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
+              var childName = axes[i].powers[j].name
+              var child = {text: {name: childName}, children: []};
+              var newPath = path.children;
+              findNode(childName, newPath);
+              path.push(child);
+            }
+          } 
+        } 
       }
     } else {
       path.push({text: {name: search}});
