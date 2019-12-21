@@ -1241,52 +1241,82 @@ function simplify(){
     document.getElementById("s1").innerHTML="";
     document.getElementById("s2").innerHTML="";
   }
- /* var elementTree = new Treant(tree_config);
-var tree_config = {
-  chart: {
-    container: "#lineage"
-  },
-  nodeStructure: {
-    text: {name: combo.value},
-    children: []
-  }
-}
-
+  var elementTree = new Treant(tree_config);
+  var tree_config = {
+    chart: {
+      container: "#lineage"
+    },
+    nodeStructure: {
+      text: {name: combo.value},
+      children: []
+    }
+  };
  
-var search = combo.value;
-function findNode(search, tree_config) {
-  if (search.localeCompare("Light")!=0 || search.localeCompare("Dark")!=0) {
-  for (var i=0; i<axes.length; i++) {
-    for (var j=0; j<axes[i].powers.length; j++) {
-      if (axes[i].powers[j].splittable == true) {
-        if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
-          var child = findNode(axes[i].powers[j].name, tree_config);
-          //tree_config.nodeStructure.children.push({text: {name: search}, children: 
-        } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
-          findNode(axes[i].powers[j].name, tree_config);
+  var search = combo.value;
+  var path = tree_config.nodeStructure.children;
+  function findNode(search, path) {
+    if (search.localeCompare("Light")!=0 || search.localeCompare("Dark")!=0) {
+      for (var i=0; i<axes.length; i++) {
+        for (var j=0; j<axes[i].powers.length; j++) {
+          if (axes[i].powers[j].splittable == true) {
+            if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
+              var childName = axes[i].powers[j].name;
+              var child = {text: {name: childName}, children: []};
+              var newPath = path.children;
+              findNode(childName, newPath);
+              path.push(child);
+            } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
+              var childName = axes[i].powers[j].name
+              var child = {text: {name: childName}, children: []};
+              var newPath = path.children;
+              findNode(childName, newPath);
+              path.push(child);
+            }
+          } else if (axes[i].powers[j].name.localeCompare(search)==0) {
+            if (j==0) {
+              var child1Name = axes[i].powers[powers.length-1].name;
+              var child1 = {text: {name: child1Name}, children: []};
+              var newPath = path.children;
+              findNode(child2Name, newPath);
+              path.push(child1);
           
+              var child2Name = axes[i].powers[j+1].name
+              var child2 = {text: {name: child2Name}, children: []};
+              findNode(child2Name, newPath);
+              path.push(child2);
+            } else if (j==powers.length-1) {
+              var child1Name = axes[i].powers[j-1].name
+              var child1 = {text: {name: child1Name}, children: []};
+              var newPath = path.children;
+              findNode(child1Name, newPath);
+              path.push(child1);
+
+              var child2Name = axes[i].powers[0].name
+              var child2 = {text: {name: child2Name}, children: []};
+              findNode(child2Name, newPath);
+              path.push(child2);
+            } else {
+              var child1Name = axes[i].powers[j-1].name
+              var child1 = {text: {name: child1Name}, children: []};
+              var newPath = path.children;
+              findNode(child1Name, newPath);
+              path.push(child1);
+            
+              var child2Name = axes[i].powers[j+1].name
+              var child2 = {text: {name: child2Name}, children: []};
+              findNode(child2Name, newPath);
+              path.push(child1);
+            }
+          }
         }
-      } else if (axes[i].powers[j].name.localeCompare(search)==0) {
-        if (j==0) {
-          findNode(axes[i].powers[powers.length-1].name, tree_config);
-          findNode(axes[i].powers[j+1].name, tree_config);
-          
-        } else if (j==powers.length-1) {
-          findNode(axes[i].powers[j-1].name, tree_config);
-          findNode(axes[i].powers[0].name, tree_config);
-          
-        } else {
-          findNode(axes[i].powers[j-1].name, tree_config);
-          findNode(axes[i].powers[j+1].name, tree_config);
-          
-        }
+      } else {
+        path.push({text: {name: search}});
       }
     }
-  } else {
-    tree_config.nodeStructure.___.children.push({text: {name: search}})
-  }*/
-	document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
+  }
+  document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
+  findNode(search, path);
 }
 function showStats(contrary) {
   document.getElementById("stats").remove();
@@ -1317,7 +1347,7 @@ function showStats(contrary) {
 }
 var simple_chart_config = {
   chart: {
-    container: "#lineage"
+    container: "#testLineage"
   },
   nodeStructure: {
     text: {name: "Fast"},
