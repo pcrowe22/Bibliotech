@@ -1266,7 +1266,7 @@ function simplify(){
         for (var j=0; j<axes[i].powers.length; j++) {
           if (axes[i].powers[j].name.localeCompare(search)==0) {
             if (j==0) {
-              var child1Name = axes[i].powers[powers.length-1].name;
+              var child1Name = axes[i].powers[axes[i].powers.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
               var newPath = path.children;
               findNode(child2Name, newPath);
