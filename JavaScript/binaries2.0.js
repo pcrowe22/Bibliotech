@@ -1393,3 +1393,4 @@ var simple_chart_config = {
   ]}
 };
 var my_chart = new Treant(simple_chart_config);
+alert(simple_chart_config.nodeStructure.children[0].children[0].name);
