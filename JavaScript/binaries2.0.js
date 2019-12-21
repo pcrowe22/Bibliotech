@@ -1268,34 +1268,37 @@ function simplify(){
             if (j==0) {
               var child1Name = axes[i].powers[axes[i].powers.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
-              var newPath = path.children;
+              var newPath = path.children[0];
               findNode(child2Name, newPath);
               path.push(child1);
           
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
+              newPath = path.children[1];
               findNode(child2Name, newPath);
               path.push(child2);
             } else if (j==axes[i].powers.length-1) {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
-              var newPath = path.children;
+              var newPath = path.children[0];
               findNode(child1Name, newPath);
               path.push(child1);
 
               var child2Name = axes[i].powers[0].name
               var child2 = {text: {name: child2Name}, children: []};
+              newPath = path.children[1];
               findNode(child2Name, newPath);
               path.push(child2);
             } else {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               var newPath = path.children;
-              findNode(child1Name, newPath);
+              findNode(child1Name, newPath)[0];
               path.push(child1);
             
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
+              newPath = path.children[1];
               findNode(child2Name, newPath);
               path.push(child1);
             }
@@ -1393,4 +1396,4 @@ var simple_chart_config = {
   ]}
 };
 var my_chart = new Treant(simple_chart_config);
-alert(simple_chart_config.nodeStructure.text.children[0].text.children[0].text.name);
+alert(simple_chart_config.nodeStructure.children[0].children[0].text.name);
