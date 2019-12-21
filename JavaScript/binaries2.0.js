@@ -1241,7 +1241,6 @@ function simplify(){
     document.getElementById("s1").innerHTML="";
     document.getElementById("s2").innerHTML="";
   }
-  var elementTree = new Treant(tree_config);
   var tree_config = {
     chart: {
       container: "#lineage"
@@ -1316,6 +1315,7 @@ function simplify(){
   }
   document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
+  var elementTree = new Treant(tree_config);
   findNode(search, path);
 }
 function showStats(contrary) {
