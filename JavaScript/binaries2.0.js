@@ -1243,7 +1243,7 @@ function simplify(){
   }
   var tree_config = {
     chart: {
-      container: "#lineage"
+      container: "#lineage",
       rootOrientation: "SOUTH",
       connectors: {
         type: "step",
