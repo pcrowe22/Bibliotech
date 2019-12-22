@@ -1244,6 +1244,9 @@ function simplify(){
   var tree_config = {
     chart: {
       container: "#lineage",
+      node: {
+        collapsable: true
+      },
       rootOrientation: "SOUTH",
       connectors: {
         type: "step",
