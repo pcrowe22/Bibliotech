@@ -691,7 +691,7 @@ var axes = [
 	ID2: "Light -- Dark",
 	parent: "none",
 	children: ["Energy -- Matter"],
-	layer: "0",
+	layer: 0,
         //left diagonal, right diagonal, top, bottom, left, right
 	graph: [1,1,0,0,0,0],
           //clockwise, starting at 12
@@ -703,7 +703,7 @@ var axes = [
 	ID2: "Energy -- Matter",
 	parent: "ldld",
 	children: ["Electrostatic-Attraction -- Gravity"],
-	layer: "1",
+	layer: 1,
 	graph: [1,1,0,0,0,0],
 	powers: [Energy, ElectrostaticAttraction, Energy, Force, Matter, Gravity, Matter, Force]
 },
@@ -713,7 +713,7 @@ var axes = [
   ID2: "Space -- Time",
   parent: "ldld",
   children: ["Compress -- Expand", "Fast -- Slow"],
-  layer: "1",
+  layer: 1,
   graph: [0,0,0,0,1,1],
   powers: [Push, Fast, Time, Slow, Pull, Expand, Space, Compress]
 },
