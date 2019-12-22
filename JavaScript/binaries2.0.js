@@ -1371,7 +1371,7 @@ function filterFunction() {
   var powers = list.getElementsByTagName("option");
   for (i=0; i< power.length; i++) {
     var textValue = powers[i].value;
-    if (textValue.toUpperCase().indexOf(input.toUpperCase()) > -1) {
+    if (textValue.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
       powers[i].style.display = "";
     } else {
       powers[i].style.display = "none";
