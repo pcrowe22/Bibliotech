@@ -33,7 +33,7 @@
 
     <canvas id="Can" width="500" height="500"></canvas>
     <div style="position: absolute; left: 1000px; top: 0px">
-      <p>Stats</p>
+      <p class="header">Stats</p>
       <div id="statsContainer">
         <ul id="stats"></ul>
       </div>
@@ -41,18 +41,18 @@
     <div id="buttonDiv">
       <br>
       <br>
-      <p>Contraries</p>
+      <p class="header">Contraries</p>
       <button id="showAllB" onclick="showAll()">Display All</button>
       <button class="contrButton" id="contr0" style="display: block" onclick="assignPotID(potentialAxes, contr[0])">Light -- Dark</button>
     </div>
     <div style="position: absolute; top: 750px">
-      <p style="position: absolute; left: 550px">Simplifier</p>
+      <p class="header" style="position: absolute; left: 550px">Simplifier</p>
       <canvas id="simplifier" width="700" height="150"></canvas>
       <p style="position: absolute; top:55px; left: 330px" id="s1"></p>
       <p style="position: absolute; top:55px; left: 830px" id="s2"></p>
     
       <div style="position: absolute; left: 1000px;">
-        <p>Elements</p>
+        <p class="header">Elements</p>
         <input type="text" placeholder="Search..." id="powerSearch" onkeyup="filterFunction()">
         <form>
         <select size="5" id="power" onchange="simplify()" style="position: absolute; left: 40px">
