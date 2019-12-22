@@ -1310,16 +1310,15 @@ function simplify(){
               path.push(child);
               var newPath = path[0].children;
               findNode(childName, newPath);
-              
+              break;
             } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
               var childName = axes[i].powers[j].name
               var child = {text: {name: childName}, children: []};
               path.push(child);
               var newPath = path[0].children;
               findNode(childName, newPath);
-              
+              break;
             }
-            break;
           } 
         } 
       }
