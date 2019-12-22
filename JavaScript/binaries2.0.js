@@ -1269,42 +1269,42 @@ function simplify(){
               var child1Name = axes[i].powers[axes[i].powers.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
-              var newPath = path.children;
-              findNode(child2Name, newPath);
+              var newPath = path[0].children;
+              findNode(child1Name, newPath);
 
           
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
-              //newPath = path.children[1];
+              newPath = path[1].children;
               findNode(child2Name, newPath);
               
             } else if (j==axes[i].powers.length-1) {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
-              var newPath = path.children;
+              var newPath = path[0].children;
               findNode(child1Name, newPath);
              
 
               var child2Name = axes[i].powers[0].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
-              //newPath = path.children[1];
+              newPath = path[1].children;
               findNode(child2Name, newPath);
               
             } else {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
-              var newPath = path.children;
+              var newPath = path[0].children;
               findNode(child1Name, newPath);
               
             
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
-              //newPath = path.children[1];
+              newPath = path[1].children;
               findNode(child2Name, newPath);
               
             }
@@ -1313,14 +1313,14 @@ function simplify(){
               var childName = axes[i].powers[j].name;
               var child = {text: {name: childName}, children: []};
               path.push(child);
-              var newPath = path.children;
+              var newPath = path[0].children;
               findNode(childName, newPath);
               
             } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
               var childName = axes[i].powers[j].name
               var child = {text: {name: childName}, children: []};
               path.push(child);
-              var newPath = path.children;
+              var newPath = path[0].children;
               findNode(childName, newPath);
               
             }
