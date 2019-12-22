@@ -1261,7 +1261,9 @@ function simplify(){
   var search = combo.value;
   var path = tree_config.nodeStructure.children;
   function findNode(search, path) {
-    if (search.localeCompare("Light")!=0 || search.localeCompare("Dark")!=0) {
+    if (search.localeCompare("Light")==0 || search.localeCompare("Dark")==0) {
+      path.push({text: {name: search}});
+    } else {
       for (var i=0; i<axes.length; i++) {
         for (var j=0; j<axes[i].powers.length; j++) {
           if (axes[i].powers[j].name.localeCompare(search)==0) {
@@ -1327,8 +1329,6 @@ function simplify(){
           } 
         } 
       }
-    } else {
-      path.push({text: {name: search}});
     }
   }
   document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
