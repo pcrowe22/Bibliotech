@@ -1257,7 +1257,7 @@ function simplify(){
     },
     nodeStructure: {
       text: {name: combo.value},
-      collapsed: true;
+      collapsed: true,
       children: []
     }
   };
