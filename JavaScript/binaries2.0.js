@@ -1274,13 +1274,11 @@ function simplify(){
               var newPath = path[0].children;
               findNode(child1Name, newPath);
 
-          
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
-              
             } else if (j==axes[i].powers.length-1) {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
@@ -1288,13 +1286,11 @@ function simplify(){
               var newPath = path[0].children;
               findNode(child1Name, newPath);
              
-
               var child2Name = axes[i].powers[0].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
-              
             } else {
               var child1Name = axes[i].powers[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
@@ -1302,14 +1298,13 @@ function simplify(){
               var newPath = path[0].children;
               findNode(child1Name, newPath);
               
-            
               var child2Name = axes[i].powers[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
-              
             }
+            break;
           } else if (axes[i].powers[j].splittable == true) {
             if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
               var childName = axes[i].powers[j].name;
@@ -1326,6 +1321,7 @@ function simplify(){
               findNode(childName, newPath);
               
             }
+            break;
           } 
         } 
       }
