@@ -1333,8 +1333,8 @@ function simplify(){
   }
   document.getElementById("elementTitle").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].value;
 	document.getElementById("elementInfo").innerHTML=document.getElementById("power").options[document.getElementById("power").selectedIndex].getAttribute("info");
-  var elementTree = new Treant(tree_config);
   findNode(search, path);
+  var elementTree = new Treant(tree_config);
 }
 function showStats(contrary) {
   document.getElementById("stats").remove();
@@ -1404,4 +1404,3 @@ var simple_chart_config = {
   ]}
 };
 var my_chart = new Treant(simple_chart_config);
-alert(simple_chart_config.nodeStructure.children[0].children[0].text.name);
