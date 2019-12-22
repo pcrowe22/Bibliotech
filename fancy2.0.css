@@ -292,6 +292,7 @@ nav li {
 .Treant > .node a {
   width: 100%;
   height: 100%;
+  border: none;
 }
 .Treant .collapse-switch { 
   width: 100%; 
