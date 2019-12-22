@@ -1264,7 +1264,7 @@ function simplify(){
     if (search.localeCompare("Light")!=0 && search.localeCompare("Dark")!=0) {
       for (var i=0; i<axes.length; i++) {
         for (var j=0; j<axes[i].powers.length; j++) {
-          if (axes[i].powers[j].name.localeCompare(search)==0) {
+          if (axes[i].powers[j].name.localeCompare(search)==0 && j%2!=0) {
             if (j==0) {
               var child1Name = axes[i].powers[axes[i].powers.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
