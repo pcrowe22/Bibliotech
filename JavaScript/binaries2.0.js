@@ -1362,3 +1362,16 @@ function showAll() {
     assignPotID(potentialAxes, axes[i].ID2);
   }
 }
+function filterFunction() {
+  var input = document.getElementById("powerSearch");
+  var list = document.getElementById("power");
+  var powers = list.getElementsByTagName("option");
+  for (i=0; i< power.length; i++) {
+    var textValue = powers[i].value;
+    if (textValue.toUpperCase().indexOf(input.toUpperCase()) > -1) {
+      powers[i].style.display = "";
+    } else {
+      powers[i].style.display = "none";
+    }
+  }
+}
