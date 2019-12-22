@@ -1356,3 +1356,9 @@ function showStats(contrary) {
     }
   }
 }
+function showAll() {
+  for (var i=0; i<axes.length; i++) {
+    assignPotID(potentialAxes, axes[i].ID1);
+    assignPotID(potentialAxes, axes[i].ID2);
+  }
+}
