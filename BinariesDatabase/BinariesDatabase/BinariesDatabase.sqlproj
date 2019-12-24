@@ -58,7 +58,7 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="axesTable.sql" />
+    <None Include="axesTable.sql" />
     <Build Include="axesChildrenTable.sql" />
     <Build Include="axesGraphTable.sql" />
     <Build Include="axesPowersTable.sql" />
