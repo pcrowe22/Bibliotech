@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="2fa228f9-40ce-492b-95a0-78b0d69414ce" ChangeDateTime="12/23/2019 21:53:22">
+    <Property Name="ElementName" Value="[dbo].[axesTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7b700a15-f453-4c9d-8c28-f64a8836d160" ChangeDateTime="12/23/2019 22:28:20">
+    <Property Name="ElementName" Value="[dbo].[axesChildrenTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesChildrenTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="51a30cde-789a-4d30-b78e-8a716804bc88" ChangeDateTime="12/23/2019 22:38:58">
+    <Property Name="ElementName" Value="[dbo].[FK_axesChildrenTable_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[axesChildrenTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_axesChildrenTable_axesTable]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="226ee95e-5ba4-4c63-b773-e9bfb084e927" ChangeDateTime="12/23/2019 22:41:02">
+    <Property Name="ElementName" Value="[dbo].[axesChildrenTable].[name]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesChildrenTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="axesName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="636dd887-d078-4f26-99b2-df2d62714cc4" ChangeDateTime="12/23/2019 22:43:16">
+    <Property Name="ElementName" Value="[dbo].[axesGraphTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesGraphTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="axesName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="05509ee7-33bb-48b2-b425-d8e3d0d068cf" ChangeDateTime="12/23/2019 22:48:05">
+    <Property Name="ElementName" Value="[dbo].[axesPowersTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesPowersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="axesName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bc5d37fa-15e0-4f0a-95ae-6f8ebc0a0234" ChangeDateTime="12/24/2019 16:53:10">
+    <Property Name="ElementName" Value="[dbo].[axesPowersTable].[powers0]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesPowersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="powerName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b9573de7-8c92-4528-88fc-4accb26e87e7" ChangeDateTime="12/24/2019 16:53:48">
+    <Property Name="ElementName" Value="[dbo].[axesPowersTable].[powers1]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesPowersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="powerBio" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="42515a59-da02-4273-acd2-0d1e1ef8f1e5" ChangeDateTime="12/24/2019 16:53:59">
+    <Property Name="ElementName" Value="[dbo].[axesPowersTable].[powers2]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesPowersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="powerSplittable" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f8b1062b-3b24-42ea-8b4b-bb3ee10ec3ed" ChangeDateTime="12/24/2019 16:54:34">
+    <Property Name="ElementName" Value="[dbo].[axesPowersTable].[powers3]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[axesPowersTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="powerHiddenContr" />
+  </Operation>
+</Operations>
