@@ -980,7 +980,7 @@ var axes = [
 }
   ];
 */
-var requestURL = "https://pcrowe22.github.io/Bibliotech/JavaScript/powerJSON.json
+var requestURL = "https://pcrowe22.github.io/Bibliotech/JavaScript/powerJSON.json;
 var request = new XMLHttpRequest();
 var request.open("GET", requestURL);
 request.responseType = "text";
