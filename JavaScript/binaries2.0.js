@@ -1,6 +1,6 @@
 
 var htmlContr = new Array(document.getElementsByClassName("contrButton"));
-
+/*
 var Light = {
   name: "Light",
   bio: "Though modern science and magic fail to fully explain Light's complete properties, alchemists have identified Light as one of the root properties of the universe."
@@ -979,7 +979,27 @@ var axes = [
   powers: [Shared, Collaboration, Action, Act, Individual, Idea, Thought, Language]
 }
   ];
-/*
+*/
+var requestURL = "https://pcrowe22.github.io/Bibliotech/JavaScript/powerJSON.json
+var request = new XMLHttpRequest();
+var request.open("GET", requestURL);
+request.responseType = "text";
+request.send();
+request.onload = function() {
+  const jsonText = request.response;
+  const jsonObjects = JSON.parse(jsonText);
+  var axesPowers = jsonObjects[0];
+  var axes = jsonObjects[1];
+  for (var i=0; i<axes.length; i++) {
+    for (var j=0; j<axes[i].powerNames.length; j++) {
+      for (var k=0; k<axesPowers; k++) {
+        if (axesPowers[k].name.localeCompare(axes[i].powerNames[j])==0) {
+          axes[i].powers.push(axesPowers[k]);
+        }
+      }
+    }
+  }
+}
 /*var csmn = {
   ID1: "cs",
   ID2: "mn",
