@@ -988,7 +988,6 @@ request.send();
 var axes;
 var axesPowers;
 request.onload = function() {
-  var i;
   const jsonText = request.response;
   const jsonObjects = JSON.parse(jsonText);
   axesPowers = jsonObjects[0];
@@ -998,12 +997,11 @@ request.onload = function() {
       for (var k=0; k<axesPowers; k++) {
         if (axesPowers[k].name.localeCompare(axes[i].powerNames[j])==0) {
           axes[i].powers.push(axesPowers[k]);
-          i++;
         }
       }
     }
   }
-  alert(i);
+  alert(axes[0].powers[0].name);
 }
 /*var csmn = {
   ID1: "cs",
