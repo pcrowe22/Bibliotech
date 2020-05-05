@@ -859,7 +859,7 @@
   "layer": 2,
   "graph": [0,0,1,0,1,0],
   "powerNames": ["Fog", "Dry", "Absence", "Emptiness", "Dust", "Earth", "Presence", "Water"],
-  "powers": [],
+  "powers": []
 },
 {
   "name": "Static -- Dynamic ++ Contained -- Released",
