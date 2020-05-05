@@ -793,7 +793,7 @@
   "layer": 2,
   "graph": [0,0,1,1,1,1],
   "powerNames": ["Fast", "Snap-Freeze", "Cold", "Freeze", "Slow", "Melt", "Hot", "Combustion"],
-  "powers": [],
+  "powers": []
 },
 {
   "name": "Energy -- Matter ++ Hot -- Cold",
