@@ -990,8 +990,8 @@ var axesPowers;
 request.onload = function() {
   const jsonText = request.response;
   const jsonObjects = JSON.parse(jsonText);
-  //var axesPowers = jsonObjects[0];
-  //var axes = jsonObjects[1];
+  axesPowers = jsonObjects[0];
+  axes = jsonObjects[1];
   for (var i=0; i<axes.length; i++) {
     for (var j=0; j<axes[i].powerNames.length; j++) {
       for (var k=0; k<axesPowers; k++) {
