@@ -1107,7 +1107,7 @@ var potentialAxes={ID1: "none",
 	parent: "none",
 	layer: "none",
 	graph: [0, 0, 0, 0, 0, 0],
-	powers: ["none", "none", "none", "none", "none", "none", "none", "none"]
+	powerNames: ["none", "none", "none", "none", "none", "none", "none", "none"]
 };
 function assignPotID(potentialAxes, contrary){
 	if (potentialAxes.ID1=="none"){
@@ -1137,7 +1137,7 @@ function chooseAxes(potAxes){
   children: [],
 	layer: "none",
 	graph: [0, 0, 0, 0, 0, 0],
-	powers: ["none", "none", "none", "none", "none", "none", "none", "none"]
+	powerNames: ["none", "none", "none", "none", "none", "none", "none", "none"]
 	};
 
 	for (var i=0; i<axes.length; i++){
@@ -1162,26 +1162,26 @@ function chooseAxes(potAxes){
         }
       //for adding an elemental power to the list of select options
       var selectList = document.getElementById("power");
-      for (var j=0; j<axes[i].powers.length; j++) {
+      for (var j=0; j<axes[i].powerNames.length; j++) {
         var included = false;
         for (var k=0; k<selectList.options.length; k++) {
-          if (selectList.options[k].text.localeCompare(axes[i].powers[j].name)==0) {
+          if (selectList.options[k].text.localeCompare(axes[i].powerNames[j].name)==0) {
             included = true;
           }
         }
         if (included == false) {
           var newOption = document.createElement("option");
-          newOption.text = axes[i].powers[j].name;
-          newOption.value = axes[i].powers[j].name;
-          newOption.setAttribute("info", axes[i].powers[j].bio);
-          if (axes[i].powers[j].splittable == true) {
-            newOption.setAttribute("selectCont", axes[i].powers[j].hiddenContr);
-            newOption.setAttribute("e1Name", axes[i].powers[j].power1.name);
-            newOption.setAttribute("e1Bio", axes[i].powers[j].power1.bio);
-            newOption.setAttribute("e1Split", axes[i].powers[j].power1.splittable);
-            newOption.setAttribute("e2Name", axes[i].powers[j].power2.name);
-            newOption.setAttribute("e2Bio", axes[i].powers[j].power2.bio);
-            newOption.setAttribute("e2Split", axes[i].powers[j].power2.splittable);
+          newOption.text = axes[i].powerNames[j].name;
+          newOption.value = axes[i].powerNames[j].name;
+          newOption.setAttribute("info", axes[i].powerNames[j].bio);
+          if (axes[i].powerNames[j].splittable == true) {
+            newOption.setAttribute("selectCont", axes[i].powerNames[j].hiddenContr);
+            newOption.setAttribute("e1Name", axes[i].powerNames[j].power1.name);
+            newOption.setAttribute("e1Bio", axes[i].powerNames[j].power1.bio);
+            newOption.setAttribute("e1Split", axes[i].powerNames[j].power1.splittable);
+            newOption.setAttribute("e2Name", axes[i].powerNames[j].power2.name);
+            newOption.setAttribute("e2Bio", axes[i].powerNames[j].power2.bio);
+            newOption.setAttribute("e2Split", axes[i].powerNames[j].power2.splittable);
           }
           document.getElementById("power").add(newOption);
         }
@@ -1289,56 +1289,56 @@ function simplify(){
   function findNode(search, path) {
     if (search.localeCompare("Light")!=0 && search.localeCompare("Dark")!=0) {
       for (var i=0; i<axes.length; i++) {
-        for (var j=0; j<axes[i].powers.length; j++) {
-          if (axes[i].powers[j].name.localeCompare(search)==0 && j%2!=0) {
+        for (var j=0; j<axes[i].powerNames.length; j++) {
+          if (axes[i].powerNames[j].name.localeCompare(search)==0 && j%2!=0) {
             if (j==0) {
-              var child1Name = axes[i].powers[axes[i].powers.length-1].name;
+              var child1Name = axes[i].powerNames[axes[i].powerNames.length-1].name;
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
               var newPath = path[0].children;
               findNode(child1Name, newPath);
 
-              var child2Name = axes[i].powers[j+1].name
+              var child2Name = axes[i].powerNames[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
-            } else if (j==axes[i].powers.length-1) {
-              var child1Name = axes[i].powers[j-1].name
+            } else if (j==axes[i].powerNames.length-1) {
+              var child1Name = axes[i].powerNames[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
               var newPath = path[0].children;
               findNode(child1Name, newPath);
              
-              var child2Name = axes[i].powers[0].name
+              var child2Name = axes[i].powerNames[0].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
             } else {
-              var child1Name = axes[i].powers[j-1].name
+              var child1Name = axes[i].powerNames[j-1].name
               var child1 = {text: {name: child1Name}, children: []};
               path.push(child1);
               var newPath = path[0].children;
               findNode(child1Name, newPath);
               
-              var child2Name = axes[i].powers[j+1].name
+              var child2Name = axes[i].powerNames[j+1].name
               var child2 = {text: {name: child2Name}, children: []};
               path.push(child2);
               newPath = path[1].children;
               findNode(child2Name, newPath);
             }
             break;
-          } else if (axes[i].powers[j].splittable == true) {
-            if (axes[i].powers[j].power1.name.localeCompare(search)==0) {
-              var childName = axes[i].powers[j].name;
+          } else if (axes[i].powerNames[j].splittable == true) {
+            if (axes[i].powerNames[j].power1.name.localeCompare(search)==0) {
+              var childName = axes[i].powerNames[j].name;
               var child = {text: {name: childName}, children: []};
               path.push(child);
               var newPath = path[0].children;
               findNode(childName, newPath);
               break;
-            } else if (axes[i].powers[j].power2.name.localeCompare(search)==0) {
-              var childName = axes[i].powers[j].name
+            } else if (axes[i].powerNames[j].power2.name.localeCompare(search)==0) {
+              var childName = axes[i].powerNames[j].name
               var child = {text: {name: childName}, children: []};
               path.push(child);
               var newPath = path[0].children;
