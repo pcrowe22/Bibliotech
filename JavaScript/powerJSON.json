@@ -782,7 +782,7 @@
     "Reflection", 
     "Visible", 
     "Spark"],
-  powers: []
+  "powers": []
 },
 {
   "name": "Hot -- Cold ++ Fast -- Slow",
