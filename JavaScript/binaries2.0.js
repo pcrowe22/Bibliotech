@@ -996,13 +996,14 @@ request.onload = function() {
     for (var j=0; j<axes[i].powerNames.length; j++) {
       for (var k=0; k<axesPowers; k++) {
         if (axesPowers[k].name.localeCompare(axes[i].powerNames[j])==0) {
+          alert(axesPowers[k].name);
           axes[i].powers.push(axesPowers[k]);
         }
       }
     }
   }
-  alert(axesPowers[0].name);
-  alert(axes[0].powers);
+  //alert(axesPowers[0].name);
+  //alert(axes[0].powers);
 }
 /*var csmn = {
   ID1: "cs",
