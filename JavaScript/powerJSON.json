@@ -687,7 +687,7 @@
     "Dark",
     "Space-Time"
     ],
-	"powers": []
+	"powers": {[]}
 },
 {
   "name": "Energy -- Matter ++ Energy -- Matter",
@@ -706,7 +706,7 @@
     "Gravity", 
     "Matter", 
     "Force"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Push -- Pull ++ Space -- Time",
@@ -725,7 +725,7 @@
     "Expand", 
     "Space", 
     "Compress"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Compress -- Expand ++ Light -- Dark",
@@ -744,7 +744,7 @@
     "Shadow", 
     "Compress", 
     "Bright"],
-  "powers": []
+  "powers": {[]}
 },  
 {
   "name": "Push -- Pull ++ Energy -- Matter",
@@ -763,7 +763,7 @@
     "Teraforming", 
     "Matter", 
     "Teraforming"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Electricity -- Teraforming ++ Visible -- Obscure",
@@ -782,7 +782,7 @@
     "Reflection", 
     "Visible", 
     "Spark"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Hot -- Cold ++ Fast -- Slow",
@@ -793,7 +793,7 @@
   "layer": 2,
   "graph": [0,0,1,1,1,1],
   "powerNames": ["Fast", "Snap-Freeze", "Cold", "Freeze", "Slow", "Melt", "Hot", "Combustion"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Energy -- Matter ++ Hot -- Cold",
@@ -804,7 +804,7 @@
   "layer": 1,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Energy", "Wind", "Cold", "Ice", "Matter", "Magma", "Hot", "Fire"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Magma -- Ice ++ Fire -- Wind",
@@ -815,7 +815,7 @@
   "layer": 2, 
   "graph": [0,0,0,0,1,0],
   "powerNames": ["Magma", "Plasma", "Fire", "Flicker Flame", "Ice", "Cloud", "Wind", "Ash"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Static -- Dynamic ++ Ash -- Cloud",
@@ -826,7 +826,7 @@
   "layer": 3,
   "graph": [0,0,1,0,1,1],
   "powerNames": ["Static", "Dust", "Ash", "Smoke", "Dynamic", "Storm", "Cloud", "Fog"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Static -- Dynamic ++ Fog -- Smoke",
@@ -837,7 +837,7 @@
   "layer": 3,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Storm", "Weather Pattern", "Dynamic", "Mist", "Fog", "Dew", "Static", "Climate"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Energy -- Matter ++ Visible -- Obscure",
@@ -848,7 +848,7 @@
   "layer": 1,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Energy", "Sound", "Obscure", "Absence", "Matter", "Presence", "Visible", "Color"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Fog -- Dust ++ Presence -- Absence",
@@ -859,7 +859,7 @@
   "layer": 2,
   "graph": [0,0,1,0,1,0],
   "powerNames": ["Fog", "Dry", "Absence", "Emptiness", "Dust", "Earth", "Presence", "Water"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Static -- Dynamic ++ Contained -- Released",
@@ -870,7 +870,7 @@
   "layer": 4,
   "graph": [1,1,0,0,0,0],
   "powerNames": ["Static", "Death", "Released", "Chaos", "Dynamic", "Life", "Contained", "Order"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Fog -- Storm ++ Fire -- Wind",
@@ -881,7 +881,7 @@
   "layer": 2,
   "graph": [0,0,0,0,0,0],
   "powerNames": ["Storm", "Tornado", "Wind", "Haze", "Fog", "Humidity", "Fire", "Fire Rain"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Life -- Death ++ Life -- Death",
@@ -892,7 +892,7 @@
   "layer": 5,
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Death", "Kamikaze", "Death", "Intangible Spirit", "Life", "Birth", "Life", "Animated Husk"],
-  "powers": []
+  "powers": {[]}
 }, 
 {
   "name": "Contained -- Released ++ Presence -- Absence",
@@ -903,7 +903,7 @@
   "layer": 2,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Contained", "None", "Absence", "Vacuum", "Released", "Pressure", "Presence", "Many"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Many -- None ++ Order -- Chaos",
@@ -914,7 +914,7 @@
   "layer": 3,
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Many", "Random", "Chaos", "Pattern", "None", "Void", "Order", "Singularity"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Sound -- Color ++ Many -- None",
@@ -925,7 +925,7 @@
   "layer": 3,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Color", "Monochrome", "None", "SingleSound", "Sound", "Layered Noise", "Many", "Technicolor"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Sound -- Color ++ Presence -- Absence",
@@ -936,7 +936,7 @@
   "layer": 3,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Color", "Blind", "Absence", "Deaf", "Sound", "Hearing", "Presence", "Sight"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Sound -- Color ++ Random -- Pattern",
@@ -947,7 +947,7 @@
   "layer": 3,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Color", "Image", "Pattern", "Speech", "Sound", "Noise", "Random", "Blur"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Space -- Time ++ Many -- None",
@@ -957,7 +957,7 @@
   "layer": 3,
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Many", "Timeline", "Time", "Present", "None", "Location", "Space", "Distance"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Reflection -- Invisible ++ Timeline -- Present",
@@ -967,7 +967,7 @@
   "layer": 2,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Timeline", "Future", "Invisible", "New", "Present", "Familiar", "Reflection", "Past"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Static -- Dynamic ++ Past -- Future",
@@ -977,7 +977,7 @@
   "layer": 4,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Dynamic", "Prediction", "Future", "Forever", "Static", "Continuation", "Past", "Memory"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Many -- None ++ Memory -- Prediction",
@@ -987,7 +987,7 @@
   "layer": 3,
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Many", "Expectation", "Prediction", "Surprise", "None", "Blank Slate", "Memory", "Experience"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Experience -- Blank Slate ++ Life -- Death",
@@ -997,7 +997,7 @@
   "layer": 4,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Life", "Unawareness", "Blank Slate", "Rebirth", "Death", "Reincarnation", "Experience", "Consciousness"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Consciousness -- Unawareness ++ Familiar -- New",
@@ -1007,7 +1007,7 @@
   "layer": 3,
   "graph": [1,1,1,0,1,1],
   "powerNames": ["Consciousness", "Unfamiliarity", "New", "Unknown", "Unawareness", "Empathy", "Familiar", "Sympathy"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Sympathy -- Unfamiliarity ++ Many -- None",
@@ -1017,7 +1017,7 @@
   "layer": 3, 
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Sympathy", "Home", "None", "Lost", "Unfamiliarity", "Foreign", "Many", "Culture"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Many -- None ++ Singularity -- Void",
@@ -1027,7 +1027,7 @@
   "layer": 3,
   "graph": [0,0,0,0,1,1],
   "powerNames": ["Many", "Wiped", "Void", "Erased", "None", "Individual", "Singularity", "Shared"],
-  "powers": []
+  "powers": {[]}
 },
 {
   "name": "Shared -- Individual ++ Thought -- Action",
@@ -1037,7 +1037,7 @@
   "layer": 4,
   "graph": [0,0,0,1,0,1],
   "powerNames": ["Shared", "Collaboration", "Action", "Act", "Individual", "Idea", "Thought", "Language"],
-  "powers": []
+  "powers": {[]}
 }
 ]
 ]
