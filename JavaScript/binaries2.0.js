@@ -1001,8 +1001,8 @@ request.onload = function() {
       }
     }
   }
-  alert(axesPowers[0]);
-  alert(axes[0]);
+  alert(axesPowers[0].name);
+  alert(axes[0].powers);
 }
 /*var csmn = {
   ID1: "cs",
