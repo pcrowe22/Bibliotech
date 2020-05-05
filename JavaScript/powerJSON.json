@@ -936,7 +936,7 @@
   "layer": 3,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Color", "Blind", "Absence", "Deaf", "Sound", "Hearing", "Presence", "Sight"],
-  "powers": [],
+  "powers": []
 },
 {
   "name": "Sound -- Color ++ Random -- Pattern",
@@ -997,7 +997,7 @@
   "layer": 4,
   "graph": [0,0,1,1,0,0],
   "powerNames": ["Life", "Unawareness", "Blank Slate", "Rebirth", "Death", "Reincarnation", "Experience", "Consciousness"],
-  "powers": [],
+  "powers": []
 },
 {
   "name": "Consciousness -- Unawareness ++ Familiar -- New",
