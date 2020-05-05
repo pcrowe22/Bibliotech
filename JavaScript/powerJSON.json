@@ -138,7 +138,7 @@
       "bio": "One half of Spark's power.",
       "splittable": false
     },
-      "power2": Negative = {
+    "power2":  {
       "name": "Negative",
       "bio": "The second half of Spark's power.",
       "splittable": false
